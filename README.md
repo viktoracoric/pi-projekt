@@ -16,7 +16,7 @@ Aplikacija za pronalazak teretane na području kojem se nalazimo. Aplikacija ola
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Registracija računa koji može pripadati korisniku, vlasniku teretane i administratoru | Viktor-Alojzije Ćorić
+F01 | Registracija | Registracija računa koji može pripadati korisniku,  vlasniku teretane i administratoru | Viktor-Alojzije Ćorić
 F02 | Prijava | Prijava u program | Kristijan Čulina
 F03 | Uređivanje korisničkih podataka | Uređivanje podataka o računu | Josip Matoković
 F04 | Pregled i filter teretana po određenim kriterijima | Pregled svih teretana u blizini, te mogućnost filtriranja prema cijeni, udaljenosti, itd. | Viktor-Alojzije Ćorić
