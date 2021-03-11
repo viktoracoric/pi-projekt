@@ -6,7 +6,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Viktor-Alojzije Ćorić | vcoric@foi.hr | 0016140113 | viktoracoric
 Kristijan Čulina | kculina@foi.hr | 0016140748 | qbitdone
-Josip Matoković | jmatokovi@foi.hr | 0016131682 | matok9
+Josip Matoković | jmatokovi@foi.hr | 0016131682 | Metok9
 
 ## Opis domene
 
