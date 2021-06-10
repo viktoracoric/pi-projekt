@@ -8,6 +8,7 @@ namespace reRack.Design
 {
     static class Program
     {
+        //testic
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
