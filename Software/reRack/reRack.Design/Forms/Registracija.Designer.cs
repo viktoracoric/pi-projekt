@@ -56,7 +56,7 @@ namespace reRack.Design.Forms
             this.uiGrad.Location = new System.Drawing.Point(164, 328);
             this.uiGrad.Name = "uiGrad";
             this.uiGrad.Size = new System.Drawing.Size(133, 21);
-            this.uiGrad.TabIndex = 42;
+            this.uiGrad.TabIndex = 3;
             // 
             // uiPotvrdaLozinke
             // 
@@ -64,7 +64,7 @@ namespace reRack.Design.Forms
             this.uiPotvrdaLozinke.Name = "uiPotvrdaLozinke";
             this.uiPotvrdaLozinke.PasswordChar = '*';
             this.uiPotvrdaLozinke.Size = new System.Drawing.Size(133, 20);
-            this.uiPotvrdaLozinke.TabIndex = 41;
+            this.uiPotvrdaLozinke.TabIndex = 6;
             // 
             // uiPotvrdaLozinkeLabel
             // 
@@ -80,7 +80,7 @@ namespace reRack.Design.Forms
             this.uiBrojTelefona.Location = new System.Drawing.Point(164, 364);
             this.uiBrojTelefona.Name = "uiBrojTelefona";
             this.uiBrojTelefona.Size = new System.Drawing.Size(133, 20);
-            this.uiBrojTelefona.TabIndex = 39;
+            this.uiBrojTelefona.TabIndex = 4;
             // 
             // uiBrojTelefonaLabel
             // 
@@ -105,7 +105,7 @@ namespace reRack.Design.Forms
             this.uiPrezime.Location = new System.Drawing.Point(164, 250);
             this.uiPrezime.Name = "uiPrezime";
             this.uiPrezime.Size = new System.Drawing.Size(133, 20);
-            this.uiPrezime.TabIndex = 36;
+            this.uiPrezime.TabIndex = 1;
             // 
             // uiPrezimeLabel
             // 
@@ -121,7 +121,7 @@ namespace reRack.Design.Forms
             this.uiIme.Location = new System.Drawing.Point(164, 215);
             this.uiIme.Name = "uiIme";
             this.uiIme.Size = new System.Drawing.Size(133, 20);
-            this.uiIme.TabIndex = 34;
+            this.uiIme.TabIndex = 0;
             // 
             // uiImeLabel
             // 
@@ -137,7 +137,7 @@ namespace reRack.Design.Forms
             this.uxActionRegistrirajSe.Location = new System.Drawing.Point(164, 491);
             this.uxActionRegistrirajSe.Name = "uxActionRegistrirajSe";
             this.uxActionRegistrirajSe.Size = new System.Drawing.Size(133, 33);
-            this.uxActionRegistrirajSe.TabIndex = 32;
+            this.uxActionRegistrirajSe.TabIndex = 7;
             this.uxActionRegistrirajSe.Text = "Registriraj se";
             this.uxActionRegistrirajSe.UseVisualStyleBackColor = true;
             // 
@@ -147,7 +147,7 @@ namespace reRack.Design.Forms
             this.uiLozinka.Name = "uiLozinka";
             this.uiLozinka.PasswordChar = '*';
             this.uiLozinka.Size = new System.Drawing.Size(133, 20);
-            this.uiLozinka.TabIndex = 31;
+            this.uiLozinka.TabIndex = 5;
             // 
             // uiLozinkaLabel
             // 
@@ -163,7 +163,7 @@ namespace reRack.Design.Forms
             this.uiEmail.Location = new System.Drawing.Point(164, 287);
             this.uiEmail.Name = "uiEmail";
             this.uiEmail.Size = new System.Drawing.Size(133, 20);
-            this.uiEmail.TabIndex = 29;
+            this.uiEmail.TabIndex = 2;
             // 
             // uiEmailLabel
             // 
@@ -219,6 +219,7 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiRegistracijaLabel);
             this.Name = "Registracija";
             this.Text = "Registracija";
+            this.Load += new System.EventHandler(this.Registracija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
