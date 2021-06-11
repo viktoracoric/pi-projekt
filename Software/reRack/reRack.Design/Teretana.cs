@@ -29,6 +29,7 @@ namespace reRack.Design
         public int kapacitet { get; set; }
         public int kvadratura { get; set; }
         public int cijena_clanstva { get; set; }
+        public string naziv { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clanstvo> Clanstvo { get; set; }
@@ -38,5 +39,10 @@ namespace reRack.Design
         public virtual ICollection<Recenzija> Recenzija { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rezervacija> Rezervacija { get; set; }
+
+        public override string ToString()
+        {
+            return naziv;
+        }
     }
 }

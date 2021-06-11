@@ -43,5 +43,12 @@ namespace reRack.Design.Forms
                                    where k.id_korisnik == id
                                    select k).Single();
         }
+
+
+        private void uiActionMojeTeretane_Click(object sender, EventArgs e)
+        {
+            MojeTeretane form = new MojeTeretane(prijavljeniKorisnik);
+            form.ShowDialog();
+        }
     }
 }

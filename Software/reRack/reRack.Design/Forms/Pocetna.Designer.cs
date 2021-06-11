@@ -95,6 +95,7 @@ namespace reRack.Design.Forms
             this.uiActionMojeTeretane.TabIndex = 8;
             this.uiActionMojeTeretane.Text = "Prikaži moje teretane";
             this.uiActionMojeTeretane.UseVisualStyleBackColor = true;
+            this.uiActionMojeTeretane.Click += new System.EventHandler(this.uiActionMojeTeretane_Click);
             // 
             // uiDobrodosli
             // 

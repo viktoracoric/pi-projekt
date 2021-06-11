@@ -45,5 +45,10 @@ namespace reRack.Design
         public virtual ICollection<Rezervacija> Rezervacija { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teretana> Teretana { get; set; }
+
+        public override string ToString()
+        {
+            return korisnicko_ime;
+        }
     }
 }

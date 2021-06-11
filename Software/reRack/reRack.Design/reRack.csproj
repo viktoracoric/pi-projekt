@@ -58,6 +58,12 @@
     <Compile Include="Clanstvo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MojeTeretane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MojeTeretane.Designer.cs">
+      <DependentUpon>MojeTeretane.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pocetna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Forms\Prijava.Designer.cs">
       <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recenzija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recenzija.Designer.cs">
+      <DependentUpon>Recenzija.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registracija.cs">
       <SubType>Form</SubType>
@@ -120,11 +132,17 @@
     <Compile Include="VrInterval.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\MojeTeretane.resx">
+      <DependentUpon>MojeTeretane.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pocetna.resx">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Prijava.resx">
       <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recenzija.resx">
+      <DependentUpon>Recenzija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>

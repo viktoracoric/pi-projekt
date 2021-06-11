@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clanstvo">
           <Key>
             <PropertyRef Name="korisnik_id" />
@@ -68,6 +68,7 @@
           <Property Name="kapacitet" Type="int" Nullable="false" />
           <Property Name="kvadratura" Type="int" Nullable="false" />
           <Property Name="cijena_clanstva" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Uloga">
           <Key>
@@ -278,8 +279,7 @@
             <End Role="Teretana" EntitySet="Teretana" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -366,6 +366,7 @@
           <NavigationProperty Name="Korisnik" Relationship="Self.teretana_FK" FromRole="Teretana" ToRole="Korisnik" />
           <NavigationProperty Name="Recenzija" Relationship="Self.recenzija_FK_1" FromRole="Teretana" ToRole="Recenzija" />
           <NavigationProperty Name="Rezervacija" Relationship="Self.Rezervacija_FK_2" FromRole="Teretana" ToRole="Rezervacija" />
+          <Property Name="naziv" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Uloga">
           <Key>
@@ -642,6 +643,7 @@
           <EntitySetMapping Name="Teretana">
             <EntityTypeMapping TypeName="Model.Teretana">
               <MappingFragment StoreEntitySet="Teretana">
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="id_teretana" ColumnName="id_teretana" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="grad_id" ColumnName="grad_id" />
