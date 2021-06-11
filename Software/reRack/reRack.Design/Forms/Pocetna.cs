@@ -50,5 +50,11 @@ namespace reRack.Design.Forms
             MojeTeretane form = new MojeTeretane(prijavljeniKorisnik);
             form.ShowDialog();
         }
+
+        private void uiActionDodajTeretanu_Click(object sender, EventArgs e)
+        {
+            DodajTeretanu form = new DodajTeretanu();
+            form.ShowDialog();
+        }
     }
 }

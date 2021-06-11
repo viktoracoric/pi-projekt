@@ -58,6 +58,7 @@ namespace reRack.Design.Forms
             this.uiActionDodajTeretanu.TabIndex = 12;
             this.uiActionDodajTeretanu.Text = "Dodaj teretanu";
             this.uiActionDodajTeretanu.UseVisualStyleBackColor = true;
+            this.uiActionDodajTeretanu.Click += new System.EventHandler(this.uiActionDodajTeretanu_Click);
             // 
             // uiActionUrediPodatkeTeretane
             // 
