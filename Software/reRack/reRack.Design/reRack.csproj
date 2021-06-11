@@ -58,6 +58,12 @@
     <Compile Include="Clanstvo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DodajTeretanu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DodajTeretanu.Designer.cs">
+      <DependentUpon>DodajTeretanu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MojeTeretane.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="VrInterval.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DodajTeretanu.resx">
+      <DependentUpon>DodajTeretanu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MojeTeretane.resx">
       <DependentUpon>MojeTeretane.cs</DependentUpon>
     </EmbeddedResource>
