@@ -12,9 +12,20 @@ namespace reRack.Design.Forms
 {
     public partial class Pocetna : Form
     {
-        public Pocetna()
+        public Pocetna(int uloga)
         {
             InitializeComponent();
+            if(uloga == 0)
+            {
+                uiActionUrediPodatkeTeretane.Hide();
+                uiActionDodajVlasnika.Hide();
+                uiActionDodajTeretanu.Hide();
+            }
+            if (uloga == 1)
+            {
+                uiActionDodajVlasnika.Hide();
+                uiActionDodajTeretanu.Hide();
+            }
         }
     }
 }

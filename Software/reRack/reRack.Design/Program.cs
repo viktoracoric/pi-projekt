@@ -17,7 +17,7 @@ namespace reRack.Design
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new uiPrijavaForm());
+            Application.Run(new Prijava());
         }
     }
 }

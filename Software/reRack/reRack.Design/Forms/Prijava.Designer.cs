@@ -1,7 +1,7 @@
 ﻿
 namespace reRack.Design
 {
-    partial class uiPrijavaForm
+    partial class Prijava
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace reRack.Design
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiPrijavaForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prijava));
             this.uxPrijavaLabel = new System.Windows.Forms.Label();
             this.uxRegistracijaButton = new System.Windows.Forms.Button();
             this.uxZaboravljenaLozinkaButton = new System.Windows.Forms.Button();
