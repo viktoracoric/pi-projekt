@@ -12,20 +12,36 @@ namespace reRack.Design.Forms
 {
     public partial class Pocetna : Form
     {
-        public Pocetna(int uloga)
+        private Korisnik prijavljeniKorisnik;
+        Entities entities = new Entities();
+
+        public Pocetna(Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
-            if(uloga == 0)
+            if(prijavljeniKorisnik.uloga_id == 0)
             {
                 uiActionUrediPodatkeTeretane.Hide();
                 uiActionDodajVlasnika.Hide();
                 uiActionDodajTeretanu.Hide();
             }
-            if (uloga == 1)
+            if (prijavljeniKorisnik.uloga_id == 1)
             {
                 uiActionDodajVlasnika.Hide();
                 uiActionDodajTeretanu.Hide();
             }
+
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
+        }
+
+        private void uiActionUrediPodatke_Click(object sender, EventArgs e)
+        {
+            UrediPodatke form = new UrediPodatke(prijavljeniKorisnik);
+            form.ShowDialog();
+            int id = prijavljeniKorisnik.id_korisnik;
+            prijavljeniKorisnik = null;
+            prijavljeniKorisnik = (from k in entities.Korisnik
+                                   where k.id_korisnik == id
+                                   select k).Single();
         }
     }
 }

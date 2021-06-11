@@ -125,8 +125,9 @@ namespace reRack.Design
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // uiPrijavaForm
+            // Prijava
             // 
+            this.AcceptButton = this.uxPrijavaButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 464);
@@ -139,7 +140,7 @@ namespace reRack.Design
             this.Controls.Add(this.uiKorIme);
             this.Controls.Add(this.uxKorImeLabel);
             this.Controls.Add(this.uxPrijavaLabel);
-            this.Name = "uiPrijavaForm";
+            this.Name = "Prijava";
             this.Text = "Prijava";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

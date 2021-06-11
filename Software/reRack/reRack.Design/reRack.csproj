@@ -76,6 +76,12 @@
     <Compile Include="Forms\Registracija.Designer.cs">
       <DependentUpon>Registracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UrediPodatke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrediPodatke.Designer.cs">
+      <DependentUpon>UrediPodatke.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grad.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrediPodatke.resx">
+      <DependentUpon>UrediPodatke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

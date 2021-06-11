@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +31,7 @@ namespace reRack.Design
         {
             string korime = uiKorIme.Text;
             string lozinka = uiLozinka.Text;
-            var prijava = from k in entities.Korisnik
+            var prijava = from k in entities.Korisnik.Include(kor => kor.Grad)
                           where k.korisnicko_ime == korime && k.lozinka == lozinka
                           select k;
             if(prijava.Count() == 0)
@@ -40,7 +40,7 @@ namespace reRack.Design
             }
             else
             {
-                Pocetna pocetna = new Pocetna(prijava.First().uloga_id);
+                Pocetna pocetna = new Pocetna(prijava.First());
                 this.Hide();
                 pocetna.Closed += (s, args) => this.Close();
                 pocetna.Show();
