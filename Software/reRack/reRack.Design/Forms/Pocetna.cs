@@ -59,7 +59,7 @@ namespace reRack.Design.Forms
 
         private void uiActionPrikazTeretana_Click(object sender, EventArgs e)
         {
-            PrikazSvihTeretana prikazSvihTeretana  = new PrikazSvihTeretana();
+            PrikazSvihTeretana prikazSvihTeretana  = new PrikazSvihTeretana(prijavljeniKorisnik);
             prikazSvihTeretana.ShowDialog();
             
         }

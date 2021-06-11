@@ -13,9 +13,12 @@ namespace reRack.Design.Forms
     public partial class PrikazSvihTeretana : Form
     {
         Entities entities = new Entities();
-        public PrikazSvihTeretana()
+        private  Korisnik prijavljeniKorisnik;
+
+        public PrikazSvihTeretana(Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
         private void PrikazSvihTeretana_Load(object sender, EventArgs e)
@@ -39,6 +42,12 @@ namespace reRack.Design.Forms
                         where t.cijena_clanstva < uiFilterCijena.Value && t.kvadratura < uiFilterKvadratura.Value
                         select t;
             uiPopisTeretana.DataSource = query.ToList();
+        }
+
+        private void uiActionPosaljiZahtjev_Click(object sender, EventArgs e)
+        {
+            SlanjeZahtjev form = new SlanjeZahtjev(prijavljeniKorisnik);
+            form.ShowDialog();
         }
     }
 }

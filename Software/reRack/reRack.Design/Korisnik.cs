@@ -21,6 +21,7 @@ namespace reRack.Design
             this.Recenzija = new HashSet<Recenzija>();
             this.Rezervacija = new HashSet<Rezervacija>();
             this.Teretana = new HashSet<Teretana>();
+            this.Zahtjev = new HashSet<Zahtjev>();
         }
     
         public int id_korisnik { get; set; }
@@ -45,7 +46,8 @@ namespace reRack.Design
         public virtual ICollection<Rezervacija> Rezervacija { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teretana> Teretana { get; set; }
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Zahtjev> Zahtjev { get; set; }
         public override string ToString()
         {
             return korisnicko_ime;

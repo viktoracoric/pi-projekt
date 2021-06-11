@@ -85,6 +85,19 @@
           <Property Name="vrijeme_pocetak" Type="time" Precision="7" Nullable="false" />
           <Property Name="vrijeme_kraj" Type="time" Precision="7" Nullable="false" />
         </EntityType>
+        <EntityType Name="Zahtjev">
+          <Key>
+            <PropertyRef Name="id_zahtjev" />
+          </Key>
+          <Property Name="id_zahtjev" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="adresa" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="grad_id" Type="int" Nullable="false" />
+          <Property Name="kapacitet" Type="int" Nullable="false" />
+          <Property Name="kvadratura" Type="int" Nullable="false" />
+          <Property Name="cijena_clanstva" Type="int" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="clanstvo_FK">
           <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
           <End Role="Clanstvo" Type="Self.Clanstvo" Multiplicity="*" />
@@ -225,6 +238,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Zahtjev_FK">
+          <End Role="Grad" Type="Self.Grad" Multiplicity="1" />
+          <End Role="Zahtjev" Type="Self.Zahtjev" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grad">
+              <PropertyRef Name="id_grad" />
+            </Principal>
+            <Dependent Role="Zahtjev">
+              <PropertyRef Name="grad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Zahtjev_FK1">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="Zahtjev" Type="Self.Zahtjev" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="Zahtjev">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Clanstvo" EntityType="Self.Clanstvo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Grad" EntityType="Self.Grad" Schema="dbo" store:Type="Tables" />
@@ -234,6 +271,7 @@
           <EntitySet Name="Teretana" EntityType="Self.Teretana" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Uloga" EntityType="Self.Uloga" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VrInterval" EntityType="Self.VrInterval" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zahtjev" EntityType="Self.Zahtjev" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="clanstvo_FK" Association="Self.clanstvo_FK">
             <End Role="Korisnik" EntitySet="Korisnik" />
             <End Role="Clanstvo" EntitySet="Clanstvo" />
@@ -278,6 +316,14 @@
             <End Role="Grad" EntitySet="Grad" />
             <End Role="Teretana" EntitySet="Teretana" />
           </AssociationSet>
+          <AssociationSet Name="Zahtjev_FK" Association="Self.Zahtjev_FK">
+            <End Role="Grad" EntitySet="Grad" />
+            <End Role="Zahtjev" EntitySet="Zahtjev" />
+          </AssociationSet>
+          <AssociationSet Name="Zahtjev_FK1" Association="Self.Zahtjev_FK1">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Zahtjev" EntitySet="Zahtjev" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -303,6 +349,7 @@
           <Property Name="naziv" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Korisnik" Relationship="Self.korisnik_FK_1" FromRole="Grad" ToRole="Korisnik" />
           <NavigationProperty Name="Teretana" Relationship="Self.teretana_FK_1" FromRole="Grad" ToRole="Teretana" />
+          <NavigationProperty Name="Zahtjev" Relationship="Model.Zahtjev_FK" FromRole="Grad" ToRole="Zahtjev" />
         </EntityType>
         <EntityType Name="Korisnik">
           <Key>
@@ -325,6 +372,7 @@
           <NavigationProperty Name="Recenzija" Relationship="Self.recenzija_FK" FromRole="Korisnik" ToRole="Recenzija" />
           <NavigationProperty Name="Rezervacija" Relationship="Self.Rezervacija_FK_1" FromRole="Korisnik" ToRole="Rezervacija" />
           <NavigationProperty Name="Teretana" Relationship="Self.teretana_FK" FromRole="Korisnik" ToRole="Teretana" />
+          <NavigationProperty Name="Zahtjev" Relationship="Model.Zahtjev_FK1" FromRole="Korisnik" ToRole="Zahtjev" />
         </EntityType>
         <EntityType Name="Recenzija">
           <Key>
@@ -578,7 +626,55 @@
             <End Role="Teretana" EntitySet="Teretana" />
             <End Role="Rezervacija" EntitySet="Rezervacija" />
           </AssociationSet>
+          <EntitySet Name="Zahtjev" EntityType="Model.Zahtjev" />
+          <AssociationSet Name="Zahtjev_FK" Association="Model.Zahtjev_FK">
+            <End Role="Grad" EntitySet="Grad" />
+            <End Role="Zahtjev" EntitySet="Zahtjev" />
+          </AssociationSet>
+          <AssociationSet Name="Zahtjev_FK1" Association="Model.Zahtjev_FK1">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Zahtjev" EntitySet="Zahtjev" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Zahtjev">
+          <Key>
+            <PropertyRef Name="id_zahtjev" />
+          </Key>
+          <Property Name="id_zahtjev" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="adresa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="grad_id" Type="Int32" Nullable="false" />
+          <Property Name="kapacitet" Type="Int32" Nullable="false" />
+          <Property Name="kvadratura" Type="Int32" Nullable="false" />
+          <Property Name="cijena_clanstva" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Grad" Relationship="Model.Zahtjev_FK" FromRole="Zahtjev" ToRole="Grad" />
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="Model.Zahtjev_FK1" FromRole="Zahtjev" ToRole="Korisnik" />
+        </EntityType>
+        <Association Name="Zahtjev_FK">
+          <End Type="Model.Grad" Role="Grad" Multiplicity="1" />
+          <End Type="Model.Zahtjev" Role="Zahtjev" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grad">
+              <PropertyRef Name="id_grad" />
+            </Principal>
+            <Dependent Role="Zahtjev">
+              <PropertyRef Name="grad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Zahtjev_FK1">
+          <End Type="Model.Korisnik" Role="Korisnik" Multiplicity="1" />
+          <End Type="Model.Zahtjev" Role="Zahtjev" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="Zahtjev">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -668,6 +764,20 @@
                 <ScalarProperty Name="id_interval" ColumnName="id_interval" />
                 <ScalarProperty Name="vrijeme_pocetak" ColumnName="vrijeme_pocetak" />
                 <ScalarProperty Name="vrijeme_kraj" ColumnName="vrijeme_kraj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zahtjev">
+            <EntityTypeMapping TypeName="Model.Zahtjev">
+              <MappingFragment StoreEntitySet="Zahtjev">
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="cijena_clanstva" ColumnName="cijena_clanstva" />
+                <ScalarProperty Name="kvadratura" ColumnName="kvadratura" />
+                <ScalarProperty Name="kapacitet" ColumnName="kapacitet" />
+                <ScalarProperty Name="grad_id" ColumnName="grad_id" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_zahtjev" ColumnName="id_zahtjev" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

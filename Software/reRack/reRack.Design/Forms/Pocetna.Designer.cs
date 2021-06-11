@@ -47,7 +47,7 @@ namespace reRack.Design.Forms
             this.uiActionDodajVlasnika.Name = "uiActionDodajVlasnika";
             this.uiActionDodajVlasnika.Size = new System.Drawing.Size(100, 51);
             this.uiActionDodajVlasnika.TabIndex = 13;
-            this.uiActionDodajVlasnika.Text = "Dodaj vlasnika";
+            this.uiActionDodajVlasnika.Text = "Pregled zahtjeva";
             this.uiActionDodajVlasnika.UseVisualStyleBackColor = true;
             // 
             // uiActionDodajTeretanu

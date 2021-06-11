@@ -33,5 +33,6 @@ namespace reRack.Design
         public virtual DbSet<Teretana> Teretana { get; set; }
         public virtual DbSet<Uloga> Uloga { get; set; }
         public virtual DbSet<VrInterval> VrInterval { get; set; }
+        public virtual DbSet<Zahtjev> Zahtjev { get; set; }
     }
 }

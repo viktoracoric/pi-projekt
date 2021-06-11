@@ -50,6 +50,7 @@ namespace reRack.Design.Forms
             this.uiActionPosaljiZahtjev.TabIndex = 15;
             this.uiActionPosaljiZahtjev.Text = "Pošalji zahtjev";
             this.uiActionPosaljiZahtjev.UseVisualStyleBackColor = true;
+            this.uiActionPosaljiZahtjev.Click += new System.EventHandler(this.uiActionPosaljiZahtjev_Click);
             // 
             // uiActionNazad
             // 

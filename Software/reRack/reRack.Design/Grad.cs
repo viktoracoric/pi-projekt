@@ -19,6 +19,7 @@ namespace reRack.Design
         {
             this.Korisnik = new HashSet<Korisnik>();
             this.Teretana = new HashSet<Teretana>();
+            this.Zahtjev = new HashSet<Zahtjev>();
         }
     
         public int id_grad { get; set; }
@@ -28,7 +29,8 @@ namespace reRack.Design
         public virtual ICollection<Korisnik> Korisnik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teretana> Teretana { get; set; }
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Zahtjev> Zahtjev { get; set; }
         public override string ToString()
         {
             return naziv;
