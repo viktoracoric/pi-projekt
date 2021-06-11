@@ -8,7 +8,7 @@ namespace reRack.Design
 {
     static class Program
     {
-        //final
+        //metoksid
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
