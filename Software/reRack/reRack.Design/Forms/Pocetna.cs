@@ -56,5 +56,12 @@ namespace reRack.Design.Forms
             DodajTeretanu form = new DodajTeretanu();
             form.ShowDialog();
         }
+
+        private void uiActionPrikazTeretana_Click(object sender, EventArgs e)
+        {
+            PrikazSvihTeretana prikazSvihTeretana  = new PrikazSvihTeretana();
+            prikazSvihTeretana.ShowDialog();
+            
+        }
     }
 }

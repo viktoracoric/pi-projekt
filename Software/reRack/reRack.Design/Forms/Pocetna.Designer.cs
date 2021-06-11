@@ -87,6 +87,7 @@ namespace reRack.Design.Forms
             this.uiActionPrikazTeretana.TabIndex = 9;
             this.uiActionPrikazTeretana.Text = "Prikaži sve teretane";
             this.uiActionPrikazTeretana.UseVisualStyleBackColor = true;
+            this.uiActionPrikazTeretana.Click += new System.EventHandler(this.uiActionPrikazTeretana_Click);
             // 
             // uiActionMojeTeretane
             // 

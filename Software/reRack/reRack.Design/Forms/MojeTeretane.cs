@@ -29,7 +29,8 @@ namespace reRack.Design.Forms
 
         private void btnRecenzija_Click(object sender, EventArgs e)
         {
-
+            Recenzija recenzija = new Recenzija();
+            recenzija.ShowDialog();
         }
     }
 }
