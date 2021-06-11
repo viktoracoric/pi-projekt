@@ -140,6 +140,7 @@ namespace reRack.Design.Forms
             this.uxActionRegistrirajSe.TabIndex = 32;
             this.uxActionRegistrirajSe.Text = "Registriraj se";
             this.uxActionRegistrirajSe.UseVisualStyleBackColor = true;
+            this.uxActionRegistrirajSe.Click += new System.EventHandler(this.uxActionRegistrirajSe_Click);
             // 
             // uiLozinka
             // 

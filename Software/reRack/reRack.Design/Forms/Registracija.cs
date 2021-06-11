@@ -16,5 +16,10 @@ namespace reRack.Design.Forms
         {
             InitializeComponent();
         }
+
+        private void uxActionRegistrirajSe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
