@@ -59,5 +59,73 @@ namespace reRack.Design.Forms
             MojiTermini mojiTermini = new MojiTermini(prijavljeniKorisnik);
             mojiTermini.ShowDialog();
         }
+
+        private void teretanaBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            /*
+
+            try
+            {
+                Teretana teretana = teretanaBindingSource.Current as Teretana;
+
+                int interval = uiTermin.SelectedIndex;
+
+                var upit = from v in entities.VrInterval
+                           where v.id_interval == interval
+                           select v;
+
+                List<VrInterval> vrIntervals = new List<VrInterval>();
+
+                foreach (var item in upit)
+                {
+                    vrIntervals.Add(item);
+                }
+
+                var query = from t in entities.Rezervacija
+                            where t.teretana_id == teretana.id_teretana && t.interval_id == interval
+                            select t;
+
+                uiObavjest.Text = "Teretana " + teretana.naziv + " ima ukupno " + teretana.kapacitet + " mjesta, a u terminu "
+                                   + vrIntervals.First().vrijeme_pocetak + " - " + vrIntervals.First().vrijeme_kraj + " je trenutno zauzeto "
+                                   + query.Count() + " mjesta";
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show( ex.Message);
+            } */
+
+            Teretana teretana = teretanaBindingSource.Current as Teretana;
+
+            int interval = uiTermin.SelectedIndex;
+
+            var upit = from v in entities.VrInterval
+                       where v.id_interval == interval
+                       select v;
+
+            List<VrInterval> vrIntervals = new List<VrInterval>();
+
+            foreach (var item in upit)
+            {
+                vrIntervals.Add(item);
+            }
+
+            if(vrIntervals.Count() > 0)
+            {
+                var query = from t in entities.Rezervacija
+                            where t.teretana_id == teretana.id_teretana && t.interval_id == interval
+                            select t;
+
+                uiObavjest.Text = "Teretana " + teretana.naziv + " ima ukupno " + teretana.kapacitet + " mjesta, a u terminu "
+                                   + vrIntervals.First().vrijeme_pocetak + " - " + vrIntervals.First().vrijeme_kraj + " je trenutno zauzeto "
+                                   + query.Count() + " mjesta";
+            }
+        }
+
+        private void uxActionNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
