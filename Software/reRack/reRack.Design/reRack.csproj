@@ -195,6 +195,9 @@
     <EmbeddedResource Include="Forms\SlanjeZahtjev.resx">
       <DependentUpon>SlanjeZahtjev.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrediTeretanu.resx">
+      <DependentUpon>UrediTeretanu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
