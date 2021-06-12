@@ -25,6 +25,9 @@ namespace reRack.Design.Forms
             uiKapacitet.Value = zahtjev.kapacitet;
             uiCijena.Value = zahtjev.cijena_clanstva;
             uiKvadratura.Value = zahtjev.kvadratura;
+
+            var q = (from x in entities.Zahtjev where x.id_zahtjev == zahtjev.id_zahtjev select x).First();
+            entities.Zahtjev.Remove(q);
         }
         public DodajTeretanu()
         {
@@ -38,6 +41,7 @@ namespace reRack.Design.Forms
 
         private void uxActionOdustani_Click(object sender, EventArgs e)
         {
+            entities.SaveChanges();
             Close();
         }
 
@@ -52,6 +56,7 @@ namespace reRack.Design.Forms
             teretana.cijena_clanstva = (int)uiCijena.Value;
             teretana.kvadratura = (int)uiKvadratura.Value;
             entities.Teretana.Add(teretana);
+
             entities.SaveChanges();
             Close();
         }

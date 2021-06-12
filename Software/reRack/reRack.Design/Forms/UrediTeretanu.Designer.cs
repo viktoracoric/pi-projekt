@@ -223,7 +223,7 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiOdaberiTeretanuLabel);
             this.Name = "UrediTeretanu";
-            this.Text = "UrediTeretanu";
+            this.Text = "Uredi Teretanu";
             this.Load += new System.EventHandler(this.UrediTeretanu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKapacitet)).EndInit();

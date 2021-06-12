@@ -29,6 +29,7 @@ namespace reRack.Design.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiActionPosaljiZahtjev = new System.Windows.Forms.Button();
             this.uiActionNazad = new System.Windows.Forms.Button();
             this.uiActionPrikazTeretane = new System.Windows.Forms.Button();
@@ -37,9 +38,24 @@ namespace reRack.Design.Forms
             this.uiFilterCijena = new System.Windows.Forms.NumericUpDown();
             this.uiFilterKvadratura = new System.Windows.Forms.NumericUpDown();
             this.uiPopisTeretana = new System.Windows.Forms.DataGridView();
+            this.idteretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kvadraturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cijenaclanstvaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clanstvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisTeretana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiActionPosaljiZahtjev
@@ -60,6 +76,7 @@ namespace reRack.Design.Forms
             this.uiActionNazad.TabIndex = 14;
             this.uiActionNazad.Text = "Nazad";
             this.uiActionNazad.UseVisualStyleBackColor = true;
+            this.uiActionNazad.Click += new System.EventHandler(this.uiActionNazad_Click);
             // 
             // uiActionPrikazTeretane
             // 
@@ -127,17 +144,137 @@ namespace reRack.Design.Forms
             // 
             // uiPopisTeretana
             // 
+            this.uiPopisTeretana.AllowUserToAddRows = false;
+            this.uiPopisTeretana.AllowUserToDeleteRows = false;
+            this.uiPopisTeretana.AutoGenerateColumns = false;
             this.uiPopisTeretana.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiPopisTeretana.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idteretanaDataGridViewTextBoxColumn,
+            this.korisnikidDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.korisnikDataGridViewTextBoxColumn,
+            this.gradDataGridViewTextBoxColumn,
+            this.adresaDataGridViewTextBoxColumn,
+            this.kapacitetDataGridViewTextBoxColumn,
+            this.kvadraturaDataGridViewTextBoxColumn,
+            this.cijenaclanstvaDataGridViewTextBoxColumn,
+            this.gradidDataGridViewTextBoxColumn,
+            this.clanstvoDataGridViewTextBoxColumn,
+            this.recenzijaDataGridViewTextBoxColumn,
+            this.rezervacijaDataGridViewTextBoxColumn});
+            this.uiPopisTeretana.DataSource = this.teretanaBindingSource;
             this.uiPopisTeretana.Location = new System.Drawing.Point(6, 1);
             this.uiPopisTeretana.Name = "uiPopisTeretana";
-            this.uiPopisTeretana.Size = new System.Drawing.Size(661, 448);
+            this.uiPopisTeretana.ReadOnly = true;
+            this.uiPopisTeretana.Size = new System.Drawing.Size(661, 368);
             this.uiPopisTeretana.TabIndex = 8;
+            // 
+            // idteretanaDataGridViewTextBoxColumn
+            // 
+            this.idteretanaDataGridViewTextBoxColumn.DataPropertyName = "id_teretana";
+            this.idteretanaDataGridViewTextBoxColumn.HeaderText = "id_teretana";
+            this.idteretanaDataGridViewTextBoxColumn.Name = "idteretanaDataGridViewTextBoxColumn";
+            this.idteretanaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idteretanaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // korisnikidDataGridViewTextBoxColumn
+            // 
+            this.korisnikidDataGridViewTextBoxColumn.DataPropertyName = "korisnik_id";
+            this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnik_id";
+            this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
+            this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korisnikDataGridViewTextBoxColumn
+            // 
+            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "Korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Vlasnik";
+            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gradDataGridViewTextBoxColumn
+            // 
+            this.gradDataGridViewTextBoxColumn.DataPropertyName = "Grad";
+            this.gradDataGridViewTextBoxColumn.HeaderText = "Grad";
+            this.gradDataGridViewTextBoxColumn.Name = "gradDataGridViewTextBoxColumn";
+            this.gradDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kapacitetDataGridViewTextBoxColumn
+            // 
+            this.kapacitetDataGridViewTextBoxColumn.DataPropertyName = "kapacitet";
+            this.kapacitetDataGridViewTextBoxColumn.HeaderText = "Kapacitet";
+            this.kapacitetDataGridViewTextBoxColumn.Name = "kapacitetDataGridViewTextBoxColumn";
+            this.kapacitetDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kvadraturaDataGridViewTextBoxColumn
+            // 
+            this.kvadraturaDataGridViewTextBoxColumn.DataPropertyName = "kvadratura";
+            this.kvadraturaDataGridViewTextBoxColumn.HeaderText = "Kvadratura";
+            this.kvadraturaDataGridViewTextBoxColumn.Name = "kvadraturaDataGridViewTextBoxColumn";
+            this.kvadraturaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cijenaclanstvaDataGridViewTextBoxColumn
+            // 
+            this.cijenaclanstvaDataGridViewTextBoxColumn.DataPropertyName = "cijena_clanstva";
+            this.cijenaclanstvaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.cijenaclanstvaDataGridViewTextBoxColumn.Name = "cijenaclanstvaDataGridViewTextBoxColumn";
+            this.cijenaclanstvaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gradidDataGridViewTextBoxColumn
+            // 
+            this.gradidDataGridViewTextBoxColumn.DataPropertyName = "grad_id";
+            this.gradidDataGridViewTextBoxColumn.HeaderText = "grad_id";
+            this.gradidDataGridViewTextBoxColumn.Name = "gradidDataGridViewTextBoxColumn";
+            this.gradidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gradidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // clanstvoDataGridViewTextBoxColumn
+            // 
+            this.clanstvoDataGridViewTextBoxColumn.DataPropertyName = "Clanstvo";
+            this.clanstvoDataGridViewTextBoxColumn.HeaderText = "Clanstvo";
+            this.clanstvoDataGridViewTextBoxColumn.Name = "clanstvoDataGridViewTextBoxColumn";
+            this.clanstvoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clanstvoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // recenzijaDataGridViewTextBoxColumn
+            // 
+            this.recenzijaDataGridViewTextBoxColumn.DataPropertyName = "Recenzija";
+            this.recenzijaDataGridViewTextBoxColumn.HeaderText = "Recenzija";
+            this.recenzijaDataGridViewTextBoxColumn.Name = "recenzijaDataGridViewTextBoxColumn";
+            this.recenzijaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recenzijaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rezervacijaDataGridViewTextBoxColumn
+            // 
+            this.rezervacijaDataGridViewTextBoxColumn.DataPropertyName = "Rezervacija";
+            this.rezervacijaDataGridViewTextBoxColumn.HeaderText = "Rezervacija";
+            this.rezervacijaDataGridViewTextBoxColumn.Name = "rezervacijaDataGridViewTextBoxColumn";
+            this.rezervacijaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rezervacijaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // teretanaBindingSource
+            // 
+            this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
             // 
             // PrikazSvihTeretana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 376);
             this.Controls.Add(this.uiActionPosaljiZahtjev);
             this.Controls.Add(this.uiActionNazad);
             this.Controls.Add(this.uiActionPrikazTeretane);
@@ -147,11 +284,12 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiFilterKvadratura);
             this.Controls.Add(this.uiPopisTeretana);
             this.Name = "PrikazSvihTeretana";
-            this.Text = "PrikazSvihTeretana";
+            this.Text = "Prikaz svih teretana";
             this.Load += new System.EventHandler(this.PrikazSvihTeretana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterKvadratura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisTeretana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +305,19 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.NumericUpDown uiFilterCijena;
         private System.Windows.Forms.NumericUpDown uiFilterKvadratura;
         private System.Windows.Forms.DataGridView uiPopisTeretana;
+        private System.Windows.Forms.BindingSource teretanaBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idteretanaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gradDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kapacitetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kvadraturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaclanstvaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gradidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clanstvoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
     }
 }

@@ -200,7 +200,7 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiEmailEdit);
             this.Controls.Add(this.uiEmailLabel);
             this.Name = "UrediPodatke";
-            this.Text = "UrediPodatke";
+            this.Text = "Uredi Podatke";
             this.Load += new System.EventHandler(this.UrediPodatke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -49,5 +49,10 @@ namespace reRack.Design.Forms
             SlanjeZahtjev form = new SlanjeZahtjev(prijavljeniKorisnik);
             form.ShowDialog();
         }
+
+        private void uiActionNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

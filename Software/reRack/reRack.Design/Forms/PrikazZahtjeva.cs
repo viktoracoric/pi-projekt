@@ -21,9 +21,7 @@ namespace reRack.Design.Forms
 
         private void PrikazZahtjeva_Load(object sender, EventArgs e)
         {
-            var query = from z in entities.Zahtjev
-                        select z;
-            zahtjevBindingSource.DataSource = query.ToList();
+            OsvjeziDGV();
         }
 
         private void uxActionOdustani_Click(object sender, EventArgs e)
@@ -37,6 +35,16 @@ namespace reRack.Design.Forms
             zahtjev = zahtjevBindingSource.Current as Zahtjev;
             DodajTeretanu dodajTeretanu = new DodajTeretanu(zahtjev);
             dodajTeretanu.ShowDialog();
+
+            OsvjeziDGV();
+        }
+
+        public void OsvjeziDGV()
+        {
+            zahtjevBindingSource.DataSource = null;
+            var query = from z in entities.Zahtjev
+                        select z;
+            zahtjevBindingSource.DataSource = query.ToList();
         }
     }
 }

@@ -31,19 +31,19 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.uiPopisZahtjeva = new System.Windows.Forms.DataGridView();
+            this.zahtjevBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uxActionOdustani = new System.Windows.Forms.Button();
             this.uxActionUpravljaj = new System.Windows.Forms.Button();
             this.idzahtjevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kvadraturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaclanstvaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zahtjevBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisZahtjeva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zahtjevBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,21 +56,25 @@ namespace reRack.Design.Forms
             this.uiPopisZahtjeva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiPopisZahtjeva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idzahtjevDataGridViewTextBoxColumn,
+            this.korisnikDataGridViewTextBoxColumn,
             this.nazivDataGridViewTextBoxColumn,
+            this.gradDataGridViewTextBoxColumn,
             this.adresaDataGridViewTextBoxColumn,
             this.gradidDataGridViewTextBoxColumn,
             this.kapacitetDataGridViewTextBoxColumn,
             this.kvadraturaDataGridViewTextBoxColumn,
             this.cijenaclanstvaDataGridViewTextBoxColumn,
-            this.korisnikidDataGridViewTextBoxColumn,
-            this.gradDataGridViewTextBoxColumn,
-            this.korisnikDataGridViewTextBoxColumn});
+            this.korisnikidDataGridViewTextBoxColumn});
             this.uiPopisZahtjeva.DataSource = this.zahtjevBindingSource;
             this.uiPopisZahtjeva.Location = new System.Drawing.Point(12, 23);
             this.uiPopisZahtjeva.Name = "uiPopisZahtjeva";
             this.uiPopisZahtjeva.ReadOnly = true;
             this.uiPopisZahtjeva.Size = new System.Drawing.Size(596, 174);
             this.uiPopisZahtjeva.TabIndex = 0;
+            // 
+            // zahtjevBindingSource
+            // 
+            this.zahtjevBindingSource.DataSource = typeof(reRack.Design.Zahtjev);
             // 
             // uxActionOdustani
             // 
@@ -98,18 +102,33 @@ namespace reRack.Design.Forms
             this.idzahtjevDataGridViewTextBoxColumn.HeaderText = "id_zahtjev";
             this.idzahtjevDataGridViewTextBoxColumn.Name = "idzahtjevDataGridViewTextBoxColumn";
             this.idzahtjevDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idzahtjevDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // korisnikDataGridViewTextBoxColumn
+            // 
+            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "Korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Vlasnik";
+            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
             this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv teretane";
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
             this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gradDataGridViewTextBoxColumn
+            // 
+            this.gradDataGridViewTextBoxColumn.DataPropertyName = "Grad";
+            this.gradDataGridViewTextBoxColumn.HeaderText = "Grad";
+            this.gradDataGridViewTextBoxColumn.Name = "gradDataGridViewTextBoxColumn";
+            this.gradDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // adresaDataGridViewTextBoxColumn
             // 
             this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
-            this.adresaDataGridViewTextBoxColumn.HeaderText = "adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
             this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -119,25 +138,26 @@ namespace reRack.Design.Forms
             this.gradidDataGridViewTextBoxColumn.HeaderText = "grad_id";
             this.gradidDataGridViewTextBoxColumn.Name = "gradidDataGridViewTextBoxColumn";
             this.gradidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gradidDataGridViewTextBoxColumn.Visible = false;
             // 
             // kapacitetDataGridViewTextBoxColumn
             // 
             this.kapacitetDataGridViewTextBoxColumn.DataPropertyName = "kapacitet";
-            this.kapacitetDataGridViewTextBoxColumn.HeaderText = "kapacitet";
+            this.kapacitetDataGridViewTextBoxColumn.HeaderText = "Kapacitet";
             this.kapacitetDataGridViewTextBoxColumn.Name = "kapacitetDataGridViewTextBoxColumn";
             this.kapacitetDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kvadraturaDataGridViewTextBoxColumn
             // 
             this.kvadraturaDataGridViewTextBoxColumn.DataPropertyName = "kvadratura";
-            this.kvadraturaDataGridViewTextBoxColumn.HeaderText = "kvadratura";
+            this.kvadraturaDataGridViewTextBoxColumn.HeaderText = "Kvadratura";
             this.kvadraturaDataGridViewTextBoxColumn.Name = "kvadraturaDataGridViewTextBoxColumn";
             this.kvadraturaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cijenaclanstvaDataGridViewTextBoxColumn
             // 
             this.cijenaclanstvaDataGridViewTextBoxColumn.DataPropertyName = "cijena_clanstva";
-            this.cijenaclanstvaDataGridViewTextBoxColumn.HeaderText = "cijena_clanstva";
+            this.cijenaclanstvaDataGridViewTextBoxColumn.HeaderText = "Cijena";
             this.cijenaclanstvaDataGridViewTextBoxColumn.Name = "cijenaclanstvaDataGridViewTextBoxColumn";
             this.cijenaclanstvaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -147,24 +167,7 @@ namespace reRack.Design.Forms
             this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnik_id";
             this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
             this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gradDataGridViewTextBoxColumn
-            // 
-            this.gradDataGridViewTextBoxColumn.DataPropertyName = "Grad";
-            this.gradDataGridViewTextBoxColumn.HeaderText = "Grad";
-            this.gradDataGridViewTextBoxColumn.Name = "gradDataGridViewTextBoxColumn";
-            this.gradDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korisnikDataGridViewTextBoxColumn
-            // 
-            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "Korisnik";
-            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Korisnik";
-            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
-            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zahtjevBindingSource
-            // 
-            this.zahtjevBindingSource.DataSource = typeof(reRack.Design.Zahtjev);
+            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
             // 
             // PrikazZahtjeva
             // 
@@ -175,7 +178,7 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uxActionOdustani);
             this.Controls.Add(this.uiPopisZahtjeva);
             this.Name = "PrikazZahtjeva";
-            this.Text = "<";
+            this.Text = "Pregled zahtjeva";
             this.Load += new System.EventHandler(this.PrikazZahtjeva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisZahtjeva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zahtjevBindingSource)).EndInit();
@@ -188,16 +191,16 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridView uiPopisZahtjeva;
         private System.Windows.Forms.Button uxActionOdustani;
         private System.Windows.Forms.Button uxActionUpravljaj;
+        private System.Windows.Forms.BindingSource zahtjevBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idzahtjevDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gradDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gradidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kapacitetDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kvadraturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaclanstvaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gradDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource zahtjevBindingSource;
     }
 }

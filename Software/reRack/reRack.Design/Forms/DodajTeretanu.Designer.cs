@@ -39,8 +39,8 @@ namespace reRack.Design.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.uiCijena = new System.Windows.Forms.NumericUpDown();
             this.uiKvadratura = new System.Windows.Forms.NumericUpDown();
-            this.uxActionSpremi = new System.Windows.Forms.Button();
-            this.uxActionOdustani = new System.Windows.Forms.Button();
+            this.uxActionPotvrdi = new System.Windows.Forms.Button();
+            this.uxActionOdbij = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.uiKapacitet = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -141,25 +141,25 @@ namespace reRack.Design.Forms
             this.uiKvadratura.Size = new System.Drawing.Size(120, 20);
             this.uiKvadratura.TabIndex = 3;
             // 
-            // uxActionSpremi
+            // uxActionPotvrdi
             // 
-            this.uxActionSpremi.Location = new System.Drawing.Point(166, 229);
-            this.uxActionSpremi.Name = "uxActionSpremi";
-            this.uxActionSpremi.Size = new System.Drawing.Size(91, 38);
-            this.uxActionSpremi.TabIndex = 4;
-            this.uxActionSpremi.Text = "Spremi";
-            this.uxActionSpremi.UseVisualStyleBackColor = true;
-            this.uxActionSpremi.Click += new System.EventHandler(this.uxActionSpremi_Click);
+            this.uxActionPotvrdi.Location = new System.Drawing.Point(166, 229);
+            this.uxActionPotvrdi.Name = "uxActionPotvrdi";
+            this.uxActionPotvrdi.Size = new System.Drawing.Size(91, 38);
+            this.uxActionPotvrdi.TabIndex = 4;
+            this.uxActionPotvrdi.Text = "Potvrdi zahtjev";
+            this.uxActionPotvrdi.UseVisualStyleBackColor = true;
+            this.uxActionPotvrdi.Click += new System.EventHandler(this.uxActionSpremi_Click);
             // 
-            // uxActionOdustani
+            // uxActionOdbij
             // 
-            this.uxActionOdustani.Location = new System.Drawing.Point(12, 229);
-            this.uxActionOdustani.Name = "uxActionOdustani";
-            this.uxActionOdustani.Size = new System.Drawing.Size(91, 38);
-            this.uxActionOdustani.TabIndex = 4;
-            this.uxActionOdustani.Text = "Odustani";
-            this.uxActionOdustani.UseVisualStyleBackColor = true;
-            this.uxActionOdustani.Click += new System.EventHandler(this.uxActionOdustani_Click);
+            this.uxActionOdbij.Location = new System.Drawing.Point(12, 229);
+            this.uxActionOdbij.Name = "uxActionOdbij";
+            this.uxActionOdbij.Size = new System.Drawing.Size(91, 38);
+            this.uxActionOdbij.TabIndex = 4;
+            this.uxActionOdbij.Text = "Odbij zahtjev";
+            this.uxActionOdbij.UseVisualStyleBackColor = true;
+            this.uxActionOdbij.Click += new System.EventHandler(this.uxActionOdustani_Click);
             // 
             // label6
             // 
@@ -204,8 +204,8 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(280, 279);
-            this.Controls.Add(this.uxActionOdustani);
-            this.Controls.Add(this.uxActionSpremi);
+            this.Controls.Add(this.uxActionOdbij);
+            this.Controls.Add(this.uxActionPotvrdi);
             this.Controls.Add(this.uiKvadratura);
             this.Controls.Add(this.uiKapacitet);
             this.Controls.Add(this.uiCijena);
@@ -243,8 +243,8 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown uiCijena;
         private System.Windows.Forms.NumericUpDown uiKvadratura;
-        private System.Windows.Forms.Button uxActionSpremi;
-        private System.Windows.Forms.Button uxActionOdustani;
+        private System.Windows.Forms.Button uxActionPotvrdi;
+        private System.Windows.Forms.Button uxActionOdbij;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown uiKapacitet;
         private System.Windows.Forms.Label label7;
