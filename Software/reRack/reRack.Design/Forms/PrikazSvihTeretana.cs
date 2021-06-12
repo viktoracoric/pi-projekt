@@ -61,5 +61,43 @@ namespace reRack.Design.Forms
             DetaljanPrikazOTeretani detaljanPrikazOTeretani = new DetaljanPrikazOTeretani(teretana);
             detaljanPrikazOTeretani.ShowDialog();
         }
+
+        private void uiUclaniSe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Teretana teretana = teretanaBindingSource.Current as Teretana;
+                Clanstvo clanstvo = new Clanstvo();
+                if (prijavljeniKorisnik.raspoloziva_sredstva > teretana.cijena_clanstva)
+                {
+                    var upit = from k in entities.Korisnik
+                               select k;
+                    foreach (var item in upit)
+                    {
+                        if (item.id_korisnik == prijavljeniKorisnik.id_korisnik)
+                        {
+                            item.raspoloziva_sredstva = prijavljeniKorisnik.raspoloziva_sredstva - teretana.cijena_clanstva;
+                        }
+                    }
+                    clanstvo.korisnik_id = prijavljeniKorisnik.id_korisnik;
+                    clanstvo.teretana_id = teretana.id_teretana;
+                    clanstvo.datum_pocetak = DateTime.Now;
+                    clanstvo.datum_kraj = DateTime.Now.AddDays(30);
+
+                    entities.Clanstvo.Add(clanstvo);
+                    entities.SaveChanges();
+                    MessageBox.Show("Cestitamo, uspjesno ste se uclanili u teretanu, vidimo se");
+                }
+                else
+                {
+                    MessageBox.Show("Nemate dovoljno raspolozivih sredstava");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Već ste član ove teretane");
+            }
+
+        }
     }
 }

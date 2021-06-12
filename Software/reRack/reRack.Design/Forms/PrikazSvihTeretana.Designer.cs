@@ -52,6 +52,7 @@ namespace reRack.Design.Forms
             this.recenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uiUclaniSe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisTeretana)).BeginInit();
@@ -70,7 +71,7 @@ namespace reRack.Design.Forms
             // 
             // uiActionNazad
             // 
-            this.uiActionNazad.Location = new System.Drawing.Point(687, 247);
+            this.uiActionNazad.Location = new System.Drawing.Point(687, 312);
             this.uiActionNazad.Name = "uiActionNazad";
             this.uiActionNazad.Size = new System.Drawing.Size(97, 35);
             this.uiActionNazad.TabIndex = 14;
@@ -271,11 +272,22 @@ namespace reRack.Design.Forms
             // 
             this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
             // 
+            // uiUclaniSe
+            // 
+            this.uiUclaniSe.Location = new System.Drawing.Point(687, 252);
+            this.uiUclaniSe.Name = "uiUclaniSe";
+            this.uiUclaniSe.Size = new System.Drawing.Size(97, 35);
+            this.uiUclaniSe.TabIndex = 16;
+            this.uiUclaniSe.Text = "Uclani se";
+            this.uiUclaniSe.UseVisualStyleBackColor = true;
+            this.uiUclaniSe.Click += new System.EventHandler(this.uiUclaniSe_Click);
+            // 
             // PrikazSvihTeretana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 376);
+            this.Controls.Add(this.uiUclaniSe);
             this.Controls.Add(this.uiActionPosaljiZahtjev);
             this.Controls.Add(this.uiActionNazad);
             this.Controls.Add(this.uiActionPrikazTeretane);
@@ -320,5 +332,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn clanstvoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button uiUclaniSe;
     }
 }
