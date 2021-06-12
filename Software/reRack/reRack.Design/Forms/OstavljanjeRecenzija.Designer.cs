@@ -1,7 +1,7 @@
 ﻿
 namespace reRack.Design.Forms
 {
-    partial class Recenzija
+    partial class OstavljanjeRecenzija
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,8 @@ namespace reRack.Design.Forms
             this.uiKomentar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uiTeretana = new System.Windows.Forms.TextBox();
+            this.uiDodaj = new System.Windows.Forms.Button();
+            this.uiOdustani = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,18 +88,42 @@ namespace reRack.Design.Forms
             this.uiTeretana.Size = new System.Drawing.Size(80, 20);
             this.uiTeretana.TabIndex = 5;
             // 
-            // Recenzija
+            // uiDodaj
             // 
+            this.uiDodaj.Location = new System.Drawing.Point(27, 316);
+            this.uiDodaj.Name = "uiDodaj";
+            this.uiDodaj.Size = new System.Drawing.Size(75, 40);
+            this.uiDodaj.TabIndex = 6;
+            this.uiDodaj.Text = "Dodaj recenziju";
+            this.uiDodaj.UseVisualStyleBackColor = true;
+            this.uiDodaj.Click += new System.EventHandler(this.uiDodaj_Click);
+            // 
+            // uiOdustani
+            // 
+            this.uiOdustani.Location = new System.Drawing.Point(186, 316);
+            this.uiOdustani.Name = "uiOdustani";
+            this.uiOdustani.Size = new System.Drawing.Size(75, 40);
+            this.uiOdustani.TabIndex = 7;
+            this.uiOdustani.Text = "Odustani";
+            this.uiOdustani.UseVisualStyleBackColor = true;
+            this.uiOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
+            // 
+            // OstavljanjeRecenzija
+            // 
+            this.AcceptButton = this.uiDodaj;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.uiOdustani;
             this.ClientSize = new System.Drawing.Size(300, 391);
+            this.Controls.Add(this.uiOdustani);
+            this.Controls.Add(this.uiDodaj);
             this.Controls.Add(this.uiTeretana);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiKomentar);
             this.Controls.Add(this.uiOcjena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Recenzija";
+            this.Name = "OstavljanjeRecenzija";
             this.Text = "Recenzija";
             this.Load += new System.EventHandler(this.Recenzija_Load);
             this.ResumeLayout(false);
@@ -113,5 +139,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiKomentar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox uiTeretana;
+        private System.Windows.Forms.Button uiDodaj;
+        private System.Windows.Forms.Button uiOdustani;
     }
 }

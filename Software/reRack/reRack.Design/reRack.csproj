@@ -94,11 +94,11 @@
     <Compile Include="Forms\PrikazZahtjeva.Designer.cs">
       <DependentUpon>PrikazZahtjeva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Recenzija.cs">
+    <Compile Include="Forms\OstavljanjeRecenzija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Recenzija.Designer.cs">
-      <DependentUpon>Recenzija.cs</DependentUpon>
+    <Compile Include="Forms\OstavljanjeRecenzija.Designer.cs">
+      <DependentUpon>OstavljanjeRecenzija.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registracija.cs">
       <SubType>Form</SubType>
@@ -183,8 +183,8 @@
     <EmbeddedResource Include="Forms\PrikazZahtjeva.resx">
       <DependentUpon>PrikazZahtjeva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Recenzija.resx">
-      <DependentUpon>Recenzija.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\OstavljanjeRecenzija.resx">
+      <DependentUpon>OstavljanjeRecenzija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>

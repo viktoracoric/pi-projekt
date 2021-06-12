@@ -36,7 +36,7 @@ namespace reRack.Design.Forms
         {
 
             Teretana teretana = teretanaBindingSource.Current as Teretana;
-            Recenzija recenzija = new Recenzija(teretana);
+            OstavljanjeRecenzija recenzija = new OstavljanjeRecenzija(teretana, prijavljeniKorisnik);
             recenzija.ShowDialog();
         }
     }
