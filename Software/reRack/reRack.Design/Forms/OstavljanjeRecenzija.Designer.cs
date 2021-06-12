@@ -85,6 +85,7 @@ namespace reRack.Design.Forms
             // 
             this.uiTeretana.Location = new System.Drawing.Point(151, 26);
             this.uiTeretana.Name = "uiTeretana";
+            this.uiTeretana.ReadOnly = true;
             this.uiTeretana.Size = new System.Drawing.Size(80, 20);
             this.uiTeretana.TabIndex = 5;
             // 
@@ -100,6 +101,7 @@ namespace reRack.Design.Forms
             // 
             // uiOdustani
             // 
+            this.uiOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.uiOdustani.Location = new System.Drawing.Point(186, 316);
             this.uiOdustani.Name = "uiOdustani";
             this.uiOdustani.Size = new System.Drawing.Size(75, 40);

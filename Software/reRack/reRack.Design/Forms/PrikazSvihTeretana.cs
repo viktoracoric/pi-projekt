@@ -25,7 +25,7 @@ namespace reRack.Design.Forms
         {
             var query = from t in entities.Teretana
                         select t;
-            uiPopisTeretana.DataSource = query.ToList();
+            teretanaBindingSource.DataSource = query.ToList();
         }
 
         private void uiFilterCijena_ValueChanged(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace reRack.Design.Forms
             var query = from t in entities.Teretana
                         where t.cijena_clanstva < uiFilterCijena.Value && t.kvadratura < uiFilterKvadratura.Value
                         select t;
-            uiPopisTeretana.DataSource = query.ToList();
+            teretanaBindingSource.DataSource = query.ToList();
         }
 
         private void uiFilterKvadratura_ValueChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace reRack.Design.Forms
             var query = from t in entities.Teretana
                         where t.cijena_clanstva < uiFilterCijena.Value && t.kvadratura < uiFilterKvadratura.Value
                         select t;
-            uiPopisTeretana.DataSource = query.ToList();
+            teretanaBindingSource.DataSource = query.ToList();
         }
 
         private void uiActionPosaljiZahtjev_Click(object sender, EventArgs e)
@@ -53,6 +53,13 @@ namespace reRack.Design.Forms
         private void uiActionNazad_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void uiActionPrikazTeretane_Click(object sender, EventArgs e)
+        {
+            Teretana teretana = teretanaBindingSource.Current as Teretana;
+            DetaljanPrikazOTeretani detaljanPrikazOTeretani = new DetaljanPrikazOTeretani(teretana);
+            detaljanPrikazOTeretani.ShowDialog();
         }
     }
 }
