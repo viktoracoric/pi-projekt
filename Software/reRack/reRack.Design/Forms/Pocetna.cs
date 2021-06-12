@@ -63,5 +63,11 @@ namespace reRack.Design.Forms
             prikazSvihTeretana.ShowDialog();
             
         }
+
+        private void uiActionUrediPodatkeTeretane_Click(object sender, EventArgs e)
+        {
+            UrediTeretanu urediTeretanu = new UrediTeretanu();
+            urediTeretanu.ShowDialog();
+        }
     }
 }

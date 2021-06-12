@@ -112,6 +112,12 @@
     <Compile Include="Forms\SlanjeZahtjev.Designer.cs">
       <DependentUpon>SlanjeZahtjev.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UrediTeretanu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrediTeretanu.Designer.cs">
+      <DependentUpon>UrediTeretanu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grad.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
