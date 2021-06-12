@@ -12,9 +12,17 @@ namespace reRack.Design.Forms
 {
     public partial class Recenzija : Form
     {
-        public Recenzija()
+        public Teretana selektiranaTeretana;
+
+        public Recenzija(Teretana selektiranaTeretana)
         {
             InitializeComponent();
+            this.selektiranaTeretana = selektiranaTeretana;
+        }
+
+        private void Recenzija_Load(object sender, EventArgs e)
+        {
+            uiTeretana.Text = selektiranaTeretana.naziv;
         }
     }
 }

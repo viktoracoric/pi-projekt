@@ -22,14 +22,21 @@ namespace reRack.Design.Forms
 
         private void MojeTeretane_Load(object sender, EventArgs e)
         {
+            List<Teretana> listaTeretana = new List<Teretana>();
             var query = from c in entities.Clanstvo.Include(cla => cla.Korisnik).Include(cla => cla.Teretana)
                         where c.korisnik_id == prijavljeniKorisnik.id_korisnik select c;
-            dgvMojeTeretane.DataSource = query.ToList();
+            foreach (var item in query)
+            {
+                listaTeretana.Add(item.Teretana);
+            }
+            teretanaBindingSource.DataSource = listaTeretana;
         }
 
         private void btnRecenzija_Click(object sender, EventArgs e)
         {
-            Recenzija recenzija = new Recenzija();
+
+            Teretana teretana = teretanaBindingSource.Current as Teretana;
+            Recenzija recenzija = new Recenzija(teretana);
             recenzija.ShowDialog();
         }
     }
