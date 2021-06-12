@@ -66,7 +66,7 @@ namespace reRack.Design.Forms
 
         private void uiActionUrediPodatkeTeretane_Click(object sender, EventArgs e)
         {
-            UrediTeretanu urediTeretanu = new UrediTeretanu();
+            UrediTeretanu urediTeretanu = new UrediTeretanu(prijavljeniKorisnik);
             urediTeretanu.ShowDialog();
         }
 

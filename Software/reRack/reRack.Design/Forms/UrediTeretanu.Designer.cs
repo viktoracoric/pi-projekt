@@ -45,6 +45,7 @@ namespace reRack.Design.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.uiOdaberiTeretanuLabel = new System.Windows.Forms.Label();
             this.uiIme = new System.Windows.Forms.ComboBox();
+            this.uiObrisiTeretanu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKapacitet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiCijena)).BeginInit();
@@ -72,7 +73,7 @@ namespace reRack.Design.Forms
             // 
             // uiKvadratura
             // 
-            this.uiKvadratura.Location = new System.Drawing.Point(95, 187);
+            this.uiKvadratura.Location = new System.Drawing.Point(117, 187);
             this.uiKvadratura.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -84,7 +85,7 @@ namespace reRack.Design.Forms
             // 
             // uiKapacitet
             // 
-            this.uiKapacitet.Location = new System.Drawing.Point(94, 133);
+            this.uiKapacitet.Location = new System.Drawing.Point(116, 133);
             this.uiKapacitet.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -96,7 +97,7 @@ namespace reRack.Design.Forms
             // 
             // uiCijena
             // 
-            this.uiCijena.Location = new System.Drawing.Point(94, 160);
+            this.uiCijena.Location = new System.Drawing.Point(116, 160);
             this.uiCijena.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -109,7 +110,7 @@ namespace reRack.Design.Forms
             // uiKorisnik
             // 
             this.uiKorisnik.FormattingEnabled = true;
-            this.uiKorisnik.Location = new System.Drawing.Point(93, 50);
+            this.uiKorisnik.Location = new System.Drawing.Point(115, 50);
             this.uiKorisnik.Name = "uiKorisnik";
             this.uiKorisnik.Size = new System.Drawing.Size(121, 21);
             this.uiKorisnik.TabIndex = 14;
@@ -117,14 +118,14 @@ namespace reRack.Design.Forms
             // uiGrad
             // 
             this.uiGrad.FormattingEnabled = true;
-            this.uiGrad.Location = new System.Drawing.Point(94, 78);
+            this.uiGrad.Location = new System.Drawing.Point(116, 78);
             this.uiGrad.Name = "uiGrad";
             this.uiGrad.Size = new System.Drawing.Size(121, 21);
             this.uiGrad.TabIndex = 15;
             // 
             // uiAdresa
             // 
-            this.uiAdresa.Location = new System.Drawing.Point(94, 106);
+            this.uiAdresa.Location = new System.Drawing.Point(116, 106);
             this.uiAdresa.Name = "uiAdresa";
             this.uiAdresa.Size = new System.Drawing.Size(121, 20);
             this.uiAdresa.TabIndex = 12;
@@ -188,24 +189,35 @@ namespace reRack.Design.Forms
             this.uiOdaberiTeretanuLabel.AutoSize = true;
             this.uiOdaberiTeretanuLabel.Location = new System.Drawing.Point(22, 29);
             this.uiOdaberiTeretanuLabel.Name = "uiOdaberiTeretanuLabel";
-            this.uiOdaberiTeretanuLabel.Size = new System.Drawing.Size(69, 13);
+            this.uiOdaberiTeretanuLabel.Size = new System.Drawing.Size(89, 13);
             this.uiOdaberiTeretanuLabel.TabIndex = 11;
-            this.uiOdaberiTeretanuLabel.Text = "Ime teretane:";
+            this.uiOdaberiTeretanuLabel.Text = "Odaberi teretanu:";
             // 
             // uiIme
             // 
             this.uiIme.FormattingEnabled = true;
-            this.uiIme.Location = new System.Drawing.Point(94, 21);
+            this.uiIme.Location = new System.Drawing.Point(116, 21);
             this.uiIme.Name = "uiIme";
             this.uiIme.Size = new System.Drawing.Size(121, 21);
             this.uiIme.TabIndex = 21;
             this.uiIme.SelectedValueChanged += new System.EventHandler(this.uiIme_SelectedValueChanged);
             // 
+            // uiObrisiTeretanu
+            // 
+            this.uiObrisiTeretanu.Location = new System.Drawing.Point(71, 282);
+            this.uiObrisiTeretanu.Name = "uiObrisiTeretanu";
+            this.uiObrisiTeretanu.Size = new System.Drawing.Size(99, 38);
+            this.uiObrisiTeretanu.TabIndex = 23;
+            this.uiObrisiTeretanu.Text = "Obriši teretanu";
+            this.uiObrisiTeretanu.UseVisualStyleBackColor = true;
+            this.uiObrisiTeretanu.Click += new System.EventHandler(this.uiObrisiTeretanu_Click);
+            // 
             // UrediTeretanu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 319);
+            this.ClientSize = new System.Drawing.Size(250, 328);
+            this.Controls.Add(this.uiObrisiTeretanu);
             this.Controls.Add(this.uiIme);
             this.Controls.Add(this.uxActionOdustani);
             this.Controls.Add(this.uxActionSpremi);
@@ -251,5 +263,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label uiOdaberiTeretanuLabel;
         private System.Windows.Forms.ComboBox uiIme;
+        private System.Windows.Forms.Button uiObrisiTeretanu;
     }
 }

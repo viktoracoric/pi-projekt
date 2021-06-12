@@ -13,15 +13,26 @@ namespace reRack.Design.Forms
     public partial class UrediTeretanu : Form
     {
         Entities entities = new Entities();
-        public UrediTeretanu()
+        Korisnik prijavljeniKorisnik = new Korisnik();
+        public UrediTeretanu(Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
+            if(prijavljeniKorisnik.uloga_id < 2)
+            {
+                uiObrisiTeretanu.Hide();
+            }
         }
 
         private void UrediTeretanu_Load(object sender, EventArgs e)
         {
-            var teretane = from t in entities.Teretana
-                           select t;
+                var teretane = from t in entities.Teretana
+                               select t;
+            if(prijavljeniKorisnik.uloga_id == 1)
+            {
+                teretane = teretane.Where(x => x.korisnik_id == prijavljeniKorisnik.id_korisnik);
+                uiKorisnik.Enabled = false;
+            }
             foreach(var item in teretane)
             {
                 uiIme.Items.Add(item);
@@ -47,10 +58,10 @@ namespace reRack.Design.Forms
 
         private void uxActionSpremi_Click(object sender, EventArgs e)
         {
-            var upit = from t in entities.Teretana
-                       where t.id_teretana == uiIme.SelectedIndex
-                       select t;
-            var teretana = upit.FirstOrDefault();
+            int idTer = (uiIme.SelectedItem as Teretana).id_teretana;
+            var teretana = (from t in entities.Teretana
+                       where t.id_teretana == idTer
+                       select t).First();
             teretana.korisnik_id = (uiKorisnik.SelectedItem as Korisnik).id_korisnik;
             teretana.grad_id = (uiGrad.SelectedItem as Grad).id_grad;
             teretana.adresa = uiAdresa.Text;
@@ -59,6 +70,15 @@ namespace reRack.Design.Forms
             teretana.cijena_clanstva = (int)uiCijena.Value;
             entities.SaveChanges();
             MessageBox.Show("Izmjene uspješno spremljene!");
+            Close();
+        }
+
+        private void uiObrisiTeretanu_Click(object sender, EventArgs e)
+        {
+            Teretana obrisiMe = (uiIme.SelectedItem as Teretana);
+            entities.Teretana.Remove(obrisiMe);
+            entities.SaveChanges();
+            MessageBox.Show("Teretana uspješno obrisana!");
             Close();
         }
     }
