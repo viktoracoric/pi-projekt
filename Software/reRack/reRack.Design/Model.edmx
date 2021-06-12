@@ -50,12 +50,12 @@
         </EntityType>
         <EntityType Name="Rezervacija">
           <Key>
-            <PropertyRef Name="korisnik_id" />
-            <PropertyRef Name="teretana_id" />
+            <PropertyRef Name="id_rezervacija" />
           </Key>
           <Property Name="korisnik_id" Type="int" Nullable="false" />
           <Property Name="teretana_id" Type="int" Nullable="false" />
           <Property Name="interval_id" Type="int" Nullable="false" />
+          <Property Name="id_rezervacija" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Teretana">
           <Key>
@@ -388,8 +388,7 @@
         </EntityType>
         <EntityType Name="Rezervacija">
           <Key>
-            <PropertyRef Name="korisnik_id" />
-            <PropertyRef Name="teretana_id" />
+            <PropertyRef Name="id_rezervacija" />
           </Key>
           <Property Name="korisnik_id" Type="Int32" Nullable="false" />
           <Property Name="teretana_id" Type="Int32" Nullable="false" />
@@ -397,6 +396,7 @@
           <NavigationProperty Name="Korisnik" Relationship="Self.Rezervacija_FK_1" FromRole="Rezervacija" ToRole="Korisnik" />
           <NavigationProperty Name="VrInterval" Relationship="Self.Rezervacija_FK" FromRole="Rezervacija" ToRole="VrInterval" />
           <NavigationProperty Name="Teretana" Relationship="Self.Rezervacija_FK_2" FromRole="Rezervacija" ToRole="Teretana" />
+          <Property Name="id_rezervacija" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Teretana">
           <Key>
@@ -730,6 +730,7 @@
           <EntitySetMapping Name="Rezervacija">
             <EntityTypeMapping TypeName="Model.Rezervacija">
               <MappingFragment StoreEntitySet="Rezervacija">
+                <ScalarProperty Name="id_rezervacija" ColumnName="id_rezervacija" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="teretana_id" ColumnName="teretana_id" />
                 <ScalarProperty Name="interval_id" ColumnName="interval_id" />

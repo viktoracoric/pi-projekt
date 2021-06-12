@@ -39,7 +39,6 @@ namespace reRack.Design
         public virtual ICollection<Recenzija> Recenzija { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rezervacija> Rezervacija { get; set; }
-
         public override string ToString()
         {
             return naziv;

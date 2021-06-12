@@ -41,5 +41,23 @@ namespace reRack.Design.Forms
             OstavljanjeRecenzija recenzija = new OstavljanjeRecenzija(teretana, prijavljeniKorisnik);
             recenzija.ShowDialog();
         }
+
+        private void uiRezerviraj_Click(object sender, EventArgs e)
+        {
+            Rezervacija rezervacija = new Rezervacija();
+
+            rezervacija.interval_id = (uiTermin.SelectedItem as VrInterval).id_interval;
+            rezervacija.korisnik_id = prijavljeniKorisnik.id_korisnik;
+            rezervacija.teretana_id = (teretanaBindingSource.Current as Teretana).id_teretana;
+            entities.Rezervacija.Add(rezervacija);
+           // MessageBox.Show("Uspjeh");
+            entities.SaveChanges();
+        }
+
+        private void uxActionPrikazMojihTermina_Click(object sender, EventArgs e)
+        {
+            MojiTermini mojiTermini = new MojiTermini(prijavljeniKorisnik);
+            mojiTermini.ShowDialog();
+        }
     }
 }

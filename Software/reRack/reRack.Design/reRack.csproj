@@ -76,6 +76,12 @@
     <Compile Include="Forms\MojeTeretane.Designer.cs">
       <DependentUpon>MojeTeretane.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MojiTermini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MojiTermini.Designer.cs">
+      <DependentUpon>MojiTermini.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pocetna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="Forms\MojeTeretane.resx">
       <DependentUpon>MojeTeretane.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MojiTermini.resx">
+      <DependentUpon>MojiTermini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pocetna.resx">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +234,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Recenzija.datasource" />
+    <None Include="Properties\DataSources\Rezervacija.datasource" />
     <None Include="Properties\DataSources\Teretana.datasource" />
     <None Include="Properties\DataSources\Zahtjev.datasource" />
     <None Include="Properties\Settings.settings">

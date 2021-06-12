@@ -17,6 +17,7 @@ namespace reRack.Design
         public int korisnik_id { get; set; }
         public int teretana_id { get; set; }
         public int interval_id { get; set; }
+        public int id_rezervacija { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
         public virtual VrInterval VrInterval { get; set; }
