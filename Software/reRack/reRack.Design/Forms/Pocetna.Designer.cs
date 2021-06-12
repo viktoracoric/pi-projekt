@@ -49,6 +49,7 @@ namespace reRack.Design.Forms
             this.uiActionDodajVlasnika.TabIndex = 13;
             this.uiActionDodajVlasnika.Text = "Pregled zahtjeva";
             this.uiActionDodajVlasnika.UseVisualStyleBackColor = true;
+            this.uiActionDodajVlasnika.Click += new System.EventHandler(this.uiActionDodajVlasnika_Click);
             // 
             // uiActionDodajTeretanu
             // 

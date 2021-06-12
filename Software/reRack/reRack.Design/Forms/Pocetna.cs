@@ -69,5 +69,11 @@ namespace reRack.Design.Forms
             UrediTeretanu urediTeretanu = new UrediTeretanu();
             urediTeretanu.ShowDialog();
         }
+
+        private void uiActionDodajVlasnika_Click(object sender, EventArgs e)
+        {
+            PrikazZahtjeva prikazZahtjeva = new PrikazZahtjeva();
+            prikazZahtjeva.ShowDialog();
+        }
     }
 }

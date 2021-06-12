@@ -120,6 +120,11 @@ namespace reRack.Design.Forms
             // uiCijena
             // 
             this.uiCijena.Location = new System.Drawing.Point(113, 151);
+            this.uiCijena.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.uiCijena.Name = "uiCijena";
             this.uiCijena.Size = new System.Drawing.Size(120, 20);
             this.uiCijena.TabIndex = 3;
@@ -127,6 +132,11 @@ namespace reRack.Design.Forms
             // uiKvadratura
             // 
             this.uiKvadratura.Location = new System.Drawing.Point(114, 178);
+            this.uiKvadratura.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.uiKvadratura.Name = "uiKvadratura";
             this.uiKvadratura.Size = new System.Drawing.Size(120, 20);
             this.uiKvadratura.TabIndex = 3;
@@ -163,6 +173,11 @@ namespace reRack.Design.Forms
             // uiKapacitet
             // 
             this.uiKapacitet.Location = new System.Drawing.Point(113, 124);
+            this.uiKapacitet.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.uiKapacitet.Name = "uiKapacitet";
             this.uiKapacitet.Size = new System.Drawing.Size(120, 20);
             this.uiKapacitet.TabIndex = 3;
