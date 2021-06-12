@@ -30,6 +30,8 @@ namespace reRack.Design.Forms
                 listaTeretana.Add(item.Teretana);
             }
             teretanaBindingSource.DataSource = listaTeretana;
+
+            uiTermin.DataSource = entities.VrInterval.ToList();
         }
 
         private void btnRecenzija_Click(object sender, EventArgs e)

@@ -31,8 +31,6 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dgvMojeTeretane = new System.Windows.Forms.DataGridView();
-            this.btnRecenzija = new System.Windows.Forms.Button();
-            this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idteretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,11 @@ namespace reRack.Design.Forms
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRecenzija = new System.Windows.Forms.Button();
+            this.uiRezerviraj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.uiTermin = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMojeTeretane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -76,20 +79,6 @@ namespace reRack.Design.Forms
             this.dgvMojeTeretane.ReadOnly = true;
             this.dgvMojeTeretane.Size = new System.Drawing.Size(426, 390);
             this.dgvMojeTeretane.TabIndex = 0;
-            // 
-            // btnRecenzija
-            // 
-            this.btnRecenzija.Location = new System.Drawing.Point(490, 13);
-            this.btnRecenzija.Name = "btnRecenzija";
-            this.btnRecenzija.Size = new System.Drawing.Size(115, 48);
-            this.btnRecenzija.TabIndex = 1;
-            this.btnRecenzija.Text = "Ostavi recenziju";
-            this.btnRecenzija.UseVisualStyleBackColor = true;
-            this.btnRecenzija.Click += new System.EventHandler(this.btnRecenzija_Click);
-            // 
-            // teretanaBindingSource
-            // 
-            this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
             // 
             // idteretanaDataGridViewTextBoxColumn
             // 
@@ -182,11 +171,54 @@ namespace reRack.Design.Forms
             this.rezervacijaDataGridViewTextBoxColumn.Name = "rezervacijaDataGridViewTextBoxColumn";
             this.rezervacijaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // teretanaBindingSource
+            // 
+            this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
+            // 
+            // btnRecenzija
+            // 
+            this.btnRecenzija.Location = new System.Drawing.Point(490, 167);
+            this.btnRecenzija.Name = "btnRecenzija";
+            this.btnRecenzija.Size = new System.Drawing.Size(121, 48);
+            this.btnRecenzija.TabIndex = 1;
+            this.btnRecenzija.Text = "Ostavi recenziju";
+            this.btnRecenzija.UseVisualStyleBackColor = true;
+            this.btnRecenzija.Click += new System.EventHandler(this.btnRecenzija_Click);
+            // 
+            // uiRezerviraj
+            // 
+            this.uiRezerviraj.Location = new System.Drawing.Point(490, 91);
+            this.uiRezerviraj.Name = "uiRezerviraj";
+            this.uiRezerviraj.Size = new System.Drawing.Size(121, 48);
+            this.uiRezerviraj.TabIndex = 2;
+            this.uiRezerviraj.Text = "Rezerviraj termin";
+            this.uiRezerviraj.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(487, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Termini:";
+            // 
+            // uiTermin
+            // 
+            this.uiTermin.FormattingEnabled = true;
+            this.uiTermin.Location = new System.Drawing.Point(490, 29);
+            this.uiTermin.Name = "uiTermin";
+            this.uiTermin.Size = new System.Drawing.Size(121, 21);
+            this.uiTermin.TabIndex = 4;
+            // 
             // MojeTeretane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 432);
+            this.Controls.Add(this.uiTermin);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.uiRezerviraj);
             this.Controls.Add(this.btnRecenzija);
             this.Controls.Add(this.dgvMojeTeretane);
             this.Name = "MojeTeretane";
@@ -195,6 +227,7 @@ namespace reRack.Design.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dgvMojeTeretane)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,5 +249,8 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource teretanaBindingSource;
+        private System.Windows.Forms.Button uiRezerviraj;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox uiTermin;
     }
 }

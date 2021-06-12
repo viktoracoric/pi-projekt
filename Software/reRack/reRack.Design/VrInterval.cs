@@ -26,5 +26,10 @@ namespace reRack.Design
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rezervacija> Rezervacija { get; set; }
+
+        public override string ToString()
+        {
+            return vrijeme_pocetak + "-" + vrijeme_kraj;
+        }
     }
 }
