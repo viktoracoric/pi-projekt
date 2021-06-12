@@ -58,6 +58,12 @@
     <Compile Include="Clanstvo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DetaljanPrikazOTeretani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetaljanPrikazOTeretani.Designer.cs">
+      <DependentUpon>DetaljanPrikazOTeretani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DodajTeretanu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <Compile Include="Zahtjev.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DetaljanPrikazOTeretani.resx">
+      <DependentUpon>DetaljanPrikazOTeretani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DodajTeretanu.resx">
       <DependentUpon>DodajTeretanu.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Recenzija.datasource" />
     <None Include="Properties\DataSources\Teretana.datasource" />
     <None Include="Properties\DataSources\Zahtjev.datasource" />
     <None Include="Properties\Settings.settings">

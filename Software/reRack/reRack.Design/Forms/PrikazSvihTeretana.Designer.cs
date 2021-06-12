@@ -86,6 +86,7 @@ namespace reRack.Design.Forms
             this.uiActionPrikazTeretane.TabIndex = 13;
             this.uiActionPrikazTeretane.Text = "Prikaz teretane";
             this.uiActionPrikazTeretane.UseVisualStyleBackColor = true;
+            this.uiActionPrikazTeretane.Click += new System.EventHandler(this.uiActionPrikazTeretane_Click);
             // 
             // uiFilterKvadraturaLabel
             // 
