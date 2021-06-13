@@ -39,6 +39,7 @@ namespace reRack.Design
             this.uiKorIme = new System.Windows.Forms.TextBox();
             this.uxKorImeLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.prijavaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +103,7 @@ namespace reRack.Design
             // 
             this.uiKorIme.Location = new System.Drawing.Point(161, 226);
             this.uiKorIme.Name = "uiKorIme";
+            this.prijavaHelpProvider.SetShowHelp(this.uiKorIme, false);
             this.uiKorIme.Size = new System.Drawing.Size(133, 20);
             this.uiKorIme.TabIndex = 9;
             // 
@@ -120,10 +122,16 @@ namespace reRack.Design
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(34, 64);
             this.pictureBox1.Name = "pictureBox1";
+            this.prijavaHelpProvider.SetShowHelp(this.pictureBox1, false);
             this.pictureBox1.Size = new System.Drawing.Size(404, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // prijavaHelpProvider
+            // 
+            this.prijavaHelpProvider.HelpNamespace = "C:\\Users\\Viktor\\source\\repos\\pi21-vcoric-kculina-jmatokovi\\Software\\reRack\\reRack" +
+    ".Design\\reRack.chm";
             // 
             // Prijava
             // 
@@ -140,7 +148,11 @@ namespace reRack.Design
             this.Controls.Add(this.uiKorIme);
             this.Controls.Add(this.uxKorImeLabel);
             this.Controls.Add(this.uxPrijavaLabel);
+            this.prijavaHelpProvider.SetHelpKeyword(this, "prijava.htm");
+            this.prijavaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.prijavaHelpProvider.SetHelpString(this, "prijava.htm");
             this.Name = "Prijava";
+            this.prijavaHelpProvider.SetShowHelp(this, true);
             this.Text = "Prijava";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -159,6 +171,7 @@ namespace reRack.Design
         private System.Windows.Forms.TextBox uiKorIme;
         private System.Windows.Forms.Label uxKorImeLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.HelpProvider prijavaHelpProvider;
     }
 }
 

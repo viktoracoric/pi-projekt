@@ -31,7 +31,6 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.uxActionObrisi = new System.Windows.Forms.Button();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.intervalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,8 @@ namespace reRack.Design.Forms
             this.vrIntervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uxActionObrisi = new System.Windows.Forms.Button();
+            this.mojiTerminiHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,16 +63,6 @@ namespace reRack.Design.Forms
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(245, 170);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // uxActionObrisi
-            // 
-            this.uxActionObrisi.Location = new System.Drawing.Point(117, 202);
-            this.uxActionObrisi.Name = "uxActionObrisi";
-            this.uxActionObrisi.Size = new System.Drawing.Size(140, 50);
-            this.uxActionObrisi.TabIndex = 1;
-            this.uxActionObrisi.Text = "Obriši rezervirani termin";
-            this.uxActionObrisi.UseVisualStyleBackColor = true;
-            this.uxActionObrisi.Click += new System.EventHandler(this.uxActionObrisi_Click);
             // 
             // korisnikidDataGridViewTextBoxColumn
             // 
@@ -123,6 +114,20 @@ namespace reRack.Design.Forms
             // 
             this.rezervacijaBindingSource.DataSource = typeof(reRack.Design.Rezervacija);
             // 
+            // uxActionObrisi
+            // 
+            this.uxActionObrisi.Location = new System.Drawing.Point(117, 202);
+            this.uxActionObrisi.Name = "uxActionObrisi";
+            this.uxActionObrisi.Size = new System.Drawing.Size(140, 50);
+            this.uxActionObrisi.TabIndex = 1;
+            this.uxActionObrisi.Text = "Obriši rezervirani termin";
+            this.uxActionObrisi.UseVisualStyleBackColor = true;
+            this.uxActionObrisi.Click += new System.EventHandler(this.uxActionObrisi_Click);
+            // 
+            // mojiTerminiHelpProvider
+            // 
+            this.mojiTerminiHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // MojiTermini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,8 +135,12 @@ namespace reRack.Design.Forms
             this.ClientSize = new System.Drawing.Size(386, 285);
             this.Controls.Add(this.uxActionObrisi);
             this.Controls.Add(this.dataGridView1);
+            this.mojiTerminiHelpProvider.SetHelpKeyword(this, "mojiTermini.htm");
+            this.mojiTerminiHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.mojiTerminiHelpProvider.SetHelpString(this, "mojiTermini.htm");
             this.Name = "MojiTermini";
-            this.Text = "Moji Termini";
+            this.mojiTerminiHelpProvider.SetShowHelp(this, true);
+            this.Text = "Moji termini";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -149,5 +158,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrIntervalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teretanaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider mojiTerminiHelpProvider;
     }
 }

@@ -38,6 +38,7 @@ namespace reRack.Design.Forms
             this.uiActionMojeTeretane = new System.Windows.Forms.Button();
             this.uiDobrodosli = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pocetnaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +123,10 @@ namespace reRack.Design.Forms
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // pocetnaHelpProvider
+            // 
+            this.pocetnaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // Pocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,7 +140,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiActionPrikazTeretana);
             this.Controls.Add(this.uiActionMojeTeretane);
             this.Controls.Add(this.uiDobrodosli);
+            this.pocetnaHelpProvider.SetHelpKeyword(this, "pocetna.htm");
+            this.pocetnaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.pocetnaHelpProvider.SetHelpString(this, "pocetna.htm");
             this.Name = "Pocetna";
+            this.pocetnaHelpProvider.SetShowHelp(this, true);
             this.Text = "Pocetna";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -153,5 +162,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Button uiActionMojeTeretane;
         private System.Windows.Forms.Label uiDobrodosli;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.HelpProvider pocetnaHelpProvider;
     }
 }

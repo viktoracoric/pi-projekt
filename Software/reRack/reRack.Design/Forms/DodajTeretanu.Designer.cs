@@ -45,6 +45,7 @@ namespace reRack.Design.Forms
             this.uiKapacitet = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.uiKorisnik = new System.Windows.Forms.ComboBox();
+            this.dodajTeretanuHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKapacitet)).BeginInit();
@@ -199,6 +200,10 @@ namespace reRack.Design.Forms
             this.uiKorisnik.Size = new System.Drawing.Size(121, 21);
             this.uiKorisnik.TabIndex = 2;
             // 
+            // dodajTeretanuHelpProvider
+            // 
+            this.dodajTeretanuHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // DodajTeretanu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,8 +225,12 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiIme);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.dodajTeretanuHelpProvider.SetHelpKeyword(this, "dodajTeretanu.htm");
+            this.dodajTeretanuHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.dodajTeretanuHelpProvider.SetHelpString(this, "dodajTeretanu.htm");
             this.Name = "DodajTeretanu";
-            this.Text = "DodajTeretanu";
+            this.dodajTeretanuHelpProvider.SetShowHelp(this, true);
+            this.Text = "Dodaj teretanu";
             this.Load += new System.EventHandler(this.DodajTeretanu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiCijena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).EndInit();
@@ -249,5 +258,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.NumericUpDown uiKapacitet;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox uiKorisnik;
+        private System.Windows.Forms.HelpProvider dodajTeretanuHelpProvider;
     }
 }

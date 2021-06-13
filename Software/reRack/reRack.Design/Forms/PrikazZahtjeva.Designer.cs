@@ -31,9 +31,6 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.uiPopisZahtjeva = new System.Windows.Forms.DataGridView();
-            this.zahtjevBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uxActionOdustani = new System.Windows.Forms.Button();
-            this.uxActionUpravljaj = new System.Windows.Forms.Button();
             this.idzahtjevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,10 @@ namespace reRack.Design.Forms
             this.kvadraturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaclanstvaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zahtjevBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uxActionOdustani = new System.Windows.Forms.Button();
+            this.uxActionUpravljaj = new System.Windows.Forms.Button();
+            this.prikazZahtjevaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisZahtjeva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zahtjevBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -71,30 +72,6 @@ namespace reRack.Design.Forms
             this.uiPopisZahtjeva.ReadOnly = true;
             this.uiPopisZahtjeva.Size = new System.Drawing.Size(596, 174);
             this.uiPopisZahtjeva.TabIndex = 0;
-            // 
-            // zahtjevBindingSource
-            // 
-            this.zahtjevBindingSource.DataSource = typeof(reRack.Design.Zahtjev);
-            // 
-            // uxActionOdustani
-            // 
-            this.uxActionOdustani.Location = new System.Drawing.Point(165, 250);
-            this.uxActionOdustani.Name = "uxActionOdustani";
-            this.uxActionOdustani.Size = new System.Drawing.Size(99, 35);
-            this.uxActionOdustani.TabIndex = 1;
-            this.uxActionOdustani.Text = "Odustani";
-            this.uxActionOdustani.UseVisualStyleBackColor = true;
-            this.uxActionOdustani.Click += new System.EventHandler(this.uxActionOdustani_Click);
-            // 
-            // uxActionUpravljaj
-            // 
-            this.uxActionUpravljaj.Location = new System.Drawing.Point(290, 250);
-            this.uxActionUpravljaj.Name = "uxActionUpravljaj";
-            this.uxActionUpravljaj.Size = new System.Drawing.Size(99, 35);
-            this.uxActionUpravljaj.TabIndex = 1;
-            this.uxActionUpravljaj.Text = "Upravljaj zahtjevom";
-            this.uxActionUpravljaj.UseVisualStyleBackColor = true;
-            this.uxActionUpravljaj.Click += new System.EventHandler(this.uxActionUpravljaj_Click);
             // 
             // idzahtjevDataGridViewTextBoxColumn
             // 
@@ -169,6 +146,34 @@ namespace reRack.Design.Forms
             this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
             this.korisnikidDataGridViewTextBoxColumn.Visible = false;
             // 
+            // zahtjevBindingSource
+            // 
+            this.zahtjevBindingSource.DataSource = typeof(reRack.Design.Zahtjev);
+            // 
+            // uxActionOdustani
+            // 
+            this.uxActionOdustani.Location = new System.Drawing.Point(165, 250);
+            this.uxActionOdustani.Name = "uxActionOdustani";
+            this.uxActionOdustani.Size = new System.Drawing.Size(99, 35);
+            this.uxActionOdustani.TabIndex = 1;
+            this.uxActionOdustani.Text = "Odustani";
+            this.uxActionOdustani.UseVisualStyleBackColor = true;
+            this.uxActionOdustani.Click += new System.EventHandler(this.uxActionOdustani_Click);
+            // 
+            // uxActionUpravljaj
+            // 
+            this.uxActionUpravljaj.Location = new System.Drawing.Point(290, 250);
+            this.uxActionUpravljaj.Name = "uxActionUpravljaj";
+            this.uxActionUpravljaj.Size = new System.Drawing.Size(99, 35);
+            this.uxActionUpravljaj.TabIndex = 1;
+            this.uxActionUpravljaj.Text = "Upravljaj zahtjevom";
+            this.uxActionUpravljaj.UseVisualStyleBackColor = true;
+            this.uxActionUpravljaj.Click += new System.EventHandler(this.uxActionUpravljaj_Click);
+            // 
+            // prikazZahtjevaHelpProvider
+            // 
+            this.prikazZahtjevaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // PrikazZahtjeva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +182,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uxActionUpravljaj);
             this.Controls.Add(this.uxActionOdustani);
             this.Controls.Add(this.uiPopisZahtjeva);
+            this.prikazZahtjevaHelpProvider.SetHelpKeyword(this, "prikazZahtjeva.htm");
+            this.prikazZahtjevaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.prikazZahtjevaHelpProvider.SetHelpString(this, "prikazZahtjeva.htm");
             this.Name = "PrikazZahtjeva";
+            this.prikazZahtjevaHelpProvider.SetShowHelp(this, true);
             this.Text = "Pregled zahtjeva";
             this.Load += new System.EventHandler(this.PrikazZahtjeva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisZahtjeva)).EndInit();
@@ -202,5 +211,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn kvadraturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaclanstvaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider prikazZahtjevaHelpProvider;
     }
 }

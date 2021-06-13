@@ -43,6 +43,7 @@ namespace reRack.Design.Forms
             this.uiCijena = new System.Windows.Forms.TextBox();
             this.uxActionOdustani = new System.Windows.Forms.Button();
             this.uxActionSpremi = new System.Windows.Forms.Button();
+            this.slanjeZahtjevaHelpProvider = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -162,7 +163,11 @@ namespace reRack.Design.Forms
             this.uxActionSpremi.UseVisualStyleBackColor = true;
             this.uxActionSpremi.Click += new System.EventHandler(this.uxActionSpremi_Click);
             // 
-            // Zahtjev
+            // slanjeZahtjevaHelpProvider
+            // 
+            this.slanjeZahtjevaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
+            // SlanjeZahtjev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +186,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.uiAdresa);
             this.Controls.Add(this.label1);
-            this.Name = "Zahtjev";
+            this.slanjeZahtjevaHelpProvider.SetHelpKeyword(this, "slanjeZahtjeva.htm");
+            this.slanjeZahtjevaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.slanjeZahtjevaHelpProvider.SetHelpString(this, "slanjeZahtjeva.htm");
+            this.Name = "SlanjeZahtjev";
+            this.slanjeZahtjevaHelpProvider.SetShowHelp(this, true);
             this.Text = "Zahtjev";
             this.Load += new System.EventHandler(this.Zahtjev_Load);
             this.ResumeLayout(false);
@@ -205,5 +214,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiCijena;
         private System.Windows.Forms.Button uxActionOdustani;
         private System.Windows.Forms.Button uxActionSpremi;
+        private System.Windows.Forms.HelpProvider slanjeZahtjevaHelpProvider;
     }
 }

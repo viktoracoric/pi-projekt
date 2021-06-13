@@ -45,6 +45,7 @@ namespace reRack.Design.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.potvrdiBtn = new System.Windows.Forms.Button();
             this.odustaniBtn = new System.Windows.Forms.Button();
+            this.urediPodatkeHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +178,10 @@ namespace reRack.Design.Forms
             this.odustaniBtn.UseVisualStyleBackColor = true;
             this.odustaniBtn.Click += new System.EventHandler(this.odustaniBtn_Click);
             // 
+            // urediPodatkeHelpProvider
+            // 
+            this.urediPodatkeHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // UrediPodatke
             // 
             this.AcceptButton = this.potvrdiBtn;
@@ -199,7 +204,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiLozinkaLabel);
             this.Controls.Add(this.uiEmailEdit);
             this.Controls.Add(this.uiEmailLabel);
+            this.urediPodatkeHelpProvider.SetHelpKeyword(this, "urediPodatke.htm");
+            this.urediPodatkeHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.urediPodatkeHelpProvider.SetHelpString(this, "urediPodatke.htm");
             this.Name = "UrediPodatke";
+            this.urediPodatkeHelpProvider.SetShowHelp(this, true);
             this.Text = "Uredi Podatke";
             this.Load += new System.EventHandler(this.UrediPodatke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -225,5 +234,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button potvrdiBtn;
         private System.Windows.Forms.Button odustaniBtn;
+        private System.Windows.Forms.HelpProvider urediPodatkeHelpProvider;
     }
 }

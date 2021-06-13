@@ -53,6 +53,7 @@ namespace reRack.Design.Forms
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiUclaniSe = new System.Windows.Forms.Button();
+            this.prikazSvihTeretanaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPopisTeretana)).BeginInit();
@@ -282,6 +283,10 @@ namespace reRack.Design.Forms
             this.uiUclaniSe.UseVisualStyleBackColor = true;
             this.uiUclaniSe.Click += new System.EventHandler(this.uiUclaniSe_Click);
             // 
+            // prikazSvihTeretanaHelpProvider
+            // 
+            this.prikazSvihTeretanaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // PrikazSvihTeretana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,7 +301,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiFilterCijena);
             this.Controls.Add(this.uiFilterKvadratura);
             this.Controls.Add(this.uiPopisTeretana);
+            this.prikazSvihTeretanaHelpProvider.SetHelpKeyword(this, "prikazSvihTeretana.htm");
+            this.prikazSvihTeretanaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.prikazSvihTeretanaHelpProvider.SetHelpString(this, "prikazSvihTeretana.htm");
             this.Name = "PrikazSvihTeretana";
+            this.prikazSvihTeretanaHelpProvider.SetShowHelp(this, true);
             this.Text = "Prikaz svih teretana";
             this.Load += new System.EventHandler(this.PrikazSvihTeretana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).EndInit();
@@ -333,5 +342,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button uiUclaniSe;
+        private System.Windows.Forms.HelpProvider prikazSvihTeretanaHelpProvider;
     }
 }

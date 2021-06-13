@@ -46,6 +46,7 @@ namespace reRack.Design.Forms
             this.uiOdaberiTeretanuLabel = new System.Windows.Forms.Label();
             this.uiIme = new System.Windows.Forms.ComboBox();
             this.uiObrisiTeretanu = new System.Windows.Forms.Button();
+            this.urediTeretanuHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKapacitet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiCijena)).BeginInit();
@@ -212,6 +213,10 @@ namespace reRack.Design.Forms
             this.uiObrisiTeretanu.UseVisualStyleBackColor = true;
             this.uiObrisiTeretanu.Click += new System.EventHandler(this.uiObrisiTeretanu_Click);
             // 
+            // urediTeretanuHelpProvider
+            // 
+            this.urediTeretanuHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // UrediTeretanu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +239,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiOdaberiTeretanuLabel);
+            this.urediTeretanuHelpProvider.SetHelpKeyword(this, "urediTeretanu.htm");
+            this.urediTeretanuHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.urediTeretanuHelpProvider.SetHelpString(this, "urediTeretanu.htm");
             this.Name = "UrediTeretanu";
+            this.urediTeretanuHelpProvider.SetShowHelp(this, true);
             this.Text = "Uredi Teretanu";
             this.Load += new System.EventHandler(this.UrediTeretanu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).EndInit();
@@ -264,5 +273,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label uiOdaberiTeretanuLabel;
         private System.Windows.Forms.ComboBox uiIme;
         private System.Windows.Forms.Button uiObrisiTeretanu;
+        private System.Windows.Forms.HelpProvider urediTeretanuHelpProvider;
     }
 }

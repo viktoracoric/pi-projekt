@@ -45,7 +45,6 @@ namespace reRack.Design.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.uiCijena = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.recenzijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idrecenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,8 @@ namespace reRack.Design.Forms
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocjenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recenzijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detaljiTeretanaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recenzijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -197,10 +198,6 @@ namespace reRack.Design.Forms
             this.dataGridView1.Size = new System.Drawing.Size(337, 243);
             this.dataGridView1.TabIndex = 2;
             // 
-            // recenzijaBindingSource
-            // 
-            this.recenzijaBindingSource.DataSource = typeof(reRack.Design.Recenzija);
-            // 
             // idrecenzijaDataGridViewTextBoxColumn
             // 
             this.idrecenzijaDataGridViewTextBoxColumn.DataPropertyName = "id_recenzija";
@@ -254,6 +251,14 @@ namespace reRack.Design.Forms
             this.komentarDataGridViewTextBoxColumn.Name = "komentarDataGridViewTextBoxColumn";
             this.komentarDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // recenzijaBindingSource
+            // 
+            this.recenzijaBindingSource.DataSource = typeof(reRack.Design.Recenzija);
+            // 
+            // detaljiTeretanaHelpProvider
+            // 
+            this.detaljiTeretanaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // DetaljanPrikazOTeretani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,8 +279,12 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uiVlasnik);
             this.Controls.Add(this.Vlasnik);
+            this.detaljiTeretanaHelpProvider.SetHelpKeyword(this, "detaljanPrikazTeretane.htm");
+            this.detaljiTeretanaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.detaljiTeretanaHelpProvider.SetHelpString(this, "detaljanPrikazTeretane.htm");
             this.Name = "DetaljanPrikazOTeretani";
-            this.Text = "Detaljan Prikaz O Teretani";
+            this.detaljiTeretanaHelpProvider.SetShowHelp(this, true);
+            this.Text = "Detaljan prikaz o teretani";
             this.Load += new System.EventHandler(this.DetaljanPrikazOTeretani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recenzijaBindingSource)).EndInit();
@@ -309,5 +318,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn ocjenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn komentarDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource recenzijaBindingSource;
+        private System.Windows.Forms.HelpProvider detaljiTeretanaHelpProvider;
     }
 }

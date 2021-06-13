@@ -47,6 +47,7 @@ namespace reRack.Design.Forms
             this.uiEmailLabel = new System.Windows.Forms.Label();
             this.uiRegistracijaLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.registracijaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,6 +197,10 @@ namespace reRack.Design.Forms
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
+            // registracijaHelpProvider
+            // 
+            this.registracijaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // Registracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +223,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiEmail);
             this.Controls.Add(this.uiEmailLabel);
             this.Controls.Add(this.uiRegistracijaLabel);
+            this.registracijaHelpProvider.SetHelpKeyword(this, "registracija.htm");
+            this.registracijaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.registracijaHelpProvider.SetHelpString(this, "registracija.htm");
             this.Name = "Registracija";
+            this.registracijaHelpProvider.SetShowHelp(this, true);
             this.Text = "Registracija";
             this.Load += new System.EventHandler(this.Registracija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -246,5 +255,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label uiEmailLabel;
         private System.Windows.Forms.Label uiRegistracijaLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.HelpProvider registracijaHelpProvider;
     }
 }

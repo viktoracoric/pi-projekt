@@ -37,6 +37,7 @@ namespace reRack.Design.Forms
             this.uiTeretana = new System.Windows.Forms.TextBox();
             this.uiDodaj = new System.Windows.Forms.Button();
             this.uiOdustani = new System.Windows.Forms.Button();
+            this.recenzijaHelpProvider = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -110,6 +111,10 @@ namespace reRack.Design.Forms
             this.uiOdustani.UseVisualStyleBackColor = true;
             this.uiOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
             // 
+            // recenzijaHelpProvider
+            // 
+            this.recenzijaHelpProvider.HelpNamespace = "reRack.chm";
+            // 
             // OstavljanjeRecenzija
             // 
             this.AcceptButton = this.uiDodaj;
@@ -125,7 +130,11 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.uiOcjena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.recenzijaHelpProvider.SetHelpKeyword(this, "ostavljanjeRecenzija.htm");
+            this.recenzijaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.recenzijaHelpProvider.SetHelpString(this, "ostavljanjeRecenzija.htm");
             this.Name = "OstavljanjeRecenzija";
+            this.recenzijaHelpProvider.SetShowHelp(this, true);
             this.Text = "Recenzija";
             this.Load += new System.EventHandler(this.Recenzija_Load);
             this.ResumeLayout(false);
@@ -143,5 +152,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiTeretana;
         private System.Windows.Forms.Button uiDodaj;
         private System.Windows.Forms.Button uiOdustani;
+        private System.Windows.Forms.HelpProvider recenzijaHelpProvider;
     }
 }
