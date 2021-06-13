@@ -29,10 +29,24 @@ namespace reRack.Design.Forms
 
         private void uxActionObrisi_Click(object sender, EventArgs e)
         {
-            Rezervacija rezervacija = rezervacijaBindingSource.Current as Rezervacija;
-
-            entities.Rezervacija.Remove(rezervacija);
-            entities.SaveChanges();
+            try
+            {
+                if(rezervacijaBindingSource.Current != null)
+                {
+                    Rezervacija rezervacija = rezervacijaBindingSource.Current as Rezervacija;
+                    entities.Rezervacija.Remove(rezervacija);
+                    entities.SaveChanges();
+                }
+                else
+                {
+                    throw new DataException("Nijedan termin nije odabran!");
+                }
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
+            
 
             var query = from r in entities.Rezervacija
                         where r.korisnik_id == prijavljeniKorisnik.id_korisnik

@@ -67,35 +67,42 @@ namespace reRack.Design.Forms
             try
             {
                 Teretana teretana = teretanaBindingSource.Current as Teretana;
-                Clanstvo clanstvo = new Clanstvo();
-                if (prijavljeniKorisnik.raspoloziva_sredstva > teretana.cijena_clanstva)
+                if (teretana.Clanstvo.Where(x=>prijavljeniKorisnik.id_korisnik == x.korisnik_id).Count() == 0)
                 {
-                    var upit = from k in entities.Korisnik
-                               select k;
-                    foreach (var item in upit)
+                    Clanstvo clanstvo = new Clanstvo();
+                    if (prijavljeniKorisnik.raspoloziva_sredstva > teretana.cijena_clanstva)
                     {
-                        if (item.id_korisnik == prijavljeniKorisnik.id_korisnik)
+                        var upit = from k in entities.Korisnik
+                                   select k;
+                        foreach (var item in upit)
                         {
-                            item.raspoloziva_sredstva = prijavljeniKorisnik.raspoloziva_sredstva - teretana.cijena_clanstva;
+                            if (item.id_korisnik == prijavljeniKorisnik.id_korisnik)
+                            {
+                                item.raspoloziva_sredstva = prijavljeniKorisnik.raspoloziva_sredstva - teretana.cijena_clanstva;
+                            }
                         }
-                    }
-                    clanstvo.korisnik_id = prijavljeniKorisnik.id_korisnik;
-                    clanstvo.teretana_id = teretana.id_teretana;
-                    clanstvo.datum_pocetak = DateTime.Now;
-                    clanstvo.datum_kraj = DateTime.Now.AddDays(30);
+                        clanstvo.korisnik_id = prijavljeniKorisnik.id_korisnik;
+                        clanstvo.teretana_id = teretana.id_teretana;
+                        clanstvo.datum_pocetak = DateTime.Now;
+                        clanstvo.datum_kraj = DateTime.Now.AddDays(30);
 
-                    entities.Clanstvo.Add(clanstvo);
-                    entities.SaveChanges();
-                    MessageBox.Show("Cestitamo, uspjesno ste se uclanili u teretanu, vidimo se");
+                        entities.Clanstvo.Add(clanstvo);
+                        entities.SaveChanges();
+                        MessageBox.Show("Cestitamo, uspjesno ste se uclanili u teretanu, vidimo se");
+                    }
+                    else
+                    {
+                        throw new DataException("Nemate dovoljno raspolozivih sredstava");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Nemate dovoljno raspolozivih sredstava");
+                    throw new DataException("Već ste član ove teretane!");
                 }
             }
-            catch (Exception ex)
+            catch (DataException ex)
             {
-                MessageBox.Show("Već ste član ove teretane");
+                MessageBox.Show(ex.Poruka);
             }
 
         }

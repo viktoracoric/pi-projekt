@@ -50,14 +50,33 @@ namespace reRack.Design.Forms
                        where k.id_korisnik == prijavljeniKorisnik.id_korisnik 
                        select k;
             var korisnik = upit.Single();
-            korisnik.ime = uiImeEdit.Text;
-            korisnik.prezime = uiPrezimeEdit.Text;
-            korisnik.mail = uiEmailEdit.Text;
-            korisnik.grad_id = (uiGradEdit.SelectedItem as Grad).id_grad;
-            korisnik.broj_telefona = uiBrojTelefonaEdit.Text;
-            korisnik.lozinka = uiLozinkaEdit.Text;
-            entities.SaveChanges();
-            Close();
+            try
+            {
+                if (uiImeEdit.Text == "" || uiPrezimeEdit.Text == "" || uiEmailEdit.Text == "" || uiBrojTelefonaEdit.Text == "" || uiLozinkaEdit.Text == "")
+                {
+                    throw new DataException("Polja ne smiju biti prazna!");
+                }
+                korisnik.ime = uiImeEdit.Text;
+                korisnik.prezime = uiPrezimeEdit.Text;
+                korisnik.mail = uiEmailEdit.Text;
+                if (!korisnik.mail.Contains("@"))
+                {
+                    throw new DataException("E-mail adresa nije ispravna!");
+                }
+                korisnik.grad_id = (uiGradEdit.SelectedItem as Grad).id_grad;
+                korisnik.broj_telefona = uiBrojTelefonaEdit.Text;
+                korisnik.lozinka = uiLozinkaEdit.Text;
+                if(korisnik.lozinka.Length < 6)
+                {
+                    throw new DataException("Lozinka mora imati najmanje 6 znakova");
+                }
+                entities.SaveChanges();
+                Close();
+            }
+            catch(DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
         }
     }
 }

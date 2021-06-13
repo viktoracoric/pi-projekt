@@ -32,11 +32,26 @@ namespace reRack.Design.Forms
         private void uxActionUpravljaj_Click(object sender, EventArgs e)
         {
             zahtjev = new Zahtjev();
-            zahtjev = zahtjevBindingSource.Current as Zahtjev;
-            DodajTeretanu dodajTeretanu = new DodajTeretanu(zahtjev);
-            dodajTeretanu.ShowDialog();
+            try
+            {
+                if(zahtjevBindingSource.Current != null)
+                {
+                    zahtjev = zahtjevBindingSource.Current as Zahtjev;
+                    DodajTeretanu dodajTeretanu = new DodajTeretanu(zahtjev);
+                    dodajTeretanu.ShowDialog();
 
-            OsvjeziDGV();
+                    OsvjeziDGV();
+                }
+                else
+                {
+                    throw new DataException("Nije odabran nijedan zahtjev!");
+                }
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
+            
         }
 
         public void OsvjeziDGV()

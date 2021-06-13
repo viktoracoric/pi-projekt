@@ -48,7 +48,21 @@ namespace reRack.Design.Forms
 
             rezervacija.interval_id = (uiTermin.SelectedItem as VrInterval).id_interval;
             rezervacija.korisnik_id = prijavljeniKorisnik.id_korisnik;
-            rezervacija.teretana_id = (teretanaBindingSource.Current as Teretana).id_teretana;
+            try
+            {
+                if(teretanaBindingSource.Current != null)
+                {
+                    rezervacija.teretana_id = (teretanaBindingSource.Current as Teretana).id_teretana;
+                }
+                else
+                {
+                    throw new DataException("Nijedna teretana nije odabrana!");
+                }
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
             entities.Rezervacija.Add(rezervacija);
            // MessageBox.Show("Uspjeh");
             entities.SaveChanges();

@@ -58,6 +58,7 @@
     <Compile Include="Clanstvo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataException.cs" />
     <Compile Include="Forms\DetaljanPrikazOTeretani.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -121,7 +121,7 @@ namespace reRack.Design.Forms
             // 
             this.uiCijena.Location = new System.Drawing.Point(113, 151);
             this.uiCijena.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -133,7 +133,7 @@ namespace reRack.Design.Forms
             // 
             this.uiKvadratura.Location = new System.Drawing.Point(114, 178);
             this.uiKvadratura.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -174,7 +174,7 @@ namespace reRack.Design.Forms
             // 
             this.uiKapacitet.Location = new System.Drawing.Point(113, 124);
             this.uiKapacitet.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});

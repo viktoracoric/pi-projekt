@@ -58,28 +58,86 @@ namespace reRack.Design.Forms
 
         private void uxActionSpremi_Click(object sender, EventArgs e)
         {
-            int idTer = (uiIme.SelectedItem as Teretana).id_teretana;
-            var teretana = (from t in entities.Teretana
-                       where t.id_teretana == idTer
-                       select t).First();
-            teretana.korisnik_id = (uiKorisnik.SelectedItem as Korisnik).id_korisnik;
-            teretana.grad_id = (uiGrad.SelectedItem as Grad).id_grad;
-            teretana.adresa = uiAdresa.Text;
-            teretana.kapacitet = (int)uiKapacitet.Value;
-            teretana.kvadratura = (int)uiKvadratura.Value;
-            teretana.cijena_clanstva = (int)uiCijena.Value;
-            entities.SaveChanges();
-            MessageBox.Show("Izmjene uspješno spremljene!");
-            Close();
+            try
+            {
+                if (uiIme.SelectedItem != null)
+                {
+                    if(uiAdresa.Text == "")
+                    {
+                        throw new DataException("Polja ne smiju biti prazna!");
+                    }
+                    int idTer = (uiIme.SelectedItem as Teretana).id_teretana;
+                    var teretana = (from t in entities.Teretana
+                                    where t.id_teretana == idTer
+                                    select t).First();
+                    teretana.korisnik_id = (uiKorisnik.SelectedItem as Korisnik).id_korisnik;
+                    teretana.grad_id = (uiGrad.SelectedItem as Grad).id_grad;
+                    teretana.adresa = uiAdresa.Text;
+                    int broj;
+                    if(Int32.TryParse(uiKapacitet.Value.ToString(), out broj))
+                    {
+                        teretana.kapacitet = broj;
+                    }
+                    else
+                    {
+                        uiKapacitet.Value = (int)Math.Round(uiKapacitet.Value);
+                        throw new DataException("Vrijednost kapaciteta mora biti cijeli broj!");
+                    }
+                    if (Int32.TryParse(uiKvadratura.Value.ToString(), out broj))
+                    {
+                        teretana.kvadratura = broj;
+                    }
+                    else
+                    {
+                        uiKvadratura.Value = (int)Math.Round(uiKvadratura.Value);
+                        throw new DataException("Vrijednost kvadrature mora biti cijeli broj!");
+                    }
+                    if (Int32.TryParse(uiCijena.Value.ToString(), out broj))
+                    {
+                        teretana.cijena_clanstva = broj;
+                    }
+                    else
+                    {
+                        uiCijena.Value = (int)Math.Round(uiCijena.Value);
+                        throw new DataException("Vrijednost cijene članstva mora biti cijeli broj!");
+                    }
+                    entities.SaveChanges();
+                    MessageBox.Show("Izmjene uspješno spremljene!");
+                    Close();
+                }
+                else
+                {
+                    throw new DataException("Nijedna teretana nije odabrana!");
+                }
+            }
+            catch(DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
+            
         }
 
         private void uiObrisiTeretanu_Click(object sender, EventArgs e)
         {
-            Teretana obrisiMe = (uiIme.SelectedItem as Teretana);
-            entities.Teretana.Remove(obrisiMe);
-            entities.SaveChanges();
-            MessageBox.Show("Teretana uspješno obrisana!");
-            Close();
+            try
+            {
+                if(uiIme.SelectedItem != null)
+                {
+                    Teretana obrisiMe = (uiIme.SelectedItem as Teretana);
+                    entities.Teretana.Remove(obrisiMe);
+                    entities.SaveChanges();
+                    MessageBox.Show("Teretana uspješno obrisana!");
+                    Close();
+                }
+               else
+                {
+                    throw new DataException("Nijedna teretana nije odabrana!");
+                }
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
         }
     }
 }
