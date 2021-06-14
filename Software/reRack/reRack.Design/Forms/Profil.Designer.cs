@@ -1,7 +1,7 @@
 ﻿
 namespace reRack.Design.Forms
 {
-    partial class UrediPodatke
+    partial class Profil
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace reRack.Design.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrediPodatke));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profil));
             this.uiGradEdit = new System.Windows.Forms.ComboBox();
             this.uiBrojTelefonaEdit = new System.Windows.Forms.TextBox();
             this.uiBrojTelefonaLabel = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@ namespace reRack.Design.Forms
             this.potvrdiBtn = new System.Windows.Forms.Button();
             this.odustaniBtn = new System.Windows.Forms.Button();
             this.urediPodatkeHelpProvider = new System.Windows.Forms.HelpProvider();
+            this.uiStatistika = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,12 +151,13 @@ namespace reRack.Design.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(96, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "";
             // 
             // potvrdiBtn
             // 
@@ -163,7 +165,7 @@ namespace reRack.Design.Forms
             this.potvrdiBtn.Name = "potvrdiBtn";
             this.potvrdiBtn.Size = new System.Drawing.Size(101, 23);
             this.potvrdiBtn.TabIndex = 56;
-            this.potvrdiBtn.Text = "Potvrdi";
+            this.potvrdiBtn.Text = "Izmjeni podatke";
             this.potvrdiBtn.UseVisualStyleBackColor = true;
             this.potvrdiBtn.Click += new System.EventHandler(this.potvrdiBtn_Click);
             // 
@@ -182,13 +184,24 @@ namespace reRack.Design.Forms
             // 
             this.urediPodatkeHelpProvider.HelpNamespace = "reRack.chm";
             // 
-            // UrediPodatke
+            // uiStatistika
+            // 
+            this.uiStatistika.Location = new System.Drawing.Point(95, 412);
+            this.uiStatistika.Name = "uiStatistika";
+            this.uiStatistika.Size = new System.Drawing.Size(106, 42);
+            this.uiStatistika.TabIndex = 58;
+            this.uiStatistika.Text = "Vidi osobnu statistiku";
+            this.uiStatistika.UseVisualStyleBackColor = true;
+            this.uiStatistika.Click += new System.EventHandler(this.uiStatistika_Click);
+            // 
+            // Profil
             // 
             this.AcceptButton = this.potvrdiBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.odustaniBtn;
-            this.ClientSize = new System.Drawing.Size(308, 426);
+            this.ClientSize = new System.Drawing.Size(308, 466);
+            this.Controls.Add(this.uiStatistika);
             this.Controls.Add(this.odustaniBtn);
             this.Controls.Add(this.potvrdiBtn);
             this.Controls.Add(this.pictureBox1);
@@ -207,7 +220,7 @@ namespace reRack.Design.Forms
             this.urediPodatkeHelpProvider.SetHelpKeyword(this, "urediPodatke.htm");
             this.urediPodatkeHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.urediPodatkeHelpProvider.SetHelpString(this, "urediPodatke.htm");
-            this.Name = "UrediPodatke";
+            this.Name = "Profil";
             this.urediPodatkeHelpProvider.SetShowHelp(this, true);
             this.Text = "Uredi Podatke";
             this.Load += new System.EventHandler(this.UrediPodatke_Load);
@@ -235,5 +248,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Button potvrdiBtn;
         private System.Windows.Forms.Button odustaniBtn;
         private System.Windows.Forms.HelpProvider urediPodatkeHelpProvider;
+        private System.Windows.Forms.Button uiStatistika;
     }
 }

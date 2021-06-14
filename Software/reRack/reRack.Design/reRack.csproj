@@ -119,17 +119,29 @@
     <Compile Include="Forms\Registracija.Designer.cs">
       <DependentUpon>Registracija.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UrediPodatke.cs">
+    <Compile Include="Forms\Profil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UrediPodatke.Designer.cs">
-      <DependentUpon>UrediPodatke.cs</DependentUpon>
+    <Compile Include="Forms\Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SlanjeZahtjev.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SlanjeZahtjev.Designer.cs">
       <DependentUpon>SlanjeZahtjev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Uplata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Uplata.Designer.cs">
+      <DependentUpon>Uplata.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UrediTeretanu.cs">
       <SubType>Form</SubType>
@@ -208,11 +220,17 @@
     <EmbeddedResource Include="Forms\Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UrediPodatke.resx">
-      <DependentUpon>UrediPodatke.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SlanjeZahtjev.resx">
       <DependentUpon>SlanjeZahtjev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistika.resx">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Uplata.resx">
+      <DependentUpon>Uplata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrediTeretanu.resx">
       <DependentUpon>UrediTeretanu.cs</DependentUpon>

@@ -35,7 +35,7 @@ namespace reRack.Design.Forms
 
         private void uiActionUrediPodatke_Click(object sender, EventArgs e)
         {
-            UrediPodatke form = new UrediPodatke(prijavljeniKorisnik);
+            Profil form = new Profil(prijavljeniKorisnik);
             form.ShowDialog();
             int id = prijavljeniKorisnik.id_korisnik;
             prijavljeniKorisnik = null;

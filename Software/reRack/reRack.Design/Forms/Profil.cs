@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace reRack.Design.Forms
 {
-    public partial class UrediPodatke : Form
+    public partial class Profil : Form
     {
         private Korisnik prijavljeniKorisnik;
         Entities entities = new Entities();
         Validacija.Validacija validacija = new Validacija.Validacija();
 
-        public UrediPodatke(Korisnik prijavljeniKorisnik)
+        public Profil(Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
             this.prijavljeniKorisnik = prijavljeniKorisnik;
@@ -44,6 +44,7 @@ namespace reRack.Design.Forms
         {
             Close();
         }
+
 
         private void potvrdiBtn_Click(object sender, EventArgs e)
         {
@@ -78,6 +79,12 @@ namespace reRack.Design.Forms
             {
                 MessageBox.Show(ex.Poruka);
             }
+        }
+
+        private void uiStatistika_Click(object sender, EventArgs e)
+        {
+            Statistika form = new Statistika(prijavljeniKorisnik);
+            form.Show();
         }
     }
 }
