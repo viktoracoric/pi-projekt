@@ -31,16 +31,6 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dgvMojeTeretane = new System.Windows.Forms.DataGridView();
-            this.btnRecenzija = new System.Windows.Forms.Button();
-            this.uiRezerviraj = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.uiTermin = new System.Windows.Forms.ComboBox();
-            this.uxActionPrikazMojihTermina = new System.Windows.Forms.Button();
-            this.uiObavjest = new System.Windows.Forms.Label();
-            this.uxActionNazad = new System.Windows.Forms.Button();
-            this.mojeTeretaneHelpProvider = new System.Windows.Forms.HelpProvider();
-            this.uiDatum = new System.Windows.Forms.DateTimePicker();
-            this.uxActionPopunjenost = new System.Windows.Forms.Button();
             this.idteretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +45,16 @@ namespace reRack.Design.Forms
             this.recenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRecenzija = new System.Windows.Forms.Button();
+            this.uiRezerviraj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.uiTermin = new System.Windows.Forms.ComboBox();
+            this.uxActionPrikazMojihTermina = new System.Windows.Forms.Button();
+            this.uiObavjest = new System.Windows.Forms.Label();
+            this.uxActionNazad = new System.Windows.Forms.Button();
+            this.mojeTeretaneHelpProvider = new System.Windows.Forms.HelpProvider();
+            this.uiDatum = new System.Windows.Forms.DateTimePicker();
+            this.uxActionPopunjenost = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMojeTeretane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -85,96 +85,6 @@ namespace reRack.Design.Forms
             this.dgvMojeTeretane.ReadOnly = true;
             this.dgvMojeTeretane.Size = new System.Drawing.Size(426, 390);
             this.dgvMojeTeretane.TabIndex = 0;
-            // 
-            // btnRecenzija
-            // 
-            this.btnRecenzija.Location = new System.Drawing.Point(490, 145);
-            this.btnRecenzija.Name = "btnRecenzija";
-            this.btnRecenzija.Size = new System.Drawing.Size(121, 48);
-            this.btnRecenzija.TabIndex = 1;
-            this.btnRecenzija.Text = "Ostavi recenziju";
-            this.btnRecenzija.UseVisualStyleBackColor = true;
-            this.btnRecenzija.Click += new System.EventHandler(this.btnRecenzija_Click);
-            // 
-            // uiRezerviraj
-            // 
-            this.uiRezerviraj.Location = new System.Drawing.Point(490, 91);
-            this.uiRezerviraj.Name = "uiRezerviraj";
-            this.uiRezerviraj.Size = new System.Drawing.Size(121, 48);
-            this.uiRezerviraj.TabIndex = 2;
-            this.uiRezerviraj.Text = "Rezerviraj termin";
-            this.uiRezerviraj.UseVisualStyleBackColor = true;
-            this.uiRezerviraj.Click += new System.EventHandler(this.uiRezerviraj_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(487, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Termini:";
-            // 
-            // uiTermin
-            // 
-            this.uiTermin.FormattingEnabled = true;
-            this.uiTermin.Location = new System.Drawing.Point(490, 29);
-            this.uiTermin.Name = "uiTermin";
-            this.uiTermin.Size = new System.Drawing.Size(121, 21);
-            this.uiTermin.TabIndex = 4;
-            this.uiTermin.TextChanged += new System.EventHandler(this.uiTermin_TextChanged);
-            // 
-            // uxActionPrikazMojihTermina
-            // 
-            this.uxActionPrikazMojihTermina.Location = new System.Drawing.Point(490, 199);
-            this.uxActionPrikazMojihTermina.Name = "uxActionPrikazMojihTermina";
-            this.uxActionPrikazMojihTermina.Size = new System.Drawing.Size(121, 51);
-            this.uxActionPrikazMojihTermina.TabIndex = 5;
-            this.uxActionPrikazMojihTermina.Text = "Moji rezervirani termini";
-            this.uxActionPrikazMojihTermina.UseVisualStyleBackColor = true;
-            this.uxActionPrikazMojihTermina.Click += new System.EventHandler(this.uxActionPrikazMojihTermina_Click);
-            // 
-            // uiObavjest
-            // 
-            this.uiObavjest.AutoSize = true;
-            this.uiObavjest.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiObavjest.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.uiObavjest.Location = new System.Drawing.Point(24, 427);
-            this.uiObavjest.Name = "uiObavjest";
-            this.uiObavjest.Size = new System.Drawing.Size(0, 16);
-            this.uiObavjest.TabIndex = 6;
-            // 
-            // uxActionNazad
-            // 
-            this.uxActionNazad.Location = new System.Drawing.Point(490, 360);
-            this.uxActionNazad.Name = "uxActionNazad";
-            this.uxActionNazad.Size = new System.Drawing.Size(121, 43);
-            this.uxActionNazad.TabIndex = 7;
-            this.uxActionNazad.Text = "Nazad";
-            this.uxActionNazad.UseVisualStyleBackColor = true;
-            this.uxActionNazad.Click += new System.EventHandler(this.uxActionNazad_Click);
-            // 
-            // mojeTeretaneHelpProvider
-            // 
-            this.mojeTeretaneHelpProvider.HelpNamespace = "reRack.chm";
-            // 
-            // uiDatum
-            // 
-            this.uiDatum.Location = new System.Drawing.Point(445, 56);
-            this.uiDatum.Name = "uiDatum";
-            this.uiDatum.Size = new System.Drawing.Size(186, 20);
-            this.uiDatum.TabIndex = 9;
-            this.uiDatum.ValueChanged += new System.EventHandler(this.uiDatum_ValueChanged);
-            // 
-            // uxActionPopunjenost
-            // 
-            this.uxActionPopunjenost.Location = new System.Drawing.Point(490, 275);
-            this.uxActionPopunjenost.Name = "uxActionPopunjenost";
-            this.uxActionPopunjenost.Size = new System.Drawing.Size(121, 41);
-            this.uxActionPopunjenost.TabIndex = 10;
-            this.uxActionPopunjenost.Text = "Popunjenost temeljem prethodnih podataka";
-            this.uxActionPopunjenost.UseVisualStyleBackColor = true;
-            this.uxActionPopunjenost.Click += new System.EventHandler(this.uxActionPopunjenost_Click);
             // 
             // idteretanaDataGridViewTextBoxColumn
             // 
@@ -279,6 +189,96 @@ namespace reRack.Design.Forms
             this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
             this.teretanaBindingSource.CurrentChanged += new System.EventHandler(this.teretanaBindingSource_CurrentChanged);
             // 
+            // btnRecenzija
+            // 
+            this.btnRecenzija.Location = new System.Drawing.Point(490, 145);
+            this.btnRecenzija.Name = "btnRecenzija";
+            this.btnRecenzija.Size = new System.Drawing.Size(121, 48);
+            this.btnRecenzija.TabIndex = 1;
+            this.btnRecenzija.Text = "Ostavi recenziju";
+            this.btnRecenzija.UseVisualStyleBackColor = true;
+            this.btnRecenzija.Click += new System.EventHandler(this.btnRecenzija_Click);
+            // 
+            // uiRezerviraj
+            // 
+            this.uiRezerviraj.Location = new System.Drawing.Point(490, 91);
+            this.uiRezerviraj.Name = "uiRezerviraj";
+            this.uiRezerviraj.Size = new System.Drawing.Size(121, 48);
+            this.uiRezerviraj.TabIndex = 2;
+            this.uiRezerviraj.Text = "Rezerviraj termin";
+            this.uiRezerviraj.UseVisualStyleBackColor = true;
+            this.uiRezerviraj.Click += new System.EventHandler(this.uiRezerviraj_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(487, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Termini:";
+            // 
+            // uiTermin
+            // 
+            this.uiTermin.FormattingEnabled = true;
+            this.uiTermin.Location = new System.Drawing.Point(490, 29);
+            this.uiTermin.Name = "uiTermin";
+            this.uiTermin.Size = new System.Drawing.Size(121, 21);
+            this.uiTermin.TabIndex = 4;
+            this.uiTermin.TextChanged += new System.EventHandler(this.uiTermin_TextChanged);
+            // 
+            // uxActionPrikazMojihTermina
+            // 
+            this.uxActionPrikazMojihTermina.Location = new System.Drawing.Point(490, 199);
+            this.uxActionPrikazMojihTermina.Name = "uxActionPrikazMojihTermina";
+            this.uxActionPrikazMojihTermina.Size = new System.Drawing.Size(121, 51);
+            this.uxActionPrikazMojihTermina.TabIndex = 5;
+            this.uxActionPrikazMojihTermina.Text = "Moji rezervirani termini";
+            this.uxActionPrikazMojihTermina.UseVisualStyleBackColor = true;
+            this.uxActionPrikazMojihTermina.Click += new System.EventHandler(this.uxActionPrikazMojihTermina_Click);
+            // 
+            // uiObavjest
+            // 
+            this.uiObavjest.AutoSize = true;
+            this.uiObavjest.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiObavjest.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.uiObavjest.Location = new System.Drawing.Point(24, 427);
+            this.uiObavjest.Name = "uiObavjest";
+            this.uiObavjest.Size = new System.Drawing.Size(0, 16);
+            this.uiObavjest.TabIndex = 6;
+            // 
+            // uxActionNazad
+            // 
+            this.uxActionNazad.Location = new System.Drawing.Point(490, 360);
+            this.uxActionNazad.Name = "uxActionNazad";
+            this.uxActionNazad.Size = new System.Drawing.Size(121, 43);
+            this.uxActionNazad.TabIndex = 7;
+            this.uxActionNazad.Text = "Nazad";
+            this.uxActionNazad.UseVisualStyleBackColor = true;
+            this.uxActionNazad.Click += new System.EventHandler(this.uxActionNazad_Click);
+            // 
+            // mojeTeretaneHelpProvider
+            // 
+            this.mojeTeretaneHelpProvider.HelpNamespace = "reRack.chm";
+            // 
+            // uiDatum
+            // 
+            this.uiDatum.Location = new System.Drawing.Point(445, 56);
+            this.uiDatum.Name = "uiDatum";
+            this.uiDatum.Size = new System.Drawing.Size(186, 20);
+            this.uiDatum.TabIndex = 9;
+            this.uiDatum.ValueChanged += new System.EventHandler(this.uiDatum_ValueChanged);
+            // 
+            // uxActionPopunjenost
+            // 
+            this.uxActionPopunjenost.Location = new System.Drawing.Point(490, 275);
+            this.uxActionPopunjenost.Name = "uxActionPopunjenost";
+            this.uxActionPopunjenost.Size = new System.Drawing.Size(121, 41);
+            this.uxActionPopunjenost.TabIndex = 10;
+            this.uxActionPopunjenost.Text = "Popunjenost temeljem prethodnih podataka";
+            this.uxActionPopunjenost.UseVisualStyleBackColor = true;
+            this.uxActionPopunjenost.Click += new System.EventHandler(this.uxActionPopunjenost_Click);
+            // 
             // MojeTeretane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@ namespace reRack.Design.Forms
             this.mojeTeretaneHelpProvider.SetHelpString(this, "mojeTeretane.htm");
             this.Name = "MojeTeretane";
             this.mojeTeretaneHelpProvider.SetShowHelp(this, true);
-            this.Text = "MojeTeretane";
+            this.Text = "Moje Teretane";
             this.Load += new System.EventHandler(this.MojeTeretane_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMojeTeretane)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).EndInit();

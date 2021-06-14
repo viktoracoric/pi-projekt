@@ -78,7 +78,7 @@ namespace reRack.Design.Forms
             this.uiActionUrediPodatke.Name = "uiActionUrediPodatke";
             this.uiActionUrediPodatke.Size = new System.Drawing.Size(100, 51);
             this.uiActionUrediPodatke.TabIndex = 10;
-            this.uiActionUrediPodatke.Text = "Uredi korisničke podatke";
+            this.uiActionUrediPodatke.Text = "Profil";
             this.uiActionUrediPodatke.UseVisualStyleBackColor = true;
             this.uiActionUrediPodatke.Click += new System.EventHandler(this.uiActionUrediPodatke_Click);
             // 
