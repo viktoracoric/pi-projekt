@@ -21,7 +21,7 @@ namespace reRack.Design.Forms
             this.prijavljeniKorisnik = prijavljeniKorisnik;
             if(prijavljeniKorisnik.uloga_id < 2)
             {
-                uiObrisiTeretanu.Hide();
+                uxActionObrisiTeretanu.Hide();
             }
         }
 

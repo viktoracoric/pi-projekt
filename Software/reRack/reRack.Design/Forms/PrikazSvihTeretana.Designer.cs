@@ -30,9 +30,9 @@ namespace reRack.Design.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.uiActionPosaljiZahtjev = new System.Windows.Forms.Button();
-            this.uiActionNazad = new System.Windows.Forms.Button();
-            this.uiActionPrikazTeretane = new System.Windows.Forms.Button();
+            this.uxActionPosaljiZahtjev = new System.Windows.Forms.Button();
+            this.uxActionNazad = new System.Windows.Forms.Button();
+            this.uxActionPrikazTeretane = new System.Windows.Forms.Button();
             this.uiFilterKvadraturaLabel = new System.Windows.Forms.Label();
             this.uiFilterCijenaLabel = new System.Windows.Forms.Label();
             this.uiFilterCijena = new System.Windows.Forms.NumericUpDown();
@@ -52,7 +52,7 @@ namespace reRack.Design.Forms
             this.recenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uiUclaniSe = new System.Windows.Forms.Button();
+            this.uxActionUclaniSe = new System.Windows.Forms.Button();
             this.prikazSvihTeretanaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiFilterKvadratura)).BeginInit();
@@ -60,35 +60,35 @@ namespace reRack.Design.Forms
             ((System.ComponentModel.ISupportInitialize)(this.teretanaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // uiActionPosaljiZahtjev
+            // uxActionPosaljiZahtjev
             // 
-            this.uiActionPosaljiZahtjev.Location = new System.Drawing.Point(687, 142);
-            this.uiActionPosaljiZahtjev.Name = "uiActionPosaljiZahtjev";
-            this.uiActionPosaljiZahtjev.Size = new System.Drawing.Size(97, 35);
-            this.uiActionPosaljiZahtjev.TabIndex = 15;
-            this.uiActionPosaljiZahtjev.Text = "Pošalji zahtjev";
-            this.uiActionPosaljiZahtjev.UseVisualStyleBackColor = true;
-            this.uiActionPosaljiZahtjev.Click += new System.EventHandler(this.uiActionPosaljiZahtjev_Click);
+            this.uxActionPosaljiZahtjev.Location = new System.Drawing.Point(687, 142);
+            this.uxActionPosaljiZahtjev.Name = "uxActionPosaljiZahtjev";
+            this.uxActionPosaljiZahtjev.Size = new System.Drawing.Size(97, 35);
+            this.uxActionPosaljiZahtjev.TabIndex = 15;
+            this.uxActionPosaljiZahtjev.Text = "Pošalji zahtjev";
+            this.uxActionPosaljiZahtjev.UseVisualStyleBackColor = true;
+            this.uxActionPosaljiZahtjev.Click += new System.EventHandler(this.uiActionPosaljiZahtjev_Click);
             // 
-            // uiActionNazad
+            // uxActionNazad
             // 
-            this.uiActionNazad.Location = new System.Drawing.Point(687, 312);
-            this.uiActionNazad.Name = "uiActionNazad";
-            this.uiActionNazad.Size = new System.Drawing.Size(97, 35);
-            this.uiActionNazad.TabIndex = 14;
-            this.uiActionNazad.Text = "Nazad";
-            this.uiActionNazad.UseVisualStyleBackColor = true;
-            this.uiActionNazad.Click += new System.EventHandler(this.uiActionNazad_Click);
+            this.uxActionNazad.Location = new System.Drawing.Point(687, 312);
+            this.uxActionNazad.Name = "uxActionNazad";
+            this.uxActionNazad.Size = new System.Drawing.Size(97, 35);
+            this.uxActionNazad.TabIndex = 14;
+            this.uxActionNazad.Text = "Nazad";
+            this.uxActionNazad.UseVisualStyleBackColor = true;
+            this.uxActionNazad.Click += new System.EventHandler(this.uiActionNazad_Click);
             // 
-            // uiActionPrikazTeretane
+            // uxActionPrikazTeretane
             // 
-            this.uiActionPrikazTeretane.Location = new System.Drawing.Point(687, 195);
-            this.uiActionPrikazTeretane.Name = "uiActionPrikazTeretane";
-            this.uiActionPrikazTeretane.Size = new System.Drawing.Size(97, 35);
-            this.uiActionPrikazTeretane.TabIndex = 13;
-            this.uiActionPrikazTeretane.Text = "Prikaz teretane";
-            this.uiActionPrikazTeretane.UseVisualStyleBackColor = true;
-            this.uiActionPrikazTeretane.Click += new System.EventHandler(this.uiActionPrikazTeretane_Click);
+            this.uxActionPrikazTeretane.Location = new System.Drawing.Point(687, 195);
+            this.uxActionPrikazTeretane.Name = "uxActionPrikazTeretane";
+            this.uxActionPrikazTeretane.Size = new System.Drawing.Size(97, 35);
+            this.uxActionPrikazTeretane.TabIndex = 13;
+            this.uxActionPrikazTeretane.Text = "Prikaz teretane";
+            this.uxActionPrikazTeretane.UseVisualStyleBackColor = true;
+            this.uxActionPrikazTeretane.Click += new System.EventHandler(this.uiActionPrikazTeretane_Click);
             // 
             // uiFilterKvadraturaLabel
             // 
@@ -273,15 +273,15 @@ namespace reRack.Design.Forms
             // 
             this.teretanaBindingSource.DataSource = typeof(reRack.Design.Teretana);
             // 
-            // uiUclaniSe
+            // uxActionUclaniSe
             // 
-            this.uiUclaniSe.Location = new System.Drawing.Point(687, 252);
-            this.uiUclaniSe.Name = "uiUclaniSe";
-            this.uiUclaniSe.Size = new System.Drawing.Size(97, 35);
-            this.uiUclaniSe.TabIndex = 16;
-            this.uiUclaniSe.Text = "Uclani se";
-            this.uiUclaniSe.UseVisualStyleBackColor = true;
-            this.uiUclaniSe.Click += new System.EventHandler(this.uiUclaniSe_Click);
+            this.uxActionUclaniSe.Location = new System.Drawing.Point(687, 252);
+            this.uxActionUclaniSe.Name = "uxActionUclaniSe";
+            this.uxActionUclaniSe.Size = new System.Drawing.Size(97, 35);
+            this.uxActionUclaniSe.TabIndex = 16;
+            this.uxActionUclaniSe.Text = "Uclani se";
+            this.uxActionUclaniSe.UseVisualStyleBackColor = true;
+            this.uxActionUclaniSe.Click += new System.EventHandler(this.uiUclaniSe_Click);
             // 
             // prikazSvihTeretanaHelpProvider
             // 
@@ -292,10 +292,10 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 376);
-            this.Controls.Add(this.uiUclaniSe);
-            this.Controls.Add(this.uiActionPosaljiZahtjev);
-            this.Controls.Add(this.uiActionNazad);
-            this.Controls.Add(this.uiActionPrikazTeretane);
+            this.Controls.Add(this.uxActionUclaniSe);
+            this.Controls.Add(this.uxActionPosaljiZahtjev);
+            this.Controls.Add(this.uxActionNazad);
+            this.Controls.Add(this.uxActionPrikazTeretane);
             this.Controls.Add(this.uiFilterKvadraturaLabel);
             this.Controls.Add(this.uiFilterCijenaLabel);
             this.Controls.Add(this.uiFilterCijena);
@@ -319,9 +319,9 @@ namespace reRack.Design.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button uiActionPosaljiZahtjev;
-        private System.Windows.Forms.Button uiActionNazad;
-        private System.Windows.Forms.Button uiActionPrikazTeretane;
+        private System.Windows.Forms.Button uxActionPosaljiZahtjev;
+        private System.Windows.Forms.Button uxActionNazad;
+        private System.Windows.Forms.Button uxActionPrikazTeretane;
         private System.Windows.Forms.Label uiFilterKvadraturaLabel;
         private System.Windows.Forms.Label uiFilterCijenaLabel;
         private System.Windows.Forms.NumericUpDown uiFilterCijena;
@@ -341,7 +341,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn clanstvoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button uiUclaniSe;
+        private System.Windows.Forms.Button uxActionUclaniSe;
         private System.Windows.Forms.HelpProvider prikazSvihTeretanaHelpProvider;
     }
 }

@@ -26,7 +26,7 @@ namespace reRack.Design.Forms
 
         private void uiPotvrdi_Click(object sender, EventArgs e)
         { 
-            var iban = uiIban.Text;
+            var iban = uiIBAN.Text;
             var cvv = uiCVV.Text;
             var novac = uiNovci.Text;
             try

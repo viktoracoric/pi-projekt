@@ -31,8 +31,16 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uiStatistika = new System.Windows.Forms.DataGridView();
+            this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intervalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idrezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrIntervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.uiBrojSati = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,15 +49,7 @@ namespace reRack.Design.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.uiUplati = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.intervalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idrezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrIntervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiStatistika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,13 +62,13 @@ namespace reRack.Design.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Tvoje prošle rezervacije:";
             // 
-            // dataGridView1
+            // uiStatistika
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiStatistika.AllowUserToAddRows = false;
+            this.uiStatistika.AllowUserToDeleteRows = false;
+            this.uiStatistika.AutoGenerateColumns = false;
+            this.uiStatistika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiStatistika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.korisnikidDataGridViewTextBoxColumn,
             this.teretanaidDataGridViewTextBoxColumn,
             this.intervalidDataGridViewTextBoxColumn,
@@ -77,12 +77,59 @@ namespace reRack.Design.Forms
             this.teretanaDataGridViewTextBoxColumn,
             this.datum,
             this.vrIntervalDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rezervacijaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(345, 184);
-            this.dataGridView1.TabIndex = 1;
+            this.uiStatistika.DataSource = this.rezervacijaBindingSource;
+            this.uiStatistika.Location = new System.Drawing.Point(15, 52);
+            this.uiStatistika.Name = "uiStatistika";
+            this.uiStatistika.ReadOnly = true;
+            this.uiStatistika.Size = new System.Drawing.Size(345, 184);
+            this.uiStatistika.TabIndex = 1;
+            // 
+            // korisnikidDataGridViewTextBoxColumn
+            // 
+            this.korisnikidDataGridViewTextBoxColumn.DataPropertyName = "korisnik_id";
+            this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnik_id";
+            this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
+            this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // teretanaidDataGridViewTextBoxColumn
+            // 
+            this.teretanaidDataGridViewTextBoxColumn.DataPropertyName = "teretana_id";
+            this.teretanaidDataGridViewTextBoxColumn.HeaderText = "teretana_id";
+            this.teretanaidDataGridViewTextBoxColumn.Name = "teretanaidDataGridViewTextBoxColumn";
+            this.teretanaidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.teretanaidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // intervalidDataGridViewTextBoxColumn
+            // 
+            this.intervalidDataGridViewTextBoxColumn.DataPropertyName = "interval_id";
+            this.intervalidDataGridViewTextBoxColumn.HeaderText = "interval_id";
+            this.intervalidDataGridViewTextBoxColumn.Name = "intervalidDataGridViewTextBoxColumn";
+            this.intervalidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.intervalidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idrezervacijaDataGridViewTextBoxColumn
+            // 
+            this.idrezervacijaDataGridViewTextBoxColumn.DataPropertyName = "id_rezervacija";
+            this.idrezervacijaDataGridViewTextBoxColumn.HeaderText = "id_rezervacija";
+            this.idrezervacijaDataGridViewTextBoxColumn.Name = "idrezervacijaDataGridViewTextBoxColumn";
+            this.idrezervacijaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idrezervacijaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // korisnikDataGridViewTextBoxColumn
+            // 
+            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "Korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Korisnik";
+            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // teretanaDataGridViewTextBoxColumn
+            // 
+            this.teretanaDataGridViewTextBoxColumn.DataPropertyName = "Teretana";
+            this.teretanaDataGridViewTextBoxColumn.HeaderText = "Teretana";
+            this.teretanaDataGridViewTextBoxColumn.Name = "teretanaDataGridViewTextBoxColumn";
+            this.teretanaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datum
             // 
@@ -90,6 +137,17 @@ namespace reRack.Design.Forms
             this.datum.HeaderText = "Datum";
             this.datum.Name = "datum";
             this.datum.ReadOnly = true;
+            // 
+            // vrIntervalDataGridViewTextBoxColumn
+            // 
+            this.vrIntervalDataGridViewTextBoxColumn.DataPropertyName = "VrInterval";
+            this.vrIntervalDataGridViewTextBoxColumn.HeaderText = "Vremenski interval";
+            this.vrIntervalDataGridViewTextBoxColumn.Name = "vrIntervalDataGridViewTextBoxColumn";
+            this.vrIntervalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rezervacijaBindingSource
+            // 
+            this.rezervacijaBindingSource.DataSource = typeof(reRack.Design.Rezervacija);
             // 
             // label2
             // 
@@ -162,64 +220,6 @@ namespace reRack.Design.Forms
             this.label6.TabIndex = 9;
             this.label6.Text = "Ponestaje vam novaca?";
             // 
-            // korisnikidDataGridViewTextBoxColumn
-            // 
-            this.korisnikidDataGridViewTextBoxColumn.DataPropertyName = "korisnik_id";
-            this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnik_id";
-            this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
-            this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // teretanaidDataGridViewTextBoxColumn
-            // 
-            this.teretanaidDataGridViewTextBoxColumn.DataPropertyName = "teretana_id";
-            this.teretanaidDataGridViewTextBoxColumn.HeaderText = "teretana_id";
-            this.teretanaidDataGridViewTextBoxColumn.Name = "teretanaidDataGridViewTextBoxColumn";
-            this.teretanaidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.teretanaidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // intervalidDataGridViewTextBoxColumn
-            // 
-            this.intervalidDataGridViewTextBoxColumn.DataPropertyName = "interval_id";
-            this.intervalidDataGridViewTextBoxColumn.HeaderText = "interval_id";
-            this.intervalidDataGridViewTextBoxColumn.Name = "intervalidDataGridViewTextBoxColumn";
-            this.intervalidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.intervalidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idrezervacijaDataGridViewTextBoxColumn
-            // 
-            this.idrezervacijaDataGridViewTextBoxColumn.DataPropertyName = "id_rezervacija";
-            this.idrezervacijaDataGridViewTextBoxColumn.HeaderText = "id_rezervacija";
-            this.idrezervacijaDataGridViewTextBoxColumn.Name = "idrezervacijaDataGridViewTextBoxColumn";
-            this.idrezervacijaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idrezervacijaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // korisnikDataGridViewTextBoxColumn
-            // 
-            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "Korisnik";
-            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Korisnik";
-            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
-            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnikDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // teretanaDataGridViewTextBoxColumn
-            // 
-            this.teretanaDataGridViewTextBoxColumn.DataPropertyName = "Teretana";
-            this.teretanaDataGridViewTextBoxColumn.HeaderText = "Teretana";
-            this.teretanaDataGridViewTextBoxColumn.Name = "teretanaDataGridViewTextBoxColumn";
-            this.teretanaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vrIntervalDataGridViewTextBoxColumn
-            // 
-            this.vrIntervalDataGridViewTextBoxColumn.DataPropertyName = "VrInterval";
-            this.vrIntervalDataGridViewTextBoxColumn.HeaderText = "Vremenski interval";
-            this.vrIntervalDataGridViewTextBoxColumn.Name = "vrIntervalDataGridViewTextBoxColumn";
-            this.vrIntervalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rezervacijaBindingSource
-            // 
-            this.rezervacijaBindingSource.DataSource = typeof(reRack.Design.Rezervacija);
-            // 
             // Statistika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,12 +233,12 @@ namespace reRack.Design.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiBrojSati);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uiStatistika);
             this.Controls.Add(this.label1);
             this.Name = "Statistika";
             this.Text = "Statistika";
             this.Load += new System.EventHandler(this.Statistika_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiStatistika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,7 +248,7 @@ namespace reRack.Design.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView uiStatistika;
         private System.Windows.Forms.BindingSource rezervacijaBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox uiBrojSati;

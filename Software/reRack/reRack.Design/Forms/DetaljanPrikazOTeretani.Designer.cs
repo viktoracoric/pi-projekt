@@ -44,7 +44,7 @@ namespace reRack.Design.Forms
             this.uiKvadratura = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.uiCijena = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uiDetaljiTeretana = new System.Windows.Forms.DataGridView();
             this.idrecenzijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@ namespace reRack.Design.Forms
             this.komentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recenzijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detaljiTeretanaHelpProvider = new System.Windows.Forms.HelpProvider();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiDetaljiTeretana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recenzijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,13 +177,13 @@ namespace reRack.Design.Forms
             this.uiCijena.Size = new System.Drawing.Size(100, 20);
             this.uiCijena.TabIndex = 1;
             // 
-            // dataGridView1
+            // uiDetaljiTeretana
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiDetaljiTeretana.AllowUserToAddRows = false;
+            this.uiDetaljiTeretana.AllowUserToDeleteRows = false;
+            this.uiDetaljiTeretana.AutoGenerateColumns = false;
+            this.uiDetaljiTeretana.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiDetaljiTeretana.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idrecenzijaDataGridViewTextBoxColumn,
             this.korisnikidDataGridViewTextBoxColumn,
             this.teretanaidDataGridViewTextBoxColumn,
@@ -191,12 +191,12 @@ namespace reRack.Design.Forms
             this.korisnikDataGridViewTextBoxColumn,
             this.ocjenaDataGridViewTextBoxColumn,
             this.komentarDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.recenzijaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(255, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(337, 243);
-            this.dataGridView1.TabIndex = 2;
+            this.uiDetaljiTeretana.DataSource = this.recenzijaBindingSource;
+            this.uiDetaljiTeretana.Location = new System.Drawing.Point(255, 34);
+            this.uiDetaljiTeretana.Name = "uiDetaljiTeretana";
+            this.uiDetaljiTeretana.ReadOnly = true;
+            this.uiDetaljiTeretana.Size = new System.Drawing.Size(337, 243);
+            this.uiDetaljiTeretana.TabIndex = 2;
             // 
             // idrecenzijaDataGridViewTextBoxColumn
             // 
@@ -264,7 +264,7 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 367);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uiDetaljiTeretana);
             this.Controls.Add(this.uiCijena);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.uiKvadratura);
@@ -286,7 +286,7 @@ namespace reRack.Design.Forms
             this.detaljiTeretanaHelpProvider.SetShowHelp(this, true);
             this.Text = "Detaljan prikaz o teretani";
             this.Load += new System.EventHandler(this.DetaljanPrikazOTeretani_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiDetaljiTeretana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recenzijaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -309,7 +309,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiKvadratura;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox uiCijena;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView uiDetaljiTeretana;
         private System.Windows.Forms.DataGridViewTextBoxColumn idrecenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teretanaidDataGridViewTextBoxColumn;

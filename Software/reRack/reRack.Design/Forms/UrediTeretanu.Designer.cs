@@ -45,7 +45,7 @@ namespace reRack.Design.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.uiOdaberiTeretanuLabel = new System.Windows.Forms.Label();
             this.uiIme = new System.Windows.Forms.ComboBox();
-            this.uiObrisiTeretanu = new System.Windows.Forms.Button();
+            this.uxActionObrisiTeretanu = new System.Windows.Forms.Button();
             this.urediTeretanuHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiKvadratura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiKapacitet)).BeginInit();
@@ -203,15 +203,15 @@ namespace reRack.Design.Forms
             this.uiIme.TabIndex = 21;
             this.uiIme.SelectedValueChanged += new System.EventHandler(this.uiIme_SelectedValueChanged);
             // 
-            // uiObrisiTeretanu
+            // uxActionObrisiTeretanu
             // 
-            this.uiObrisiTeretanu.Location = new System.Drawing.Point(71, 282);
-            this.uiObrisiTeretanu.Name = "uiObrisiTeretanu";
-            this.uiObrisiTeretanu.Size = new System.Drawing.Size(99, 38);
-            this.uiObrisiTeretanu.TabIndex = 23;
-            this.uiObrisiTeretanu.Text = "Obriši teretanu";
-            this.uiObrisiTeretanu.UseVisualStyleBackColor = true;
-            this.uiObrisiTeretanu.Click += new System.EventHandler(this.uiObrisiTeretanu_Click);
+            this.uxActionObrisiTeretanu.Location = new System.Drawing.Point(71, 282);
+            this.uxActionObrisiTeretanu.Name = "uxActionObrisiTeretanu";
+            this.uxActionObrisiTeretanu.Size = new System.Drawing.Size(99, 38);
+            this.uxActionObrisiTeretanu.TabIndex = 23;
+            this.uxActionObrisiTeretanu.Text = "Obriši teretanu";
+            this.uxActionObrisiTeretanu.UseVisualStyleBackColor = true;
+            this.uxActionObrisiTeretanu.Click += new System.EventHandler(this.uiObrisiTeretanu_Click);
             // 
             // urediTeretanuHelpProvider
             // 
@@ -222,7 +222,7 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 328);
-            this.Controls.Add(this.uiObrisiTeretanu);
+            this.Controls.Add(this.uxActionObrisiTeretanu);
             this.Controls.Add(this.uiIme);
             this.Controls.Add(this.uxActionOdustani);
             this.Controls.Add(this.uxActionSpremi);
@@ -272,7 +272,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label uiOdaberiTeretanuLabel;
         private System.Windows.Forms.ComboBox uiIme;
-        private System.Windows.Forms.Button uiObrisiTeretanu;
+        private System.Windows.Forms.Button uxActionObrisiTeretanu;
         private System.Windows.Forms.HelpProvider urediTeretanuHelpProvider;
     }
 }

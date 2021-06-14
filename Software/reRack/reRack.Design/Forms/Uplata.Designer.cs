@@ -30,27 +30,27 @@ namespace reRack.Design.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uplata));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uiSlika = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.uiIban = new System.Windows.Forms.TextBox();
+            this.uiIBAN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.uiCVV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uiNovci = new System.Windows.Forms.TextBox();
-            this.uiPotvrdi = new System.Windows.Forms.Button();
-            this.uiOdustani = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.uxActionPotvrdi = new System.Windows.Forms.Button();
+            this.uxActionOdustani = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // uiSlika
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(91, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.uiSlika.Image = ((System.Drawing.Image)(resources.GetObject("uiSlika.Image")));
+            this.uiSlika.Location = new System.Drawing.Point(91, 12);
+            this.uiSlika.Name = "uiSlika";
+            this.uiSlika.Size = new System.Drawing.Size(100, 103);
+            this.uiSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.uiSlika.TabIndex = 0;
+            this.uiSlika.TabStop = false;
             // 
             // label1
             // 
@@ -61,12 +61,12 @@ namespace reRack.Design.Forms
             this.label1.TabIndex = 1;
             this.label1.Text = "Unesite IBAN:";
             // 
-            // uiIban
+            // uiIBAN
             // 
-            this.uiIban.Location = new System.Drawing.Point(59, 171);
-            this.uiIban.Name = "uiIban";
-            this.uiIban.Size = new System.Drawing.Size(170, 20);
-            this.uiIban.TabIndex = 2;
+            this.uiIBAN.Location = new System.Drawing.Point(59, 171);
+            this.uiIBAN.Name = "uiIBAN";
+            this.uiIBAN.Size = new System.Drawing.Size(170, 20);
+            this.uiIBAN.TabIndex = 2;
             // 
             // label2
             // 
@@ -100,46 +100,46 @@ namespace reRack.Design.Forms
             this.uiNovci.Size = new System.Drawing.Size(66, 20);
             this.uiNovci.TabIndex = 6;
             // 
-            // uiPotvrdi
+            // uxActionPotvrdi
             // 
-            this.uiPotvrdi.Location = new System.Drawing.Point(22, 366);
-            this.uiPotvrdi.Name = "uiPotvrdi";
-            this.uiPotvrdi.Size = new System.Drawing.Size(75, 23);
-            this.uiPotvrdi.TabIndex = 7;
-            this.uiPotvrdi.Text = "Potvrdi";
-            this.uiPotvrdi.UseVisualStyleBackColor = true;
-            this.uiPotvrdi.Click += new System.EventHandler(this.uiPotvrdi_Click);
+            this.uxActionPotvrdi.Location = new System.Drawing.Point(22, 366);
+            this.uxActionPotvrdi.Name = "uxActionPotvrdi";
+            this.uxActionPotvrdi.Size = new System.Drawing.Size(75, 23);
+            this.uxActionPotvrdi.TabIndex = 7;
+            this.uxActionPotvrdi.Text = "Potvrdi";
+            this.uxActionPotvrdi.UseVisualStyleBackColor = true;
+            this.uxActionPotvrdi.Click += new System.EventHandler(this.uiPotvrdi_Click);
             // 
-            // uiOdustani
+            // uxActionOdustani
             // 
-            this.uiOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiOdustani.Location = new System.Drawing.Point(183, 366);
-            this.uiOdustani.Name = "uiOdustani";
-            this.uiOdustani.Size = new System.Drawing.Size(75, 23);
-            this.uiOdustani.TabIndex = 8;
-            this.uiOdustani.Text = "Odustani";
-            this.uiOdustani.UseVisualStyleBackColor = true;
-            this.uiOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
+            this.uxActionOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.uxActionOdustani.Location = new System.Drawing.Point(183, 366);
+            this.uxActionOdustani.Name = "uxActionOdustani";
+            this.uxActionOdustani.Size = new System.Drawing.Size(75, 23);
+            this.uxActionOdustani.TabIndex = 8;
+            this.uxActionOdustani.Text = "Odustani";
+            this.uxActionOdustani.UseVisualStyleBackColor = true;
+            this.uxActionOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
             // 
             // Uplata
             // 
-            this.AcceptButton = this.uiPotvrdi;
+            this.AcceptButton = this.uxActionPotvrdi;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.uiOdustani;
+            this.CancelButton = this.uxActionOdustani;
             this.ClientSize = new System.Drawing.Size(295, 450);
-            this.Controls.Add(this.uiOdustani);
-            this.Controls.Add(this.uiPotvrdi);
+            this.Controls.Add(this.uxActionOdustani);
+            this.Controls.Add(this.uxActionPotvrdi);
             this.Controls.Add(this.uiNovci);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiCVV);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.uiIban);
+            this.Controls.Add(this.uiIBAN);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.uiSlika);
             this.Name = "Uplata";
             this.Text = "Uplata";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,14 +147,14 @@ namespace reRack.Design.Forms
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox uiSlika;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox uiIban;
+        private System.Windows.Forms.TextBox uiIBAN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox uiCVV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox uiNovci;
-        private System.Windows.Forms.Button uiPotvrdi;
-        private System.Windows.Forms.Button uiOdustani;
+        private System.Windows.Forms.Button uxActionPotvrdi;
+        private System.Windows.Forms.Button uxActionOdustani;
     }
 }

@@ -35,8 +35,8 @@ namespace reRack.Design.Forms
             this.uiKomentar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uiTeretana = new System.Windows.Forms.TextBox();
-            this.uiDodaj = new System.Windows.Forms.Button();
-            this.uiOdustani = new System.Windows.Forms.Button();
+            this.uxActionDodaj = new System.Windows.Forms.Button();
+            this.uxActionOdustani = new System.Windows.Forms.Button();
             this.recenzijaHelpProvider = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
@@ -90,26 +90,26 @@ namespace reRack.Design.Forms
             this.uiTeretana.Size = new System.Drawing.Size(80, 20);
             this.uiTeretana.TabIndex = 5;
             // 
-            // uiDodaj
+            // uxActionDodaj
             // 
-            this.uiDodaj.Location = new System.Drawing.Point(27, 316);
-            this.uiDodaj.Name = "uiDodaj";
-            this.uiDodaj.Size = new System.Drawing.Size(75, 40);
-            this.uiDodaj.TabIndex = 6;
-            this.uiDodaj.Text = "Dodaj recenziju";
-            this.uiDodaj.UseVisualStyleBackColor = true;
-            this.uiDodaj.Click += new System.EventHandler(this.uiDodaj_Click);
+            this.uxActionDodaj.Location = new System.Drawing.Point(27, 316);
+            this.uxActionDodaj.Name = "uxActionDodaj";
+            this.uxActionDodaj.Size = new System.Drawing.Size(75, 40);
+            this.uxActionDodaj.TabIndex = 6;
+            this.uxActionDodaj.Text = "Dodaj recenziju";
+            this.uxActionDodaj.UseVisualStyleBackColor = true;
+            this.uxActionDodaj.Click += new System.EventHandler(this.uiDodaj_Click);
             // 
-            // uiOdustani
+            // uxActionOdustani
             // 
-            this.uiOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiOdustani.Location = new System.Drawing.Point(186, 316);
-            this.uiOdustani.Name = "uiOdustani";
-            this.uiOdustani.Size = new System.Drawing.Size(75, 40);
-            this.uiOdustani.TabIndex = 7;
-            this.uiOdustani.Text = "Odustani";
-            this.uiOdustani.UseVisualStyleBackColor = true;
-            this.uiOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
+            this.uxActionOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.uxActionOdustani.Location = new System.Drawing.Point(186, 316);
+            this.uxActionOdustani.Name = "uxActionOdustani";
+            this.uxActionOdustani.Size = new System.Drawing.Size(75, 40);
+            this.uxActionOdustani.TabIndex = 7;
+            this.uxActionOdustani.Text = "Odustani";
+            this.uxActionOdustani.UseVisualStyleBackColor = true;
+            this.uxActionOdustani.Click += new System.EventHandler(this.uiOdustani_Click);
             // 
             // recenzijaHelpProvider
             // 
@@ -117,13 +117,13 @@ namespace reRack.Design.Forms
             // 
             // OstavljanjeRecenzija
             // 
-            this.AcceptButton = this.uiDodaj;
+            this.AcceptButton = this.uxActionDodaj;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.uiOdustani;
+            this.CancelButton = this.uxActionOdustani;
             this.ClientSize = new System.Drawing.Size(300, 391);
-            this.Controls.Add(this.uiOdustani);
-            this.Controls.Add(this.uiDodaj);
+            this.Controls.Add(this.uxActionOdustani);
+            this.Controls.Add(this.uxActionDodaj);
             this.Controls.Add(this.uiTeretana);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uiKomentar);
@@ -150,8 +150,8 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiKomentar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox uiTeretana;
-        private System.Windows.Forms.Button uiDodaj;
-        private System.Windows.Forms.Button uiOdustani;
+        private System.Windows.Forms.Button uxActionDodaj;
+        private System.Windows.Forms.Button uxActionOdustani;
         private System.Windows.Forms.HelpProvider recenzijaHelpProvider;
     }
 }

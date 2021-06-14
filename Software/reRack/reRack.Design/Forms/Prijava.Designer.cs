@@ -37,10 +37,10 @@ namespace reRack.Design
             this.uxLozinkaLabel = new System.Windows.Forms.Label();
             this.uiKorIme = new System.Windows.Forms.TextBox();
             this.uxKorImeLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uiSlika = new System.Windows.Forms.PictureBox();
             this.prijavaHelpProvider = new System.Windows.Forms.HelpProvider();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // uxPrijavaLabel
@@ -113,17 +113,17 @@ namespace reRack.Design
             this.uxKorImeLabel.TabIndex = 8;
             this.uxKorImeLabel.Text = "Korisničko ime";
             // 
-            // pictureBox1
+            // uiSlika
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.prijavaHelpProvider.SetShowHelp(this.pictureBox1, false);
-            this.pictureBox1.Size = new System.Drawing.Size(404, 113);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.uiSlika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.uiSlika.Image = ((System.Drawing.Image)(resources.GetObject("uiSlika.Image")));
+            this.uiSlika.Location = new System.Drawing.Point(34, 64);
+            this.uiSlika.Name = "uiSlika";
+            this.prijavaHelpProvider.SetShowHelp(this.uiSlika, false);
+            this.uiSlika.Size = new System.Drawing.Size(404, 113);
+            this.uiSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiSlika.TabIndex = 15;
+            this.uiSlika.TabStop = false;
             // 
             // prijavaHelpProvider
             // 
@@ -148,7 +148,7 @@ namespace reRack.Design
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 464);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.uiSlika);
             this.Controls.Add(this.uxActionRegistracija);
             this.Controls.Add(this.uxActionPrijava);
             this.Controls.Add(this.uiLozinka);
@@ -163,7 +163,7 @@ namespace reRack.Design
             this.Name = "Prijava";
             this.prijavaHelpProvider.SetShowHelp(this, true);
             this.Text = "Prijava";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +178,7 @@ namespace reRack.Design
         private System.Windows.Forms.Label uxLozinkaLabel;
         private System.Windows.Forms.TextBox uiKorIme;
         private System.Windows.Forms.Label uxKorImeLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox uiSlika;
         private System.Windows.Forms.HelpProvider prijavaHelpProvider;
         private System.Windows.Forms.Label label1;
     }

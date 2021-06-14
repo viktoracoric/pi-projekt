@@ -35,14 +35,14 @@ namespace reRack.Design.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.uiKapacitet = new System.Windows.Forms.TextBox();
             this.uxActionZatvori = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.popunjenostTerminaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uiPopunjenost = new System.Windows.Forms.DataGridView();
             this.vrijemepocetakDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemekrajDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postotakPopunjenostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idintervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.popunjenostTerminaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.uiPopunjenost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popunjenostTerminaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,28 +90,24 @@ namespace reRack.Design.Forms
             this.uxActionZatvori.UseVisualStyleBackColor = true;
             this.uxActionZatvori.Click += new System.EventHandler(this.uxActionZatvori_Click);
             // 
-            // dataGridView1
+            // uiPopunjenost
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiPopunjenost.AllowUserToAddRows = false;
+            this.uiPopunjenost.AllowUserToDeleteRows = false;
+            this.uiPopunjenost.AutoGenerateColumns = false;
+            this.uiPopunjenost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiPopunjenost.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vrijemepocetakDataGridViewTextBoxColumn,
             this.vrijemekrajDataGridViewTextBoxColumn,
             this.postotakPopunjenostiDataGridViewTextBoxColumn,
             this.idintervalDataGridViewTextBoxColumn,
             this.rezervacijaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.popunjenostTerminaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(345, 150);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // popunjenostTerminaBindingSource
-            // 
-            this.popunjenostTerminaBindingSource.DataSource = typeof(reRack.Design.PopunjenostTermina);
+            this.uiPopunjenost.DataSource = this.popunjenostTerminaBindingSource;
+            this.uiPopunjenost.Location = new System.Drawing.Point(29, 103);
+            this.uiPopunjenost.Name = "uiPopunjenost";
+            this.uiPopunjenost.ReadOnly = true;
+            this.uiPopunjenost.Size = new System.Drawing.Size(345, 150);
+            this.uiPopunjenost.TabIndex = 4;
             // 
             // vrijemepocetakDataGridViewTextBoxColumn
             // 
@@ -150,12 +146,16 @@ namespace reRack.Design.Forms
             this.rezervacijaDataGridViewTextBoxColumn.ReadOnly = true;
             this.rezervacijaDataGridViewTextBoxColumn.Visible = false;
             // 
+            // popunjenostTerminaBindingSource
+            // 
+            this.popunjenostTerminaBindingSource.DataSource = typeof(reRack.Design.PopunjenostTermina);
+            // 
             // PrikazPopunjenosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 336);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uiPopunjenost);
             this.Controls.Add(this.uxActionZatvori);
             this.Controls.Add(this.uiKapacitet);
             this.Controls.Add(this.label2);
@@ -164,7 +164,7 @@ namespace reRack.Design.Forms
             this.Name = "PrikazPopunjenosti";
             this.Text = "Prikaz Popunjenosti";
             this.Load += new System.EventHandler(this.PrikazPopunjenosti_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPopunjenost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popunjenostTerminaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,7 +178,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox uiKapacitet;
         private System.Windows.Forms.Button uxActionZatvori;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView uiPopunjenost;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemepocetakDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemekrajDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postotakPopunjenostiDataGridViewTextBoxColumn;

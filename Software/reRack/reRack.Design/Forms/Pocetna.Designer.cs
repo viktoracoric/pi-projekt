@@ -37,9 +37,9 @@ namespace reRack.Design.Forms
             this.uiActionPrikazTeretana = new System.Windows.Forms.Button();
             this.uiActionMojeTeretane = new System.Windows.Forms.Button();
             this.uiDobrodosli = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uiSlika = new System.Windows.Forms.PictureBox();
             this.pocetnaHelpProvider = new System.Windows.Forms.HelpProvider();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // uiActionDodajVlasnika
@@ -112,16 +112,16 @@ namespace reRack.Design.Forms
             this.uiDobrodosli.TabIndex = 7;
             this.uiDobrodosli.Text = "Dobrodošli!";
             // 
-            // pictureBox1
+            // uiSlika
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(404, 113);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.uiSlika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.uiSlika.Image = ((System.Drawing.Image)(resources.GetObject("uiSlika.Image")));
+            this.uiSlika.Location = new System.Drawing.Point(31, 88);
+            this.uiSlika.Name = "uiSlika";
+            this.uiSlika.Size = new System.Drawing.Size(404, 113);
+            this.uiSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiSlika.TabIndex = 16;
+            this.uiSlika.TabStop = false;
             // 
             // pocetnaHelpProvider
             // 
@@ -132,7 +132,7 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.uiSlika);
             this.Controls.Add(this.uiActionDodajVlasnika);
             this.Controls.Add(this.uiActionDodajTeretanu);
             this.Controls.Add(this.uiActionUrediPodatkeTeretane);
@@ -146,7 +146,7 @@ namespace reRack.Design.Forms
             this.Name = "Pocetna";
             this.pocetnaHelpProvider.SetShowHelp(this, true);
             this.Text = "Pocetna";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +161,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.Button uiActionPrikazTeretana;
         private System.Windows.Forms.Button uiActionMojeTeretane;
         private System.Windows.Forms.Label uiDobrodosli;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox uiSlika;
         private System.Windows.Forms.HelpProvider pocetnaHelpProvider;
     }
 }

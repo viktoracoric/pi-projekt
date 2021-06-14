@@ -46,9 +46,9 @@ namespace reRack.Design.Forms
             this.uiEmail = new System.Windows.Forms.TextBox();
             this.uiEmailLabel = new System.Windows.Forms.Label();
             this.uiRegistracijaLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uiSlika = new System.Windows.Forms.PictureBox();
             this.registracijaHelpProvider = new System.Windows.Forms.HelpProvider();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // uiGrad
@@ -186,16 +186,16 @@ namespace reRack.Design.Forms
             this.uiRegistracijaLabel.TabIndex = 27;
             this.uiRegistracijaLabel.Text = "Registriraj se";
             // 
-            // pictureBox1
+            // uiSlika
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 76);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
+            this.uiSlika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.uiSlika.Image = ((System.Drawing.Image)(resources.GetObject("uiSlika.Image")));
+            this.uiSlika.Location = new System.Drawing.Point(12, 76);
+            this.uiSlika.Name = "uiSlika";
+            this.uiSlika.Size = new System.Drawing.Size(354, 94);
+            this.uiSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiSlika.TabIndex = 43;
+            this.uiSlika.TabStop = false;
             // 
             // registracijaHelpProvider
             // 
@@ -206,7 +206,7 @@ namespace reRack.Design.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 549);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.uiSlika);
             this.Controls.Add(this.uiGrad);
             this.Controls.Add(this.uiPotvrdaLozinke);
             this.Controls.Add(this.uiPotvrdaLozinkeLabel);
@@ -230,7 +230,7 @@ namespace reRack.Design.Forms
             this.registracijaHelpProvider.SetShowHelp(this, true);
             this.Text = "Registracija";
             this.Load += new System.EventHandler(this.Registracija_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +254,7 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiEmail;
         private System.Windows.Forms.Label uiEmailLabel;
         private System.Windows.Forms.Label uiRegistracijaLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox uiSlika;
         private System.Windows.Forms.HelpProvider registracijaHelpProvider;
     }
 }
