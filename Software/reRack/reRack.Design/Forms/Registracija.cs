@@ -13,6 +13,7 @@ namespace reRack.Design.Forms
     public partial class Registracija : Form
     {
         Entities entities = new Entities();
+        Validacija.Validacija validacija = new Validacija.Validacija();
         public Registracija()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace reRack.Design.Forms
         {
             try
             {
-                if (uiLozinka.Text == uiPotvrdaLozinke.Text)
+                if (validacija.ValidirajJednakostLozinki(uiLozinka.Text, uiPotvrdaLozinke.Text))
                 {
                     Prijava prijava = new Prijava();
                     this.Hide();
@@ -37,7 +38,7 @@ namespace reRack.Design.Forms
                     prijava.Show();
                     //TODO: unijeti u bazu
                     Korisnik korisnik = new Korisnik();
-                    if(uiIme.Text == "" || uiPrezime.Text == "" || uiEmail.Text == "" || uiBrojTelefona.Text == "" || uiLozinka.Text == "")
+                    if(!validacija.ValidirajUnos(uiIme.Text) || !validacija.ValidirajUnos(uiPrezime.Text) || !validacija.ValidirajUnos(uiEmail.Text) || !validacija.ValidirajUnos(uiBrojTelefona.Text) || !validacija.ValidirajUnos(uiLozinka.Text))
                     {
                         throw new DataException("Polja ne smiju biti prazna!");
                     }
@@ -46,14 +47,14 @@ namespace reRack.Design.Forms
                     korisnik.korisnicko_ime = uiIme.Text.Substring(0, 1).ToLower() + uiPrezime.Text.ToLower();
                     korisnik.prezime = uiPrezime.Text;
                     korisnik.mail = uiEmail.Text;
-                    if(!korisnik.mail.Contains("@"))
+                    if(!validacija.ValidirajEmail(korisnik.mail))
                     {
                         throw new DataException("E-mail adresa nije ispravna!");
                     }
                     korisnik.grad_id = (uiGrad.SelectedItem as Grad).id_grad;
                     korisnik.broj_telefona = uiBrojTelefona.Text;
                     korisnik.lozinka = uiLozinka.Text;
-                    if (korisnik.lozinka.Length < 6)
+                    if (!validacija.ValidirajJakostLozinke(korisnik.lozinka))
                     {
                         throw new DataException("Lozinka mora imati najmanje 6 znakova");
                     }

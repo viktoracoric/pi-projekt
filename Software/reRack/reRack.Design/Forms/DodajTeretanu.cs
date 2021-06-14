@@ -13,6 +13,7 @@ namespace reRack.Design.Forms
     public partial class DodajTeretanu : Form
     {
         Entities entities = new Entities();
+        Validacija.Validacija validacija = new Validacija.Validacija();
         public DodajTeretanu(Zahtjev zahtjev)
         {
             InitializeComponent();
@@ -50,35 +51,34 @@ namespace reRack.Design.Forms
         {
             try
             {
-                if (uiIme.Text != "" && uiKorisnik.Text != "" && uiGrad.Text != "" && uiAdresa.Text != "")
+                if(validacija.ValidirajUnos(uiAdresa.Text) && validacija.ValidirajUnos(uiIme.Text) && validacija.ValidirajUnos(uiGrad.Text) && validacija.ValidirajUnos(uiKorisnik.Text))
                 {
                     Teretana teretana = new Teretana();
                     teretana.korisnik_id = (uiKorisnik.SelectedItem as Korisnik).id_korisnik;
                     teretana.adresa = uiAdresa.Text;
                     teretana.naziv = uiIme.Text;
                     teretana.grad_id = (uiGrad.SelectedItem as Grad).id_grad;
-                    int broj;
-                    if (Int32.TryParse(uiKapacitet.Value.ToString(), out broj))
+                    if (validacija.ValidirajBroj(uiKapacitet.Value.ToString()) != -1)
                     {
-                        teretana.kapacitet = broj;
+                        teretana.kapacitet = validacija.ValidirajBroj(uiKapacitet.Value.ToString());
                     }
                     else
                     {
                         uiKapacitet.Value = (int)Math.Round(uiKapacitet.Value);
                         throw new DataException("Vrijednost kapaciteta mora biti cijeli broj!");
                     }
-                    if (Int32.TryParse(uiKvadratura.Value.ToString(), out broj))
+                    if (validacija.ValidirajBroj(uiKvadratura.Value.ToString()) != -1)
                     {
-                        teretana.kvadratura = broj;
+                        teretana.kvadratura = validacija.ValidirajBroj(uiKvadratura.Value.ToString());
                     }
                     else
                     {
                         uiKvadratura.Value = (int)Math.Round(uiKvadratura.Value);
                         throw new DataException("Vrijednost kvadrature mora biti cijeli broj!");
                     }
-                    if (Int32.TryParse(uiCijena.Value.ToString(), out broj))
+                    if (validacija.ValidirajBroj(uiCijena.Value.ToString()) != -1)
                     {
-                        teretana.cijena_clanstva = broj;
+                        teretana.cijena_clanstva = validacija.ValidirajBroj(uiCijena.Value.ToString());
                     }
                     else
                     {

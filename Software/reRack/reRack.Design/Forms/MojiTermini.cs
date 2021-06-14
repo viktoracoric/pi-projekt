@@ -14,6 +14,7 @@ namespace reRack.Design.Forms
     {
         private Korisnik prijavljeniKorisnik;
         Entities entities = new Entities();
+        Validacija.Validacija validacija = new Validacija.Validacija();
         public MojiTermini(Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace reRack.Design.Forms
         {
             try
             {
-                if(rezervacijaBindingSource.Current != null)
+                if(validacija.ValidirajOdabraniObjekt(rezervacijaBindingSource.Current))
                 {
                     Rezervacija rezervacija = rezervacijaBindingSource.Current as Rezervacija;
                     entities.Rezervacija.Remove(rezervacija);

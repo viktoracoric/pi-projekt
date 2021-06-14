@@ -14,6 +14,7 @@ namespace reRack.Design.Forms
     {
         private Korisnik prijavljeniKorisnik;
         Entities entities = new Entities();
+        Validacija.Validacija validacija = new Validacija.Validacija();
 
         public UrediPodatke(Korisnik prijavljeniKorisnik)
         {
@@ -52,21 +53,21 @@ namespace reRack.Design.Forms
             var korisnik = upit.Single();
             try
             {
-                if (uiImeEdit.Text == "" || uiPrezimeEdit.Text == "" || uiEmailEdit.Text == "" || uiBrojTelefonaEdit.Text == "" || uiLozinkaEdit.Text == "")
+                if (!validacija.ValidirajUnos(uiImeEdit.Text) || !validacija.ValidirajUnos(uiPrezimeEdit.Text) || !validacija.ValidirajUnos(uiEmailEdit.Text) || !validacija.ValidirajUnos(uiBrojTelefonaEdit.Text) || !validacija.ValidirajUnos(uiLozinkaEdit.Text))
                 {
                     throw new DataException("Polja ne smiju biti prazna!");
                 }
                 korisnik.ime = uiImeEdit.Text;
                 korisnik.prezime = uiPrezimeEdit.Text;
                 korisnik.mail = uiEmailEdit.Text;
-                if (!korisnik.mail.Contains("@"))
+                if (!validacija.ValidirajEmail(korisnik.mail))
                 {
                     throw new DataException("E-mail adresa nije ispravna!");
                 }
                 korisnik.grad_id = (uiGradEdit.SelectedItem as Grad).id_grad;
                 korisnik.broj_telefona = uiBrojTelefonaEdit.Text;
                 korisnik.lozinka = uiLozinkaEdit.Text;
-                if(korisnik.lozinka.Length < 6)
+                if(!validacija.ValidirajJakostLozinke(uiLozinkaEdit.Text))
                 {
                     throw new DataException("Lozinka mora imati najmanje 6 znakova");
                 }
