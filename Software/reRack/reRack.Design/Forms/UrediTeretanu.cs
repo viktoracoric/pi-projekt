@@ -124,6 +124,25 @@ namespace reRack.Design.Forms
                 if(uiIme.SelectedItem != null)
                 {
                     Teretana obrisiMe = (uiIme.SelectedItem as Teretana);
+
+                    var upit = from c in entities.Clanstvo
+                               where obrisiMe.id_teretana == c.teretana_id
+                               select c;
+
+                    foreach (var item in upit)
+                    {
+                        entities.Clanstvo.Remove(item);
+                    }
+
+                    var upitovski = from r in entities.Rezervacija
+                                    where obrisiMe.id_teretana == r.teretana_id
+                                    select r;
+
+                    foreach (var item in upitovski)
+                    {
+                        entities.Rezervacija.Remove(item);
+                    }
+                    entities.SaveChanges();
                     entities.Teretana.Remove(obrisiMe);
                     entities.SaveChanges();
                     MessageBox.Show("Teretana uspješno obrisana!");

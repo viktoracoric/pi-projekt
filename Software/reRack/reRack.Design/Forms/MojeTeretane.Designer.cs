@@ -40,6 +40,7 @@ namespace reRack.Design.Forms
             this.uxActionNazad = new System.Windows.Forms.Button();
             this.mojeTeretaneHelpProvider = new System.Windows.Forms.HelpProvider();
             this.uiDatum = new System.Windows.Forms.DateTimePicker();
+            this.uxActionPopunjenost = new System.Windows.Forms.Button();
             this.idteretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +88,7 @@ namespace reRack.Design.Forms
             // 
             // btnRecenzija
             // 
-            this.btnRecenzija.Location = new System.Drawing.Point(490, 167);
+            this.btnRecenzija.Location = new System.Drawing.Point(490, 145);
             this.btnRecenzija.Name = "btnRecenzija";
             this.btnRecenzija.Size = new System.Drawing.Size(121, 48);
             this.btnRecenzija.TabIndex = 1;
@@ -121,10 +122,11 @@ namespace reRack.Design.Forms
             this.uiTermin.Name = "uiTermin";
             this.uiTermin.Size = new System.Drawing.Size(121, 21);
             this.uiTermin.TabIndex = 4;
+            this.uiTermin.TextChanged += new System.EventHandler(this.uiTermin_TextChanged);
             // 
             // uxActionPrikazMojihTermina
             // 
-            this.uxActionPrikazMojihTermina.Location = new System.Drawing.Point(490, 244);
+            this.uxActionPrikazMojihTermina.Location = new System.Drawing.Point(490, 199);
             this.uxActionPrikazMojihTermina.Name = "uxActionPrikazMojihTermina";
             this.uxActionPrikazMojihTermina.Size = new System.Drawing.Size(121, 51);
             this.uxActionPrikazMojihTermina.TabIndex = 5;
@@ -146,7 +148,7 @@ namespace reRack.Design.Forms
             // 
             this.uxActionNazad.Location = new System.Drawing.Point(490, 360);
             this.uxActionNazad.Name = "uxActionNazad";
-            this.uxActionNazad.Size = new System.Drawing.Size(102, 43);
+            this.uxActionNazad.Size = new System.Drawing.Size(121, 43);
             this.uxActionNazad.TabIndex = 7;
             this.uxActionNazad.Text = "Nazad";
             this.uxActionNazad.UseVisualStyleBackColor = true;
@@ -162,6 +164,17 @@ namespace reRack.Design.Forms
             this.uiDatum.Name = "uiDatum";
             this.uiDatum.Size = new System.Drawing.Size(186, 20);
             this.uiDatum.TabIndex = 9;
+            this.uiDatum.ValueChanged += new System.EventHandler(this.uiDatum_ValueChanged);
+            // 
+            // uxActionPopunjenost
+            // 
+            this.uxActionPopunjenost.Location = new System.Drawing.Point(490, 275);
+            this.uxActionPopunjenost.Name = "uxActionPopunjenost";
+            this.uxActionPopunjenost.Size = new System.Drawing.Size(121, 41);
+            this.uxActionPopunjenost.TabIndex = 10;
+            this.uxActionPopunjenost.Text = "Popunjenost temeljem prethodnih podataka";
+            this.uxActionPopunjenost.UseVisualStyleBackColor = true;
+            this.uxActionPopunjenost.Click += new System.EventHandler(this.uxActionPopunjenost_Click);
             // 
             // idteretanaDataGridViewTextBoxColumn
             // 
@@ -270,7 +283,8 @@ namespace reRack.Design.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 460);
+            this.ClientSize = new System.Drawing.Size(643, 475);
+            this.Controls.Add(this.uxActionPopunjenost);
             this.Controls.Add(this.uiDatum);
             this.Controls.Add(this.uxActionNazad);
             this.Controls.Add(this.uiObavjest);
@@ -320,5 +334,6 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn recenzijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker uiDatum;
+        private System.Windows.Forms.Button uxActionPopunjenost;
     }
 }

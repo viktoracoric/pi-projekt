@@ -85,6 +85,12 @@ namespace reRack.Design.Forms
                         uiCijena.Value = (int)Math.Round(uiCijena.Value);
                         throw new DataException("Vrijednost cijene članstva mora biti cijeli broj!");
                     }
+                    if ((uiKorisnik.SelectedItem as Korisnik).uloga_id == 0)
+                    {
+                        (uiKorisnik.SelectedItem as Korisnik).uloga_id = 1;
+                        MessageBox.Show("Teretana uspješno dodana na popis teretana!");
+                    }
+                   
                     entities.Teretana.Add(teretana);
 
                     entities.SaveChanges();

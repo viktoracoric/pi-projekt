@@ -72,7 +72,10 @@ namespace reRack.Design.Forms
                 {
                     throw new DataException("Lozinka mora imati najmanje 6 znakova");
                 }
+                   
+
                 entities.SaveChanges();
+                MessageBox.Show("Uspješna izmjena!");
                 Close();
             }
             catch(DataException ex)

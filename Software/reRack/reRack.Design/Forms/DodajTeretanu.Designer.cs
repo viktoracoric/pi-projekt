@@ -148,7 +148,7 @@ namespace reRack.Design.Forms
             this.uxActionPotvrdi.Name = "uxActionPotvrdi";
             this.uxActionPotvrdi.Size = new System.Drawing.Size(91, 38);
             this.uxActionPotvrdi.TabIndex = 4;
-            this.uxActionPotvrdi.Text = "Potvrdi zahtjev";
+            this.uxActionPotvrdi.Text = "Potvrdi";
             this.uxActionPotvrdi.UseVisualStyleBackColor = true;
             this.uxActionPotvrdi.Click += new System.EventHandler(this.uxActionSpremi_Click);
             // 
@@ -158,7 +158,7 @@ namespace reRack.Design.Forms
             this.uxActionOdbij.Name = "uxActionOdbij";
             this.uxActionOdbij.Size = new System.Drawing.Size(91, 38);
             this.uxActionOdbij.TabIndex = 4;
-            this.uxActionOdbij.Text = "Odbij zahtjev";
+            this.uxActionOdbij.Text = "Odbij";
             this.uxActionOdbij.UseVisualStyleBackColor = true;
             this.uxActionOdbij.Click += new System.EventHandler(this.uxActionOdustani_Click);
             // 
