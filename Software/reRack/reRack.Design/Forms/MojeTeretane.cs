@@ -48,6 +48,7 @@ namespace reRack.Design.Forms
 
             rezervacija.interval_id = (uiTermin.SelectedItem as VrInterval).id_interval;
             rezervacija.korisnik_id = prijavljeniKorisnik.id_korisnik;
+            rezervacija.datum = uiDatum.Value.Date;
             try
             {
                 if(teretanaBindingSource.Current != null)
@@ -76,40 +77,7 @@ namespace reRack.Design.Forms
 
         private void teretanaBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            /*
-
-            try
-            {
-                Teretana teretana = teretanaBindingSource.Current as Teretana;
-
-                int interval = uiTermin.SelectedIndex;
-
-                var upit = from v in entities.VrInterval
-                           where v.id_interval == interval
-                           select v;
-
-                List<VrInterval> vrIntervals = new List<VrInterval>();
-
-                foreach (var item in upit)
-                {
-                    vrIntervals.Add(item);
-                }
-
-                var query = from t in entities.Rezervacija
-                            where t.teretana_id == teretana.id_teretana && t.interval_id == interval
-                            select t;
-
-                uiObavjest.Text = "Teretana " + teretana.naziv + " ima ukupno " + teretana.kapacitet + " mjesta, a u terminu "
-                                   + vrIntervals.First().vrijeme_pocetak + " - " + vrIntervals.First().vrijeme_kraj + " je trenutno zauzeto "
-                                   + query.Count() + " mjesta";
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show( ex.Message);
-            } */
-
+          
             Teretana teretana = teretanaBindingSource.Current as Teretana;
 
             int interval = uiTermin.SelectedIndex;
@@ -128,11 +96,12 @@ namespace reRack.Design.Forms
             if(vrIntervals.Count() > 0)
             {
                 var query = from t in entities.Rezervacija
-                            where t.teretana_id == teretana.id_teretana && t.interval_id == interval
+                            where t.teretana_id == teretana.id_teretana && t.interval_id == interval && t.datum == uiDatum.Value.Date
                             select t;
 
                 uiObavjest.Text = "Teretana " + teretana.naziv + " ima ukupno " + teretana.kapacitet + " mjesta, a u terminu "
-                                   + vrIntervals.First().vrijeme_pocetak + " - " + vrIntervals.First().vrijeme_kraj + " je trenutno zauzeto "
+                                   + vrIntervals.First().vrijeme_pocetak + " - " + vrIntervals.First().vrijeme_kraj + " na datum: " + uiDatum.Value.Date.ToShortDateString()
+                                   + " je trenutno zauzeto "
                                    + query.Count() + " mjesta";
             }
         }

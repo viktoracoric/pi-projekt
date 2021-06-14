@@ -56,6 +56,7 @@
           <Property Name="teretana_id" Type="int" Nullable="false" />
           <Property Name="interval_id" Type="int" Nullable="false" />
           <Property Name="id_rezervacija" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum" Type="date" />
         </EntityType>
         <EntityType Name="Teretana">
           <Key>
@@ -397,6 +398,7 @@
           <NavigationProperty Name="VrInterval" Relationship="Self.Rezervacija_FK" FromRole="Rezervacija" ToRole="VrInterval" />
           <NavigationProperty Name="Teretana" Relationship="Self.Rezervacija_FK_2" FromRole="Rezervacija" ToRole="Teretana" />
           <Property Name="id_rezervacija" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Teretana">
           <Key>
@@ -730,6 +732,7 @@
           <EntitySetMapping Name="Rezervacija">
             <EntityTypeMapping TypeName="Model.Rezervacija">
               <MappingFragment StoreEntitySet="Rezervacija">
+                <ScalarProperty Name="datum" ColumnName="datum" />
                 <ScalarProperty Name="id_rezervacija" ColumnName="id_rezervacija" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="teretana_id" ColumnName="teretana_id" />

@@ -31,7 +31,6 @@ namespace reRack.Design
         public virtual ICollection<Teretana> Teretana { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Zahtjev> Zahtjev { get; set; }
-
         public override string ToString()
         {
             return naziv;

@@ -31,15 +31,16 @@ namespace reRack.Design.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uxActionObrisi = new System.Windows.Forms.Button();
+            this.mojiTerminiHelpProvider = new System.Windows.Forms.HelpProvider();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrIntervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teretanaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.intervalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrIntervalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teretanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uxActionObrisi = new System.Windows.Forms.Button();
-            this.mojiTerminiHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -52,17 +53,39 @@ namespace reRack.Design.Forms
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.korisnikidDataGridViewTextBoxColumn,
+            this.teretanaDataGridViewTextBoxColumn,
+            this.datum,
+            this.vrIntervalDataGridViewTextBoxColumn,
             this.teretanaidDataGridViewTextBoxColumn,
             this.intervalidDataGridViewTextBoxColumn,
-            this.korisnikDataGridViewTextBoxColumn,
-            this.vrIntervalDataGridViewTextBoxColumn,
-            this.teretanaDataGridViewTextBoxColumn});
+            this.korisnikDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.rezervacijaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(245, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(350, 170);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // uxActionObrisi
+            // 
+            this.uxActionObrisi.Location = new System.Drawing.Point(117, 202);
+            this.uxActionObrisi.Name = "uxActionObrisi";
+            this.uxActionObrisi.Size = new System.Drawing.Size(140, 50);
+            this.uxActionObrisi.TabIndex = 1;
+            this.uxActionObrisi.Text = "Obriši rezervirani termin";
+            this.uxActionObrisi.UseVisualStyleBackColor = true;
+            this.uxActionObrisi.Click += new System.EventHandler(this.uxActionObrisi_Click);
+            // 
+            // mojiTerminiHelpProvider
+            // 
+            this.mojiTerminiHelpProvider.HelpNamespace = "reRack.chm";
+            // 
+            // datum
+            // 
+            this.datum.DataPropertyName = "datum";
+            this.datum.HeaderText = "Datum";
+            this.datum.Name = "datum";
+            this.datum.ReadOnly = true;
             // 
             // korisnikidDataGridViewTextBoxColumn
             // 
@@ -71,6 +94,20 @@ namespace reRack.Design.Forms
             this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
             this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
             this.korisnikidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // teretanaDataGridViewTextBoxColumn
+            // 
+            this.teretanaDataGridViewTextBoxColumn.DataPropertyName = "Teretana";
+            this.teretanaDataGridViewTextBoxColumn.HeaderText = "Teretana";
+            this.teretanaDataGridViewTextBoxColumn.Name = "teretanaDataGridViewTextBoxColumn";
+            this.teretanaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vrIntervalDataGridViewTextBoxColumn
+            // 
+            this.vrIntervalDataGridViewTextBoxColumn.DataPropertyName = "VrInterval";
+            this.vrIntervalDataGridViewTextBoxColumn.HeaderText = "Interval";
+            this.vrIntervalDataGridViewTextBoxColumn.Name = "vrIntervalDataGridViewTextBoxColumn";
+            this.vrIntervalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // teretanaidDataGridViewTextBoxColumn
             // 
@@ -96,37 +133,9 @@ namespace reRack.Design.Forms
             this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
             this.korisnikDataGridViewTextBoxColumn.Visible = false;
             // 
-            // vrIntervalDataGridViewTextBoxColumn
-            // 
-            this.vrIntervalDataGridViewTextBoxColumn.DataPropertyName = "VrInterval";
-            this.vrIntervalDataGridViewTextBoxColumn.HeaderText = "VrInterval";
-            this.vrIntervalDataGridViewTextBoxColumn.Name = "vrIntervalDataGridViewTextBoxColumn";
-            this.vrIntervalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // teretanaDataGridViewTextBoxColumn
-            // 
-            this.teretanaDataGridViewTextBoxColumn.DataPropertyName = "Teretana";
-            this.teretanaDataGridViewTextBoxColumn.HeaderText = "Teretana";
-            this.teretanaDataGridViewTextBoxColumn.Name = "teretanaDataGridViewTextBoxColumn";
-            this.teretanaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // rezervacijaBindingSource
             // 
             this.rezervacijaBindingSource.DataSource = typeof(reRack.Design.Rezervacija);
-            // 
-            // uxActionObrisi
-            // 
-            this.uxActionObrisi.Location = new System.Drawing.Point(117, 202);
-            this.uxActionObrisi.Name = "uxActionObrisi";
-            this.uxActionObrisi.Size = new System.Drawing.Size(140, 50);
-            this.uxActionObrisi.TabIndex = 1;
-            this.uxActionObrisi.Text = "Obriši rezervirani termin";
-            this.uxActionObrisi.UseVisualStyleBackColor = true;
-            this.uxActionObrisi.Click += new System.EventHandler(this.uxActionObrisi_Click);
-            // 
-            // mojiTerminiHelpProvider
-            // 
-            this.mojiTerminiHelpProvider.HelpNamespace = "reRack.chm";
             // 
             // MojiTermini
             // 
@@ -152,12 +161,13 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button uxActionObrisi;
         private System.Windows.Forms.BindingSource rezervacijaBindingSource;
+        private System.Windows.Forms.HelpProvider mojiTerminiHelpProvider;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teretanaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vrIntervalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teretanaidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn intervalidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vrIntervalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teretanaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.HelpProvider mojiTerminiHelpProvider;
     }
 }
