@@ -43,10 +43,10 @@ namespace reRack.Design.Forms
             this.uiEmailEdit = new System.Windows.Forms.TextBox();
             this.uiEmailLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.potvrdiBtn = new System.Windows.Forms.Button();
-            this.odustaniBtn = new System.Windows.Forms.Button();
+            this.uxActionIzmjeni = new System.Windows.Forms.Button();
+            this.uxActionOdustani = new System.Windows.Forms.Button();
             this.urediPodatkeHelpProvider = new System.Windows.Forms.HelpProvider();
-            this.uiStatistika = new System.Windows.Forms.Button();
+            this.uxActionStatistika = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,51 +159,51 @@ namespace reRack.Design.Forms
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
             // 
-            // potvrdiBtn
+            // uxActionIzmjeni
             // 
-            this.potvrdiBtn.Location = new System.Drawing.Point(29, 367);
-            this.potvrdiBtn.Name = "potvrdiBtn";
-            this.potvrdiBtn.Size = new System.Drawing.Size(101, 23);
-            this.potvrdiBtn.TabIndex = 56;
-            this.potvrdiBtn.Text = "Izmjeni podatke";
-            this.potvrdiBtn.UseVisualStyleBackColor = true;
-            this.potvrdiBtn.Click += new System.EventHandler(this.potvrdiBtn_Click);
+            this.uxActionIzmjeni.Location = new System.Drawing.Point(29, 367);
+            this.uxActionIzmjeni.Name = "uxActionIzmjeni";
+            this.uxActionIzmjeni.Size = new System.Drawing.Size(101, 23);
+            this.uxActionIzmjeni.TabIndex = 56;
+            this.uxActionIzmjeni.Text = "Izmjeni podatke";
+            this.uxActionIzmjeni.UseVisualStyleBackColor = true;
+            this.uxActionIzmjeni.Click += new System.EventHandler(this.potvrdiBtn_Click);
             // 
-            // odustaniBtn
+            // uxActionOdustani
             // 
-            this.odustaniBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.odustaniBtn.Location = new System.Drawing.Point(156, 367);
-            this.odustaniBtn.Name = "odustaniBtn";
-            this.odustaniBtn.Size = new System.Drawing.Size(107, 23);
-            this.odustaniBtn.TabIndex = 57;
-            this.odustaniBtn.Text = "Odustani";
-            this.odustaniBtn.UseVisualStyleBackColor = true;
-            this.odustaniBtn.Click += new System.EventHandler(this.odustaniBtn_Click);
+            this.uxActionOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.uxActionOdustani.Location = new System.Drawing.Point(156, 367);
+            this.uxActionOdustani.Name = "uxActionOdustani";
+            this.uxActionOdustani.Size = new System.Drawing.Size(107, 23);
+            this.uxActionOdustani.TabIndex = 57;
+            this.uxActionOdustani.Text = "Odustani";
+            this.uxActionOdustani.UseVisualStyleBackColor = true;
+            this.uxActionOdustani.Click += new System.EventHandler(this.odustaniBtn_Click);
             // 
             // urediPodatkeHelpProvider
             // 
             this.urediPodatkeHelpProvider.HelpNamespace = "reRack.chm";
             // 
-            // uiStatistika
+            // uxActionStatistika
             // 
-            this.uiStatistika.Location = new System.Drawing.Point(95, 412);
-            this.uiStatistika.Name = "uiStatistika";
-            this.uiStatistika.Size = new System.Drawing.Size(106, 42);
-            this.uiStatistika.TabIndex = 58;
-            this.uiStatistika.Text = "Vidi osobnu statistiku";
-            this.uiStatistika.UseVisualStyleBackColor = true;
-            this.uiStatistika.Click += new System.EventHandler(this.uiStatistika_Click);
+            this.uxActionStatistika.Location = new System.Drawing.Point(95, 412);
+            this.uxActionStatistika.Name = "uxActionStatistika";
+            this.uxActionStatistika.Size = new System.Drawing.Size(106, 42);
+            this.uxActionStatistika.TabIndex = 58;
+            this.uxActionStatistika.Text = "Vidi osobnu statistiku";
+            this.uxActionStatistika.UseVisualStyleBackColor = true;
+            this.uxActionStatistika.Click += new System.EventHandler(this.uiStatistika_Click);
             // 
             // Profil
             // 
-            this.AcceptButton = this.potvrdiBtn;
+            this.AcceptButton = this.uxActionIzmjeni;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.odustaniBtn;
+            this.CancelButton = this.uxActionOdustani;
             this.ClientSize = new System.Drawing.Size(308, 466);
-            this.Controls.Add(this.uiStatistika);
-            this.Controls.Add(this.odustaniBtn);
-            this.Controls.Add(this.potvrdiBtn);
+            this.Controls.Add(this.uxActionStatistika);
+            this.Controls.Add(this.uxActionOdustani);
+            this.Controls.Add(this.uxActionIzmjeni);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.uiGradEdit);
             this.Controls.Add(this.uiBrojTelefonaEdit);
@@ -245,9 +245,9 @@ namespace reRack.Design.Forms
         private System.Windows.Forms.TextBox uiEmailEdit;
         private System.Windows.Forms.Label uiEmailLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button potvrdiBtn;
-        private System.Windows.Forms.Button odustaniBtn;
+        private System.Windows.Forms.Button uxActionIzmjeni;
+        private System.Windows.Forms.Button uxActionOdustani;
         private System.Windows.Forms.HelpProvider urediPodatkeHelpProvider;
-        private System.Windows.Forms.Button uiStatistika;
+        private System.Windows.Forms.Button uxActionStatistika;
     }
 }

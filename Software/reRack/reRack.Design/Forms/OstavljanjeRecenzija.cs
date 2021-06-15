@@ -24,10 +24,6 @@ namespace reRack.Design.Forms
             this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
-        public OstavljanjeRecenzija()
-        {
-            InitializeComponent();
-        }
         private void Recenzija_Load(object sender, EventArgs e)
         {
             uiTeretana.Text = selektiranaTeretana.naziv;

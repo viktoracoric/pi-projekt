@@ -30,77 +30,77 @@ namespace reRack.Design.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pocetna));
-            this.uiActionDodajVlasnika = new System.Windows.Forms.Button();
-            this.uiActionDodajTeretanu = new System.Windows.Forms.Button();
-            this.uiActionUrediPodatkeTeretane = new System.Windows.Forms.Button();
-            this.uiActionUrediPodatke = new System.Windows.Forms.Button();
-            this.uiActionPrikazTeretana = new System.Windows.Forms.Button();
-            this.uiActionMojeTeretane = new System.Windows.Forms.Button();
+            this.uxActionPregledZahtjeva = new System.Windows.Forms.Button();
+            this.uxActionDodajTeretanu = new System.Windows.Forms.Button();
+            this.uxActionUrediPodatkeTeretane = new System.Windows.Forms.Button();
+            this.uxActionProfil = new System.Windows.Forms.Button();
+            this.uxActionPrikazTeretana = new System.Windows.Forms.Button();
+            this.uxActionMojeTeretane = new System.Windows.Forms.Button();
             this.uiDobrodosli = new System.Windows.Forms.Label();
             this.uiSlika = new System.Windows.Forms.PictureBox();
             this.pocetnaHelpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.uiSlika)).BeginInit();
             this.SuspendLayout();
             // 
-            // uiActionDodajVlasnika
+            // uxActionPregledZahtjeva
             // 
-            this.uiActionDodajVlasnika.Location = new System.Drawing.Point(325, 361);
-            this.uiActionDodajVlasnika.Name = "uiActionDodajVlasnika";
-            this.uiActionDodajVlasnika.Size = new System.Drawing.Size(100, 51);
-            this.uiActionDodajVlasnika.TabIndex = 13;
-            this.uiActionDodajVlasnika.Text = "Pregled zahtjeva";
-            this.uiActionDodajVlasnika.UseVisualStyleBackColor = true;
-            this.uiActionDodajVlasnika.Click += new System.EventHandler(this.uiActionDodajVlasnika_Click);
+            this.uxActionPregledZahtjeva.Location = new System.Drawing.Point(325, 361);
+            this.uxActionPregledZahtjeva.Name = "uxActionPregledZahtjeva";
+            this.uxActionPregledZahtjeva.Size = new System.Drawing.Size(100, 51);
+            this.uxActionPregledZahtjeva.TabIndex = 13;
+            this.uxActionPregledZahtjeva.Text = "Pregled zahtjeva";
+            this.uxActionPregledZahtjeva.UseVisualStyleBackColor = true;
+            this.uxActionPregledZahtjeva.Click += new System.EventHandler(this.uiActionDodajVlasnika_Click);
             // 
-            // uiActionDodajTeretanu
+            // uxActionDodajTeretanu
             // 
-            this.uiActionDodajTeretanu.Location = new System.Drawing.Point(181, 361);
-            this.uiActionDodajTeretanu.Name = "uiActionDodajTeretanu";
-            this.uiActionDodajTeretanu.Size = new System.Drawing.Size(100, 51);
-            this.uiActionDodajTeretanu.TabIndex = 12;
-            this.uiActionDodajTeretanu.Text = "Dodaj teretanu";
-            this.uiActionDodajTeretanu.UseVisualStyleBackColor = true;
-            this.uiActionDodajTeretanu.Click += new System.EventHandler(this.uiActionDodajTeretanu_Click);
+            this.uxActionDodajTeretanu.Location = new System.Drawing.Point(181, 361);
+            this.uxActionDodajTeretanu.Name = "uxActionDodajTeretanu";
+            this.uxActionDodajTeretanu.Size = new System.Drawing.Size(100, 51);
+            this.uxActionDodajTeretanu.TabIndex = 12;
+            this.uxActionDodajTeretanu.Text = "Dodaj teretanu";
+            this.uxActionDodajTeretanu.UseVisualStyleBackColor = true;
+            this.uxActionDodajTeretanu.Click += new System.EventHandler(this.uiActionDodajTeretanu_Click);
             // 
-            // uiActionUrediPodatkeTeretane
+            // uxActionUrediPodatkeTeretane
             // 
-            this.uiActionUrediPodatkeTeretane.Location = new System.Drawing.Point(45, 361);
-            this.uiActionUrediPodatkeTeretane.Name = "uiActionUrediPodatkeTeretane";
-            this.uiActionUrediPodatkeTeretane.Size = new System.Drawing.Size(100, 51);
-            this.uiActionUrediPodatkeTeretane.TabIndex = 11;
-            this.uiActionUrediPodatkeTeretane.Text = "Uredi podatke teretane";
-            this.uiActionUrediPodatkeTeretane.UseVisualStyleBackColor = true;
-            this.uiActionUrediPodatkeTeretane.Click += new System.EventHandler(this.uiActionUrediPodatkeTeretane_Click);
+            this.uxActionUrediPodatkeTeretane.Location = new System.Drawing.Point(45, 361);
+            this.uxActionUrediPodatkeTeretane.Name = "uxActionUrediPodatkeTeretane";
+            this.uxActionUrediPodatkeTeretane.Size = new System.Drawing.Size(100, 51);
+            this.uxActionUrediPodatkeTeretane.TabIndex = 11;
+            this.uxActionUrediPodatkeTeretane.Text = "Uredi podatke teretane";
+            this.uxActionUrediPodatkeTeretane.UseVisualStyleBackColor = true;
+            this.uxActionUrediPodatkeTeretane.Click += new System.EventHandler(this.uiActionUrediPodatkeTeretane_Click);
             // 
-            // uiActionUrediPodatke
+            // uxActionProfil
             // 
-            this.uiActionUrediPodatke.Location = new System.Drawing.Point(325, 256);
-            this.uiActionUrediPodatke.Name = "uiActionUrediPodatke";
-            this.uiActionUrediPodatke.Size = new System.Drawing.Size(100, 51);
-            this.uiActionUrediPodatke.TabIndex = 10;
-            this.uiActionUrediPodatke.Text = "Profil";
-            this.uiActionUrediPodatke.UseVisualStyleBackColor = true;
-            this.uiActionUrediPodatke.Click += new System.EventHandler(this.uiActionUrediPodatke_Click);
+            this.uxActionProfil.Location = new System.Drawing.Point(325, 256);
+            this.uxActionProfil.Name = "uxActionProfil";
+            this.uxActionProfil.Size = new System.Drawing.Size(100, 51);
+            this.uxActionProfil.TabIndex = 10;
+            this.uxActionProfil.Text = "Profil";
+            this.uxActionProfil.UseVisualStyleBackColor = true;
+            this.uxActionProfil.Click += new System.EventHandler(this.uiActionUrediPodatke_Click);
             // 
-            // uiActionPrikazTeretana
+            // uxActionPrikazTeretana
             // 
-            this.uiActionPrikazTeretana.Location = new System.Drawing.Point(181, 256);
-            this.uiActionPrikazTeretana.Name = "uiActionPrikazTeretana";
-            this.uiActionPrikazTeretana.Size = new System.Drawing.Size(100, 51);
-            this.uiActionPrikazTeretana.TabIndex = 9;
-            this.uiActionPrikazTeretana.Text = "Prikaži sve teretane";
-            this.uiActionPrikazTeretana.UseVisualStyleBackColor = true;
-            this.uiActionPrikazTeretana.Click += new System.EventHandler(this.uiActionPrikazTeretana_Click);
+            this.uxActionPrikazTeretana.Location = new System.Drawing.Point(181, 256);
+            this.uxActionPrikazTeretana.Name = "uxActionPrikazTeretana";
+            this.uxActionPrikazTeretana.Size = new System.Drawing.Size(100, 51);
+            this.uxActionPrikazTeretana.TabIndex = 9;
+            this.uxActionPrikazTeretana.Text = "Prikaži sve teretane";
+            this.uxActionPrikazTeretana.UseVisualStyleBackColor = true;
+            this.uxActionPrikazTeretana.Click += new System.EventHandler(this.uiActionPrikazTeretana_Click);
             // 
-            // uiActionMojeTeretane
+            // uxActionMojeTeretane
             // 
-            this.uiActionMojeTeretane.Location = new System.Drawing.Point(45, 256);
-            this.uiActionMojeTeretane.Name = "uiActionMojeTeretane";
-            this.uiActionMojeTeretane.Size = new System.Drawing.Size(100, 51);
-            this.uiActionMojeTeretane.TabIndex = 8;
-            this.uiActionMojeTeretane.Text = "Prikaži moje teretane";
-            this.uiActionMojeTeretane.UseVisualStyleBackColor = true;
-            this.uiActionMojeTeretane.Click += new System.EventHandler(this.uiActionMojeTeretane_Click);
+            this.uxActionMojeTeretane.Location = new System.Drawing.Point(45, 256);
+            this.uxActionMojeTeretane.Name = "uxActionMojeTeretane";
+            this.uxActionMojeTeretane.Size = new System.Drawing.Size(100, 51);
+            this.uxActionMojeTeretane.TabIndex = 8;
+            this.uxActionMojeTeretane.Text = "Prikaži moje teretane";
+            this.uxActionMojeTeretane.UseVisualStyleBackColor = true;
+            this.uxActionMojeTeretane.Click += new System.EventHandler(this.uiActionMojeTeretane_Click);
             // 
             // uiDobrodosli
             // 
@@ -133,12 +133,12 @@ namespace reRack.Design.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 450);
             this.Controls.Add(this.uiSlika);
-            this.Controls.Add(this.uiActionDodajVlasnika);
-            this.Controls.Add(this.uiActionDodajTeretanu);
-            this.Controls.Add(this.uiActionUrediPodatkeTeretane);
-            this.Controls.Add(this.uiActionUrediPodatke);
-            this.Controls.Add(this.uiActionPrikazTeretana);
-            this.Controls.Add(this.uiActionMojeTeretane);
+            this.Controls.Add(this.uxActionPregledZahtjeva);
+            this.Controls.Add(this.uxActionDodajTeretanu);
+            this.Controls.Add(this.uxActionUrediPodatkeTeretane);
+            this.Controls.Add(this.uxActionProfil);
+            this.Controls.Add(this.uxActionPrikazTeretana);
+            this.Controls.Add(this.uxActionMojeTeretane);
             this.Controls.Add(this.uiDobrodosli);
             this.pocetnaHelpProvider.SetHelpKeyword(this, "pocetna.htm");
             this.pocetnaHelpProvider.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
@@ -154,12 +154,12 @@ namespace reRack.Design.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button uiActionDodajVlasnika;
-        private System.Windows.Forms.Button uiActionDodajTeretanu;
-        private System.Windows.Forms.Button uiActionUrediPodatkeTeretane;
-        private System.Windows.Forms.Button uiActionUrediPodatke;
-        private System.Windows.Forms.Button uiActionPrikazTeretana;
-        private System.Windows.Forms.Button uiActionMojeTeretane;
+        private System.Windows.Forms.Button uxActionPregledZahtjeva;
+        private System.Windows.Forms.Button uxActionDodajTeretanu;
+        private System.Windows.Forms.Button uxActionUrediPodatkeTeretane;
+        private System.Windows.Forms.Button uxActionProfil;
+        private System.Windows.Forms.Button uxActionPrikazTeretana;
+        private System.Windows.Forms.Button uxActionMojeTeretane;
         private System.Windows.Forms.Label uiDobrodosli;
         private System.Windows.Forms.PictureBox uiSlika;
         private System.Windows.Forms.HelpProvider pocetnaHelpProvider;

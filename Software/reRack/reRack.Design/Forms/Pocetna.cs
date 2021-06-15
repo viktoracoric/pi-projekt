@@ -20,14 +20,14 @@ namespace reRack.Design.Forms
             InitializeComponent();
             if(prijavljeniKorisnik.uloga_id == 0)
             {
-                uiActionUrediPodatkeTeretane.Hide();
-                uiActionDodajVlasnika.Hide();
-                uiActionDodajTeretanu.Hide();
+                uxActionUrediPodatkeTeretane.Hide();
+                uxActionPregledZahtjeva.Hide();
+                uxActionDodajTeretanu.Hide();
             }
             if (prijavljeniKorisnik.uloga_id == 1)
             {
-                uiActionDodajVlasnika.Hide();
-                uiActionDodajTeretanu.Hide();
+                uxActionPregledZahtjeva.Hide();
+                uxActionDodajTeretanu.Hide();
             }
 
             this.prijavljeniKorisnik = prijavljeniKorisnik;
